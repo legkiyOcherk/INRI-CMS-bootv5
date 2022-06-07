@@ -1,7 +1,7 @@
 <?php
 global $PDO;
 
-function db_open($charset = 'utf8') {
+function db_open( $charset = 'utf8' ) {
   global $PDO;
   
   $opt = [
@@ -11,15 +11,17 @@ function db_open($charset = 'utf8') {
   ];
   $CFG = & $_SESSION["NEX_CFG"];
   
-  $dsn = 'mysql:host='.$CFG["db_hostname"].';dbname='.$CFG["db_basename"].';charset='.$charset;
-  
-  $PDO = new PDO($dsn, $CFG["db_username"], $CFG["db_password"], $opt);  
-  
+  if( $CFG["db_hostname"] && $CFG["db_basename"] && $CFG["db_username"] && $CFG["db_password"] ){
+    
+    $dsn = 'mysql:host='.$CFG["db_hostname"].';dbname='.$CFG["db_basename"].';charset='.$charset;  
+    $PDO = new PDO($dsn, $CFG["db_username"], $CFG["db_password"], $opt);  
+    
+  }else{
+    die( "db error" );
+  }
   if($PDO){
   		$_SESSION["DB_OPENED"] = TRUE;
 			return $PDO;
-		
-	
 	}
 	return FALSE;
 }
