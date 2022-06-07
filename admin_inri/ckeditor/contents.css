@@ -1,0 +1,54 @@
+body
+{
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height:1.5;
+}
+
+.cke_editable
+{
+	font-size: 13px;
+	line-height: 1.6;
+
+	/* Fix for missing scrollbars with RTL texts. (#10488) */
+	word-wrap: break-word;
+}
+
+.cke_widget_wrapper, .cke_widget_wrapper:hover { outline:1px dotted #777 !important; width:100%; display: inline-block;}
+.cke_widget_wrapper > .cke_widget_element, .cke_widget_wrapper:hover > .cke_widget_element { outline:none !important; overflow: hidden; padding:5px; }
+.cke_widget_wrapper .cke_widget_editable, .cke_widget_wrapper:hover .cke_widget_editable { outline:none !important; overflow: hidden; margin:10px 0 0 0; }
+.cke_widget_wrapper .cke_widget_editable.cke_widget_editable_focused { outline:1px dotted #73120D !important; }
+.cke_reset.cke_widget_drag_handler_container { left:3px !important; top:3px !important; }
+
+.cke_widget_wrapper_cmlex-article { width:48% !important; margin:0 1% 20px 1%; float:left; display: inline-block;}
+.cmlex-article-img {  }
+.cmlex-article-title { box-sizing:border-box; border:none !important; background:#fafafa; padding:5px; }
+
+.button, .cmlex-insert-button { background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%);
+                                background-color:#FB3E6E; transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0s; line-height:1; color:#fff; box-shadow:0px 1px 2px -2px rgba(0, 0, 0, 0.9); font-weight:400; font-size:1em; display:inline-block; border-radius:4px; padding:9px 20px; margin:5px; text-decoration:none; opacity:1; border:none; cursor:text; }
+
+.cmlex-insert-spoiler { position:relative; box-sizing:border-box; padding:5px; margin:5px 0; }
+.cmlex-insert-spoiler:before { content:"спойлер"; background:#777; position:absolute; right:1px; top:1px; display:block; color:#fff; font-size:10px; padding:0px 4px; }
+
+.cmlex-insert-box { box-sizing:border-box; padding:5px; overflow:hidden; }
+.cmlex-insert-box-href { box-sizing:border-box; border:none !important; background:#fafafa; padding:5px; }
+.cmlex-insert-box-body { outline:none !important; padding:5px; box-sizing:border-box; margin:0 !important; border:none !important; }
+.cmlex-insert-box-hide { display:block !important; }
+
+.cmlex-igallery { display:block; clear:both; width:100%; box-sizing:border-box; padding:5px; margin:5px 0; text-align:center; height:80px; background: url("data:image/png;base64,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") no-repeat center center; }
+
+.cmlex-row { box-sizing:border-box; padding:5px; overflow:hidden; margin:10px 0; }
+.cmlex-bootstrap-col { position:relative; box-sizing:border-box; padding:5px 10px; float:left; border:1px dotted #C9CDFF; }
+.cmlex-bootstrap-col:before { background:#777; position:absolute; right:1px; top:-3px; display:block; color:#fff; font-size:8px; padding:1px 4px; }
+.cmlex-col-100 { width:100%; } .cmlex-col-100:before { content:"100%"; }
+.cmlex-col-50 { width:50%; } .cmlex-col-50:before { content:"50%"; }
+.cmlex-col-25 { width:25%; } .cmlex-col-25:before { content:"25%"; }
+.cmlex-col-33 { width:33.3%; } .cmlex-col-33:before { content:"33%"; }
+.cmlex-col-67 { width:66.7%; } .cmlex-col-67:before { content:"67%"; }
+
+.cmlex_tabs_box{ box-sizing:border-box; padding:5px; border:#777 2px solid; overflow:hidden; margin:5px 0; }
+.cmlex_tabs_head{ box-sizing:border-box; padding:5px 10px; margin-bottom:5px; background:#888; color:#fff; font-size:14px; overflow: hidden;}
+.cmlex_tabs_text{ box-sizing:border-box; padding:5px; border:1px dashed #ccc; overflow: hidden; }
+.cmlex_tabs_left { box-sizing:border-box; padding:5px 10px; border:1px dotted #C9CDFF; width:50%; float:left; width:29.5%; }
+.cmlex_tabs_right { box-sizing:border-box; padding:5px 10px; border:1px dotted #C9CDFF; width:50%; float:right; width:69.5%; }

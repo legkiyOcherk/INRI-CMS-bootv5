@@ -1,0 +1,17 @@
+.noprint,.modal-footer, .navbar
+{
+	display:none;
+}
+#yamapa
+{
+	display:none;
+}
+#addr_tel
+{
+	display:block;
+}
+#yandex
+{
+	width:100%;
+	height:80%;
+}

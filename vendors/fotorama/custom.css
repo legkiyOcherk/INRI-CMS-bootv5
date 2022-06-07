@@ -1,0 +1,28 @@
+ .slider .fotorama__nav-wrap {
+      position: absolute !important;
+      z-index: 2 !important;
+      margin-top: -111px !important;
+    }
+  .slider  .fotorama__nav__shaft {
+      padding-top: 26px !important;
+    }
+  .slider   .fotorama__thumb-border {
+      width: 198px !important;
+      height: 96px !important;
+      top: 9px !important;
+    }
+.slider .fotorama__nav__frame.fotorama__nav__frame--thumb.fotorama__active {
+    width: 200px !important;
+    height: 100px !important;
+    margin-top: 0 !important;
+    position: relative !important;
+    top: -14px !important;
+}
+  .slider   .fotorama__img {
+      width: 100% !important;
+      height: auto !important;
+      left: 0 !important;
+    }
+    .fotorama__dot {
+    border-color: #bfb973;
+}

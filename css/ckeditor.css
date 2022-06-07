@@ -1,0 +1,44 @@
+/*@import url('/css/bootstrap/css/bootstrap.min.css');*/
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css');
+@import url('https://use.fontawesome.com/releases/v5.0.13/css/all.css');
+@import url('/css/style.css');
+/*a:hover {text-decoration:none;}*/
+/*body {/*max-width:1140px;*//* width:100%; margin:auto; background:#fff; padding:8px;}*/
+
+body{
+  background-color: #ffffff;    
+}
+/*
+a{
+  color: #005ebe;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    float: none;
+}
+table {
+  height: auto!important;
+}
+table th,
+table td {
+  vertical-align: baseline;
+}
+table th {
+  padding: 8px 10px;
+  background: #404040;
+  color: #fff;
+  vertical-align: middle;
+  text-align: left;
+}
+table td {
+  padding: 8px 10px;
+  border: none;
+  text-align: left;
+}
+table .odd {
+  background: #efefef;
+}*/
