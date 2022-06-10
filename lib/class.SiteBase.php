@@ -190,7 +190,7 @@ class SiteBase {
     }
     
     $output .= '
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css?v=1" rel="stylesheet">
     ';
     $output .= $this->user_meta;
@@ -198,6 +198,9 @@ class SiteBase {
     
     return  $output;
   }
+  
+   
+  
   
   function getHeader(){
     $output = '';
@@ -216,42 +219,44 @@ class SiteBase {
           <!-- header -->
           <div class = "header_box">
             <div class = "header">
-            
-              <div class="row align-items-center">
+              <div class="container">
+                
+                <div class="row align-items-center">
+                
+                  <div class="col-12 col-sm-4 col-lg-auto">
+                    <div class="logo_box">
+                      <a href="/"><img class="logo" src="'.$this->logo_path.'" alt="'.$this->site_slogan.'" title="'.$this->site_slogan.'"></a>
+                    </div>
+                  </div>
+                  
+                  <div class="col-12 col-sm-4 col-lg">
+                    <div class="header_phone_box">
+                      <div class="header_phone">
+                        '.$this->phone_header.'
+                      </div>
+                      <div class="header_adress">
+                        '.$this->adress_header.'
+                      </div>
+                      <div class="header_work">
+                        '.$this->working_hour.'
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-12 col-sm-4 col-lg-auto">
+                    <div class="header_callback_box">
+                      <div class="header_callback">
+                        <button class="btn flmenu1" data-id="0" data-target="#myModal" data-title="Заказать обратный звонок" data-toggle="modal">Заказать обратный звонок</button>
+                      </div>
+                      <div class="header_soc">
+                        '.$this->soc_net.'
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
               
-                <div class="col-12 col-sm-4 col-lg-auto">
-                  <div class="logo_box">
-                    <a href="/"><img class="logo" src="'.$this->logo_path.'" alt="'.$this->site_slogan.'" title="'.$this->site_slogan.'"></a>
-                  </div>
-                </div>
-                
-                <div class="col-12 col-sm-4 col-lg">
-                  <div class="header_phone_box">
-                    <div class="header_phone">
-                      '.$this->phone_header.'
-                    </div>
-                    <div class="header_adress">
-                      '.$this->adress_header.'
-                    </div>
-                    <div class="header_work">
-                      '.$this->working_hour.'
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="col-12 col-sm-4 col-lg-auto">
-                  <div class="header_callback_box">
-                    <div class="header_callback">
-                      <button class="btn flmenu1" data-id="0" data-target="#myModal" data-title="Заказать обратный звонок" data-toggle="modal">Заказать обратный звонок</button>
-                    </div>
-                    <div class="header_soc">
-                      '.$this->soc_net.'
-                    </div>
-                  </div>
-                </div>
-                
               </div>
-              
             </div>
           </div>
           <!-- End header -->';
@@ -306,75 +311,76 @@ class SiteBase {
     $output .= '
     <div class="cms_footer_box">
       <div class="cms_footer">
-        
-        <div class="row">
-          <div class="col inri_box_line"> 
-            <div class="inri_box">
-              <span><a href="//in-ri.ru" target="_blank">© '.date('Y').' '.SITE_NAME.'</a></span> 
-              <a href="//in-ri.ru" target="_blank"><b>
-                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="549.392px" height="530.999px" viewBox="0 0 549.392 530.999" enable-background="new 0 0 549.392 530.999" xml:space="preserve">
-                  <g>
-                    <defs>
-                      <polygon class="inri_item" id="SVGID_1_" points="0,86.998 55.001,86.998 55.001,443.998 0,443.998 0,86.998 		"></polygon>
-                    </defs>
-                    <use xlink:href="#SVGID_1_" overflow="visible" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff"></use>
-                    <clipPath id="SVGID_2_">
-                      <use xlink:href="#SVGID_1_" overflow="visible"></use>
-                    </clipPath>
-                  </g>
-                  <g>
-                    <defs>
-                      <path class="inri_item" id="SVGID_3_" d="M249.579,444.338h21.759V206.002c-20.739,0-41.478,0-62.217,0v116.619L88.76,204.982H66.66v239.017
-                        c20.742,0,41.82,0,62.901,0V327.04L249.579,444.338L249.579,444.338z"></path>
-                    </defs>
-                    <use xlink:href="#SVGID_3_" overflow="visible" fill="#ffffff"></use>
-                    <clipPath id="SVGID_4_">
-                      <use xlink:href="#SVGID_3_" overflow="visible"></use>
-                    </clipPath>
-                  </g>
-                  <g>
-                    <defs>
-                      <path class="inri_item" id="SVGID_5_" d="M436.789,359.68c60.18-40.8,43.182-153.339-50.319-153.678c-34.68,0-70.038,0-104.379,0
-                        c0,79.557,0,158.778,0,237.997c19.722,0,40.461,0,60.861,0V373.96h31.62l40.8,70.038h67.998v-8.838L436.789,359.68L436.789,359.68
-                        z M386.47,319.9h-43.518c0-19.041,0-40.119,0-59.499c14.28,0,29.238-0.339,43.518,0C421.15,260.74,419.449,319.9,386.47,319.9
-                        L386.47,319.9z"></path>
-                    </defs>
-                    <use xlink:href="#SVGID_5_" overflow="visible" fill="#ffffff"></use>
-                    <clipPath id="SVGID_6_">
-                      <use xlink:href="#SVGID_5_" overflow="visible"></use>
-                    </clipPath>
-                  </g>
-                  <g>
-                    <defs>
-                      <polygon class="inri_item" id="SVGID_7_" points="538.001,443.998 483.001,443.998 483.001,205.999 538.001,205.999 538.001,443.998 
-                        538.001,443.998 		"></polygon>
-                    </defs>
-                    <defs>
-                      <polygon class="inri_item" id="SVGID_8_" points="510.5,101.607 549.392,140.5 510.5,179.39 471.61,140.5 510.5,101.607 		"></polygon>
-                    </defs>
-                    <use xlink:href="#SVGID_7_" overflow="visible" fill="#ffffff"></use>
-                    <use xlink:href="#SVGID_8_" overflow="visible" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff"></use>
-                    <clipPath id="SVGID_9_">
-                      <use xlink:href="#SVGID_7_" overflow="visible"></use>
-                    </clipPath>
-                    <clipPath id="SVGID_10_" clip-path="url(#SVGID_9_)">
-                      <use xlink:href="#SVGID_8_" overflow="visible"></use>
-                    </clipPath>
-                  </g>
-                  <g>
-                    <path class="inri_item" fill="#ffffff" d="M483.001,454.999v20.999h-428v-20.999H0c0,45.885,0,76,0,76h538.001v-76H483.001z"></path>
-                    <path class="inri_item" fill="#ffffff" d="M55.001,75.998v-1v-20h428v20.999h55.001V0H0c0,0,0,29.677,0,74.998c0,0.329,0,0.669,0,1H55.001z"></path>
-                  </g>
-                </svg>
-              </b></a>
-            
+        <div class="container py-1">
+          <div class="row">
+            <div class="col inri_box_line"> 
+              <div class="inri_box">
+                <span><a href="//in-ri.ru" target="_blank">© '.date('Y').' '.SITE_NAME.'</a></span> 
+                <a href="//in-ri.ru" target="_blank"><b>
+                  <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="549.392px" height="530.999px" viewBox="0 0 549.392 530.999" enable-background="new 0 0 549.392 530.999" xml:space="preserve">
+                    <g>
+                      <defs>
+                        <polygon class="inri_item" id="SVGID_1_" points="0,86.998 55.001,86.998 55.001,443.998 0,443.998 0,86.998 		"></polygon>
+                      </defs>
+                      <use xlink:href="#SVGID_1_" overflow="visible" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff"></use>
+                      <clipPath id="SVGID_2_">
+                        <use xlink:href="#SVGID_1_" overflow="visible"></use>
+                      </clipPath>
+                    </g>
+                    <g>
+                      <defs>
+                        <path class="inri_item" id="SVGID_3_" d="M249.579,444.338h21.759V206.002c-20.739,0-41.478,0-62.217,0v116.619L88.76,204.982H66.66v239.017
+                          c20.742,0,41.82,0,62.901,0V327.04L249.579,444.338L249.579,444.338z"></path>
+                      </defs>
+                      <use xlink:href="#SVGID_3_" overflow="visible" fill="#ffffff"></use>
+                      <clipPath id="SVGID_4_">
+                        <use xlink:href="#SVGID_3_" overflow="visible"></use>
+                      </clipPath>
+                    </g>
+                    <g>
+                      <defs>
+                        <path class="inri_item" id="SVGID_5_" d="M436.789,359.68c60.18-40.8,43.182-153.339-50.319-153.678c-34.68,0-70.038,0-104.379,0
+                          c0,79.557,0,158.778,0,237.997c19.722,0,40.461,0,60.861,0V373.96h31.62l40.8,70.038h67.998v-8.838L436.789,359.68L436.789,359.68
+                          z M386.47,319.9h-43.518c0-19.041,0-40.119,0-59.499c14.28,0,29.238-0.339,43.518,0C421.15,260.74,419.449,319.9,386.47,319.9
+                          L386.47,319.9z"></path>
+                      </defs>
+                      <use xlink:href="#SVGID_5_" overflow="visible" fill="#ffffff"></use>
+                      <clipPath id="SVGID_6_">
+                        <use xlink:href="#SVGID_5_" overflow="visible"></use>
+                      </clipPath>
+                    </g>
+                    <g>
+                      <defs>
+                        <polygon class="inri_item" id="SVGID_7_" points="538.001,443.998 483.001,443.998 483.001,205.999 538.001,205.999 538.001,443.998 
+                          538.001,443.998 		"></polygon>
+                      </defs>
+                      <defs>
+                        <polygon class="inri_item" id="SVGID_8_" points="510.5,101.607 549.392,140.5 510.5,179.39 471.61,140.5 510.5,101.607 		"></polygon>
+                      </defs>
+                      <use xlink:href="#SVGID_7_" overflow="visible" fill="#ffffff"></use>
+                      <use xlink:href="#SVGID_8_" overflow="visible" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff"></use>
+                      <clipPath id="SVGID_9_">
+                        <use xlink:href="#SVGID_7_" overflow="visible"></use>
+                      </clipPath>
+                      <clipPath id="SVGID_10_" clip-path="url(#SVGID_9_)">
+                        <use xlink:href="#SVGID_8_" overflow="visible"></use>
+                      </clipPath>
+                    </g>
+                    <g>
+                      <path class="inri_item" fill="#ffffff" d="M483.001,454.999v20.999h-428v-20.999H0c0,45.885,0,76,0,76h538.001v-76H483.001z"></path>
+                      <path class="inri_item" fill="#ffffff" d="M55.001,75.998v-1v-20h428v20.999h55.001V0H0c0,0,0,29.677,0,74.998c0,0.329,0,0.669,0,1H55.001z"></path>
+                    </g>
+                  </svg>
+                </b></a>
+              
+              </div>
+              
             </div>
-            
           </div>
-        </div>
-            
-        <div class="row">
-          <div class="col">'.$this->user_script.'</div>
+              
+          <div class="row">
+            <div class="col">'.$this->user_script.'</div>
+          </div>
         </div>
       </div>
     </div>
@@ -395,42 +401,43 @@ class SiteBase {
     <!-- footer -->
     <div class="footer_box">
       <div class="footer">
-        
-        <div class="row">
-          <div class="col-12 footer_menu_box">
-            <ul class="footer_menu ">';
+        <div class="container py-1">
+          <div class="row">
+            <div class="col-12 footer_menu_box">
+              <ul class="footer_menu ">';
     #$output .= Article::show_footer_menu($this);
     $output .= Article::show_simple_menu($this);
     $output .= '
-            </ul>
-          </div>';
+              </ul>
+            </div>';
     
     if($this->soc_net){
       $output .= '
-          <div class="col-12 soc_net_box">
-            <div class = "soc_net">'.$this->soc_net.'</div>
-          </div>';
+            <div class="col-12 soc_net_box">
+              <div class = "soc_net">'.$this->soc_net.'</div>
+            </div>';
     }
           
     $output .= '      
-        </div>';
+          </div>';
     if( isset($this->phone_header) && $this->phone_header ){
       $output .= '
-        <div class="row">
-          <div class="col-12 tac">
-            '.$this->phone_header.'
-          </div>
-        </div>';
+          <div class="row">
+            <div class="col-12 tac">
+              '.$this->phone_header.'
+            </div>
+          </div>';
     }
     if( isset($this->adress_header) && $this->adress_header ){
       $output .= '
-        <div class="row">
-          <div class="col-12 tac">
-            '.$this->adress_header.'
-          </div>
-        </div>';
+          <div class="row">
+            <div class="col-12 tac">
+              '.$this->adress_header.'
+            </div>
+          </div>';
     }
     $output .= '
+        </div>
       </div>
     </div>
     <!-- End footer -->';
@@ -447,8 +454,8 @@ class SiteBase {
     <link rel="stylesheet" type="text/css" media="all" href="/css/font-awesome/css/font-awesome.min.css">
     
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" ></script>
     
     <script src="/vendors/maskedinput/jquery.maskedinput.min.js"></script>
     <script type="text/javascript">
@@ -506,9 +513,9 @@ class SiteBase {
     $output = '';
     
     $s = "
-      SELECT `".DB_PFX."carusel`.* 
-      FROM `".DB_PFX."carusel`
-      WHERE `".DB_PFX."carusel`.`hide` = 0
+      SELECT   `".DB_PFX."carusel`.* 
+      FROM     `".DB_PFX."carusel`
+      WHERE    `".DB_PFX."carusel`.`hide` = 0
       ORDER BY `".DB_PFX."carusel`.`ord`
     "; #pri($s);
     
@@ -518,19 +525,20 @@ class SiteBase {
     <!-- mine_slider -->
     <div class="mine_slider_box">
       <div class="mine_slider">
+        <div class="container py-1">
         
-        <div id="carouseMineControls" class="carousel slide" data-ride="carousel" data-interval = "35000">
-          <ol class="carousel-indicators">';
+          <div id="carouseMineControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">';
             
         for($i = 0; $i < $count; $i++ ){
-          (!$i) ? $active = 'class="active"' : $active = '';
+          (!$i) ? $active = ' class="active" aria-current="true" ' : $active = '';
           $output .= '
-            <li data-target="#carouseMineControls" data-slide-to="'.$i.'" '.$active.'></li>';
+              <button type="button" data-bs-target="#carouseMineControls" data-bs-slide-to="'.$i.'" '.$active.' aria-label=""></button>';
         }    
         $output .= '
-          </ol>
+            </div>
           
-          <div class="carousel-inner">';
+            <div class="carousel-inner">';
         $i = 0; 
         while($r = $q->fetch()){
           ( !$i++) ? $active = "active" : $active = ""; 
@@ -539,50 +547,50 @@ class SiteBase {
             $img = "/images/carusel/slide/".$r['img'];
           }else continue ;
           
-          
           $output .= '
-            <div class="carousel-item '.$active.'">
-              <div class="carousel_item_slide">';
+              <div class="carousel-item '.$active.'" data-bs-interval="35000">
+                <div class="carousel_item_slide">';
           if($r['link'])
             $output .= '
-                <a href = "'.$r['link'].'" target = "_blank">';
+                  <a href = "'.$r['link'].'" target = "_blank">';
           $output .= '
-                <img class="d-block w-100" src="'.$img.'" alt="'.$r['title'].'">';
+                  <img class="d-block w-100" src="'.$img.'" alt="'.$r['title'].'">';
           if($r['link'])
             $output .= '
-                </a>';
+                  </a>';
           if($r['txt1'] || $r['longtxt1']){
             $output .= '
-                 <div class="carousel-caption d-none d-md-block">';
+                   <div class="carousel-caption d-none d-md-block bg-light text-dark shadow-lg">';
             if($r['txt1'])
               $output .= '     
-                  <h5>'.$r['txt1'].'</h5>';
+                    <h5>'.$r['txt1'].'</h5>';
             if($r['longtxt1'])
               $output .= '                  
-                  <p>'.$r['longtxt1'].'</p>';
+                    <p>'.$r['longtxt1'].'</p>';
             $output .= '
-                </div>';
+                  </div>';
           
           }
           $output .= '
-              </div>
-            </div>
-          ';
+                </div>
+              </div>';
         }
           $output .= '
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouseMineControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Предидущий</span>
+            </button>
+            
+            <button class="carousel-control-next" type="button" data-bs-target="#carouseMineControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Следующий</span>
+            </button>
           </div>
-          <a class="carousel-control-prev" href="#carouseMineControls" role="button" data-slide="prev">
-            <i class="fa fa-angle-left" aria-hidden="true"></i>
-            <span class="sr-only">Предидущий</span>
-          </a>
-          <a class="carousel-control-next" href="#carouseMineControls" role="button" data-slide="next">
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-            <span class="sr-only">Следующий</span>
-          </a>
+          
         </div>
-        
       </div>
-      
     </div>    
     <!-- End mine_slider -->';
       }
@@ -692,8 +700,7 @@ class SiteBase {
           </div>
         </div>
       </div>
-    <!-- End mine_application -->
-    ';
+    <!-- End mine_application -->';
     
     $this->js_scripts .= '
     <script src="/vendors/maskedinput/jquery.maskedinput.min.js"></script>
@@ -831,21 +838,20 @@ class SiteBase {
     return $output;
   }
   
-  
-  
-  function getInnerContent($cont){ 
+  function getInnerContent( $cont ){ 
     $output = '';
     
     if(db::value('link', DB_PFX.'mine_block', 'link = "block_inner_content"' )){
       $this->is_block_inner_content = true;
       $s = "
-        SELECT `".DB_PFX."mine_block`.*, `".DB_PFX."url`.`url`
-        FROM `".DB_PFX."mine_block`    
+        SELECT    `".DB_PFX."mine_block`.*, `".DB_PFX."url`.`url`
+        FROM      `".DB_PFX."mine_block`    
         LEFT JOIN `".DB_PFX."url`
-        ON (`".DB_PFX."url`.`module` = '".DB_PFX."mine_block') AND (`".DB_PFX."url`.`module_id` = `".DB_PFX."mine_block`.`id`) 
-        WHERE `".DB_PFX."mine_block`.`hide` = 0
-        AND `".DB_PFX."mine_block`.`fl_is_fixed` = 1
-        ORDER BY `".DB_PFX."mine_block`.`ord`
+        ON        (`".DB_PFX."url`.`module`     = '".DB_PFX."mine_block') 
+        AND       (`".DB_PFX."url`.`module_id`  = `".DB_PFX."mine_block`.`id`) 
+        WHERE     `".DB_PFX."mine_block`.`hide` = 0
+        AND       `".DB_PFX."mine_block`.`fl_is_fixed` = 1
+        ORDER BY  `".DB_PFX."mine_block`.`ord`
       "; #pri($s);
       
       $output .= $this->getBlockSwitchSelector($s, $cont);
@@ -1100,9 +1106,9 @@ class SiteBase {
     $output = '';
     
     $s = "
-      SELECT `".DB_PFX."reviews`.*
-      FROM `".DB_PFX."reviews`
-      WHERE `".DB_PFX."reviews`.`hide` = 0
+      SELECT   `".DB_PFX."reviews`.*
+      FROM     `".DB_PFX."reviews`
+      WHERE    `".DB_PFX."reviews`.`hide` = 0
       ORDER BY `".DB_PFX."reviews`.`date` DESC
       LIMIT 10
     "; #pri($s);

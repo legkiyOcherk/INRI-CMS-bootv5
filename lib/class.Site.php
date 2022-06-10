@@ -221,65 +221,66 @@ class SiteOnlineshop extends SiteBase{
           <!-- header -->
           <div class = "header_box">
             <div class = "header">
-            
-              <div class="row align-items-center">
-              
-                <div class="col-12 col-sm-4 col-lg-auto">
-                  <div class="logo_box">
-                    <a href="/"><img class="logo" src="'.$this->logo_path.'" alt="'.$this->site_slogan.'" title="'.$this->site_slogan.'"></a>
-                  </div>
-                </div>
+              <div class="container py-1">
                 
-                <div class="col-12 col-sm-4 col-lg">
-                  <div class="header_phone_box">
-                    <div class="header_phone">
-                      '.$this->phone_header.'
-                    </div>
-                    <div class="header_adress">
-                      '.$this->adress_header.'
-                    </div>
-                    <div class="header_work">
-                      '.$this->working_hour.'
-                    </div>
-                  </div>
-                </div>
+                <div class="row align-items-center">
                 
-                <div class="col-12 col-sm-4 col-lg-auto">
-                  <div class="header_callback_box">
-                    <div class="header_callback">
-                      <button class="btn flmenu1" data-id="0" data-target="#myModal" data-title="Заказать обратный звонок" data-toggle="modal">Заказать обратный звонок</button>
-                    </div>
-                    <div class="header_soc">
-                      '.$this->soc_net.'
+                  <div class="col-12 col-sm-4 col-lg-auto">
+                    <div class="logo_box">
+                      <a href="/"><img class="logo" src="'.$this->logo_path.'" alt="'.$this->site_slogan.'" title="'.$this->site_slogan.'"></a>
                     </div>
                   </div>
-                </div>';
+                  
+                  <div class="col-12 col-sm-4 col-lg">
+                    <div class="header_phone_box">
+                      <div class="header_phone">
+                        '.$this->phone_header.'
+                      </div>
+                      <div class="header_adress">
+                        '.$this->adress_header.'
+                      </div>
+                      <div class="header_work">
+                        '.$this->working_hour.'
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-12 col-sm-4 col-lg-auto">
+                    <div class="header_callback_box">
+                      <div class="header_callback">
+                        <button class="btn flmenu1" data-id="0" data-target="#myModal" data-title="Заказать обратный звонок" data-toggle="modal">Заказать обратный звонок</button>
+                      </div>
+                      <div class="header_soc">
+                        '.$this->soc_net.'
+                      </div>
+                    </div>
+                  </div>';
       
     $basked_data = $this->_BASKET->get_basket_data();
     $style = '';
     #( $this->_BASKET->getCount() ) ? $style = "" : $style = "display: none;" ;
     $output .= '
-                <div class="col-12 col-sm-4 col-lg-auto">
-                
-                  <!-- basked -->
-                  <div class="basked_box" style = "'.$style.'">
-                    <a href="/basket">
-                      <div class="basked_icon">
-                        <i class="fas fa-cart-arrow-down" aria-hidden="true"></i>
-                      </div>
-                      <div class="basked">
-                        '.$basked_data['basket_head'].'
-                      </div>
-                    </a>
-                  </div>
-                  <!-- End basked -->
+                  <div class="col-12 col-sm-4 col-lg-auto">
                   
-                </div>
-    ';
+                    <!-- basked -->
+                    <div class="basked_box" style = "'.$style.'">
+                      <a href="/basket">
+                        <div class="basked_icon">
+                          <i class="fas fa-cart-arrow-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="basked">
+                          '.$basked_data['basket_head'].'
+                        </div>
+                      </a>
+                    </div>
+                    <!-- End basked -->
+                    
+                  </div>';
     
     $output .= '
-              </div>
+                </div>
               
+              </div>
             </div>
           </div>
           <!-- End header -->';
@@ -296,31 +297,35 @@ class SiteOnlineshop extends SiteBase{
           <!-- top_menu -->
           <div class="top_menu_box">
             <div class="top_menu">
-            
-              <nav class= "navbar navbar-expand-sm navbar-dark bg-dark">
-                <a class="navbar-brand d-sm-none" href="#">Меню</a>
-                <button class="navbar-toggler" type="button" 
-                  data-toggle="collapse" 
-                  data-target="#navbarsTop" 
-                  aria-controls="navbarsTop" 
-                  aria-expanded="false" 
-                  aria-label="Toggle navigation">
-                  <!--<span class="navbar-toggler-icon"></span>-->
-                  <i class="fa fa-bars fa-lg" title="Toggle navigation"></i>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarsTop">
-                  
-                  <ul class="navbar-nav mr-auto">';
+              <div class="container py-1">
+              
+                <nav class= "navbar navbar-expand-lg bg-light">
+                  <div class="container-fluid">
+                    <a class="navbar-brand d-lg-none" href="#">Меню</a>
+                    
+                    <button class          = "navbar-toggler" 
+                            type           = "button" 
+                            data-bs-toggle = "collapse" 
+                            data-bs-target = "#navbarsTop" 
+                            aria-controls  = "navbarsTop" 
+                            aria-expanded  = "false" 
+                            aria-label     = "Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarsTop">
+                      
+                      <ul class="navbar-nav mr-auto">';
     $output .= Article::show_head_chief_menu2($this, DB_PFX.'articles_cat', DB_PFX.'articles', DB_PFX.'url'); # Меню с выподашкой cat_articles
     #$output .= Article::show_head_chief_menu($this); # Меню cat_articles
     #$output .= Article::show_simple_menu($this);     # Меню smpl_article 
     $output .= '
-                  </ul>
-
-                </div>
-              </nav>
-              
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+                
+              </div>
             </div>
           </div>
           <!-- End top_menu -->
@@ -337,9 +342,11 @@ class SiteOnlineshop extends SiteBase{
     $output .= '
       <div class="block_box mine_goods_cat">
         <div class="block">
-          '.$text.'
-          '.Goods::show_mine_goods_cat($this).'
-       </div>
+          <div class="container py-1">
+            '.$text.'
+            '.Goods::show_mine_goods_cat($this).'
+          </div>
+        </div>
       </div>';
       
       $output = $this->addEditAdminLink($output, IA_URL.'goods.php?c_id=root');
@@ -352,9 +359,11 @@ class SiteOnlineshop extends SiteBase{
     
     $output .= '
     <div class="block_box mine_search_line">
-      <div class="block">';
+      <div class="block">
+        <div class="container py-1">';
     $output .= $this->search->showSearchLine($this);
     $output .= '
+        </div>
       </div>
     </div>';
     $output = $this->addEditAdminLink($output, IA_URL.'mine_block.php');
@@ -366,9 +375,11 @@ class SiteOnlineshop extends SiteBase{
     
     $output .= '
     <div class="block_box">
-      <div class="block">';
+      <div class="block">
+        <div class="container py-1">';
     $output .= Goods::show_mine_goods($this, 1);
     $output .= '
+        </div>
       </div>
     </div>';
     
@@ -388,7 +399,7 @@ class SiteOnlineshop extends SiteBase{
     <!-- footer -->
     <div class="footer_box">
       <div class="footer">
-        
+        <div class="container py-1">
         <div class="row">
           <div class="col-12 footer_menu_box">
             <ul class="footer_menu ">';
@@ -424,6 +435,7 @@ class SiteOnlineshop extends SiteBase{
         </div>';
     }
     $output .= '
+        </div>
       </div>
     </div>
     <!-- End footer -->';

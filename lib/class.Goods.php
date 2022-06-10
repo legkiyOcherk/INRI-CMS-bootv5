@@ -457,8 +457,7 @@ class Goods {
       if( $q->rowCount()){
         $output .= '
           <div class = "m_catalog">
-            <div class="catalog_dir card-deck">
-        '; 
+            <div class="catalog_dir row row-cols-1 row-cols-md-3 g-4">'; 
         while($r = $q->fetch()){
           $output .= self::show_goods_cat_card($r);
         }
@@ -478,17 +477,24 @@ class Goods {
     $r = $goods_cat_arr;
     ($r['img']) ? $image = '/images/goods/cat/slide/'.$r['img'] : $image = '/css/img/nofoto.gif' ;
     $output .= '
-      <div class="card">
-        <a href="/'.$r['url'].'">
-          <div class="card_img_box">  
-            <img class="" src = "'.$image.'" alt = "Изображение - '.$r['title'].'"   title = "'.$r['title'].'">
-            <div class="card_img_shadow"></div>
-          </div>
-        </a> 
-        <div class="card-body">
-        </div>
-        <div class="card-footer">
-          <p class="card-title"><a href="/'.$r['url'].'">'.$r['title'].'</a></p> 
+      <div class="col">
+        <div class="card h-100">
+          <a href="/'.$r['url'].'">';
+            #<div class="card_img_box">  
+            #  <img class="" src = "'.$image.'" alt = "Изображение - '.$r['title'].'"   title = "'.$r['title'].'">
+            #  <div class="card_img_shadow"></div>
+            #</div>
+    $output .= '
+            <img class = "card-img-top" src = "'.$image.'" alt = "Изображение - '.$r['title'].'"   title = "'.$r['title'].'">
+          </a> 
+          <div class="card-body">
+            <p class="card-title"><a href="/'.$r['url'].'">'.$r['title'].'</a></p>  
+          </div>';
+    #$output .= '
+    #      <div class="card-footer">
+    #        
+    #      </div>';
+    $output .= '
         </div>
       </div>';
       
@@ -969,7 +975,7 @@ class Goods {
       
       $output .= '
         <div class="cat_box">
-          <div class="catalog_items card-deck">';
+          <div class="catalog_items row row-cols-1 row-cols-md-3 g-4">';
       
       $availability_arr = db::select('*', DB_PFX."availability", "hide = 0");
       $site->goods_availability = array();
@@ -1032,15 +1038,15 @@ class Goods {
         
         if ($img && $img_exists){
           $cat_item['image'] = '
-            <img src = "'.Images::static_get_img_link("images/goods/orig", $img,  'images/goods/variations/450x450',  450, null, 0xFFFFFF, 95).'" title = "'.$img_title_txt[0].'" alt = "'.$img_alt_txt[0].'">
+            <img class="card-img-top" src = "'.Images::static_get_img_link("images/goods/orig", $img,  'images/goods/variations/450x450',  450, null, 0xFFFFFF, 95).'" title = "'.$img_title_txt[0].'" alt = "'.$img_alt_txt[0].'">
           ';
         }elseif( $cat_item['cat_image'] = db::value("img", DB_PFX."goods_cat", "id = ".$cat_id) ){
           $cat_item['image'] = '
-            <img src = "'.Images::static_get_img_link("images/goods/cat/orig", $cat_item['cat_image'],  'images/goods/cat/variations/100x100',  100, null, 0xFFFFFF, 95).'" title = "'.$img_title_txt[0].'" alt = "'.$img_alt_txt[0].'">
+            <img  class="card-img-top" src = "'.Images::static_get_img_link("images/goods/cat/orig", $cat_item['cat_image'],  'images/goods/cat/variations/100x100',  100, null, 0xFFFFFF, 95).'" title = "'.$img_title_txt[0].'" alt = "'.$img_alt_txt[0].'">
           ';  
         }else{
           $cat_item['image'] ='
-            <img src = "/css/img/no_photo.jpg">
+            <img class="card-img-top" src = "/css/img/no_photo.jpg">
           ';
         }
         $output .= self::tmp_cat_item($cat_item, ++$j);
@@ -1674,27 +1680,27 @@ class Goods {
             </tr>
     ';*/
     $output .= '
-            <div class="card tac">
-              <a href="/'.$arr['url'].'">
-                <div class="card_img_box " >  
-                  '.$arr['image'].'
-                  <div class="card_img_shadow"></div>
+            <div class="col">
+              <div class="card tac">
+                <a href="/'.$arr['url'].'">
+                  <div class="card_img_box " >  
+                    '.$arr['image'].'
+                  </div>
+                </a> 
+                <div class="card-body">
+                  <p class="card-title"><a href="/'.$arr['url'].'">'.$arr['title'].'</a></p> 
                 </div>
-              </a> 
-              <div class="card-body">
-                <p class="card-title"><a href="/'.$arr['url'].'">'.$arr['title'].'</a></p> 
+                <div class="card-footer">
+                  <div class="available">'.$arr['availability'].'</div>
+                  <div class="npr">
+                    <span class="price">'.number_format( $arr['price'], 0, ',', ' ').' </span><span class="rouble">руб.</span>
+                  </div>
+                  <div class = "card_btn_box">
+                    <button class="buy_btn good_buy store_buy btn btn-primary btn-md" data-id="'.$arr['id'].'" >Купить</button>
+                  </div>
+                </div>
               </div>
-              <div class="card-footer">
-                <div class="available">'.$arr['availability'].'</div>
-                <div class="npr">
-                  <span class="price">'.number_format( $arr['price'], 0, ',', ' ').' </span><span class="rouble">руб.</span>
-                </div>
-                <div class = "card_btn_box">
-                  <button class="buy_btn good_buy store_buy btn btn-primary btn-md" data-id="'.$arr['id'].'" >Купить</button>
-                </div>
-              </div>
-            </div>
-    ';
+            </div>';
     
     return $output;
     
