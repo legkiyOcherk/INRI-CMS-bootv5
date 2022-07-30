@@ -299,7 +299,7 @@ class SiteOnlineshop extends SiteBase{
             <div class="top_menu">
               <div class="container py-1">
               
-                <nav class= "navbar navbar-expand-lg bg-light">
+                <nav class= "navbar navbar-expand-lg navbar-dark bg-dark">
                   <div class="container-fluid">
                     <a class="navbar-brand d-lg-none" href="#">Меню</a>
                     

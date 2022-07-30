@@ -874,6 +874,7 @@ class SiteBase {
     <!-- content -->
     <div class="content_box">
       <div class="content">
+         <div class="container">
         '.$this->bread.'
         <div class = "content_body">
     ';
@@ -886,6 +887,7 @@ class SiteBase {
   function getContentPostfix($left_menu = true){
     $output = '';
     $output .= '
+          </div>
         </div>
       </div>
     </div>

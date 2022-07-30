@@ -842,7 +842,7 @@
 <treenode node="submit;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\vendors\recaptcha-master\src\ReCaptcha\RequestMethod.php;f11;40;53;40;;;;vpos;;v;;astring;;r&#10;Description&#10;     Submit the request with the specified parameters.&#10;&#10;Parameters:&#10;    RequestParameters $params - Request parameters&#10;&#10;Return:&#10;   Body of the reCAPTCHA response;;d-1,-1;;b1,0;;m0;;eRequestParameters $params;;p">
 </treenode>
 </treenode>
-<treenode node="require.php;PHP:PHP Include;E:\яндекс диск\gitHub\INRI-CMS-bootv5\site.php;f14;2;25;2;;E:\яндекс диск\gitHub\INRI-CMS-bootv5\robots.php;f14;2;25;2;;E:\яндекс диск\gitHub\INRI-CMS-bootv5\ajx.basket.php;f14;1;25;1;;E:\яндекс диск\gitHub\INRI-CMS-bootv5\ajax.php;f14;1;25;1;;E:\яндекс диск\gitHub\INRI-CMS-bootv5\404.php;f14;1;25;1;;E:\яндекс диск\gitHub\INRI-CMS-bootv5\index.php;f14;2;25;2;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="require.php;PHP:PHP Include;E:\яндекс диск\gitHub\INRI-CMS-bootv5\ajx.basket.php;f14;1;25;1;;E:\яндекс диск\gitHub\INRI-CMS-bootv5\ajax.php;f14;1;25;1;;E:\яндекс диск\gitHub\INRI-CMS-bootv5\404.php;f14;1;25;1;;E:\яндекс диск\gitHub\INRI-CMS-bootv5\robots.php;f14;2;25;2;;E:\яндекс диск\gitHub\INRI-CMS-bootv5\site.php;f14;2;25;2;;E:\яндекс диск\gitHub\INRI-CMS-bootv5\index.php;f14;2;25;2;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 <treenode node="SITE_NAME;PHP:PHP Word;E:\яндекс диск\gitHub\INRI-CMS-bootv5\define.php;f41;9;50;9;;;;vpos;;v;;a;;r&quot;in-ri.ru&quot;;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
@@ -1015,9 +1015,9 @@
 </treenode>
 <treenode node="OneFormAdmin;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\admin_inri\lib\global.lib.php;f2;47;3;102;;;;vpos;;v;;a;;r;;d65,47;;b0,0;;m0;;etitle;;psql_table;;padmin;;p">
 </treenode>
-<treenode node="OneSeoFormAdmin;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\admin_inri\lib\global.lib.php;f2;114;3;197;;;;vpos;;v;;a;;r&#10;Definition&#10;    OneSeoFormAdmin( $title = &apos;&apos;, $sql_table, &amp;$admin = null)&#10;&#10;Description&#10;     –абота со справочной таблицей Seo id	title	type	view	ord	hide	value&#10;&#10;Parameters:&#10;    undefined $title - - «аголовок&#10;    undefined $sql_table_form - - таблица;;d68,114;;b0,0;;m0;;etitle;;psql_table;;padmin;;p">
+<treenode node="OneSeoFormAdmin;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\admin_inri\lib\global.lib.php;f2;114;3;197;;;;vpos;;v;;a;;r&#10;Definition&#10;    OneSeoFormAdmin( $title = &apos;&apos;, $sql_table, &amp;$admin = null)&#10;&#10;Description&#10;     –абота со справочной таблицей Seo id title type view ord hide value&#10;&#10;Parameters:&#10;    undefined $title - - «аголовок&#10;    undefined $sql_table_form - - таблица;;d68,114;;b0,0;;m0;;etitle;;psql_table;;padmin;;p">
 </treenode>
-<treenode node="setHeaderForAdm;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\admin_inri\lib\global.lib.php;f9;33;3;45;;;;vpos;;v;;a;;r&#10;Definition&#10;    setHeaderForAdm($header, $title, &amp;$admin = null)&#10;&#10;Description&#10;     –абота со справочной таблицей id	name	title	val	type	comment&#10;&#10;Parameters:&#10;    undefined $title - - «аголовок&#10;    undefined $sql_table_form - - таблица;;d66,33;;b0,5;;m0;;eheader;;ptitle;;padmin;;p">
+<treenode node="setHeaderForAdm;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\admin_inri\lib\global.lib.php;f9;33;3;45;;;;vpos;;v;;a;;r&#10;Definition&#10;    setHeaderForAdm($header, $title, &amp;$admin = null)&#10;&#10;Description&#10;     –абота со справочной таблицей id name title val type comment&#10;&#10;Parameters:&#10;    undefined $title - - «аголовок&#10;    undefined $sql_table_form - - таблица;;d66,33;;b0,5;;m0;;eheader;;ptitle;;padmin;;p">
 </treenode>
 <treenode node="validate_post_vars;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\admin_inri\lib\global.lib.php;f9;4;3;21;;;;vpos;;v;;a;;r;;d47,4;;b0,5;;m0;;ea;;p">
 </treenode>
@@ -6484,34 +6484,34 @@
 </treenode>
 <treenode node="Site;PHP:Class Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.Site.php;f4;631;39;639;;;;vpos;;v;;aSite—utaway;;cSiteCorporate;;cSiteOnlineshop;;c;;r;;d37,639;;b0,0;;m0;;e">
 </treenode>
-<treenode node="SiteBase;PHP:Class Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f0;1;1;1754;;;;vpos;;v;;a;;r;;d15,1;;b0,0;;m0;;e">
+<treenode node="SiteBase;PHP:Class Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f0;1;1;1753;;;;vpos;;v;;a;;r;;d15,1;;b0,0;;m0;;e">
 <treenode node="__construct;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;33;3;125;;;;vpos;;v;;a;;r;;d40,33;;b0,0;;m0;;emodule;;p">
 </treenode>
 <treenode node="addEditAdminLink;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;493;3;509;;;;vpos;;v;;a;;r;;d46,493;;b0,0;;m0;;econt;;plink;;p">
 </treenode>
-<treenode node="addVisitedPage;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1187;3;1206;;;;vpos;;v;;a;;r;;d53,1187;;b0,0;;m0;;emodule;;pmodule_id;;pcont;;p">
+<treenode node="addVisitedPage;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1186;3;1205;;;;vpos;;v;;a;;r;;d53,1186;;b0,0;;m0;;emodule;;pmodule_id;;pcont;;p">
 </treenode>
-<treenode node="backup;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1553;3;1665;;;;vpos;;v;;a;;r;;d19,1553;;b0,0;;m0;;e">
+<treenode node="backup;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1552;3;1664;;;;vpos;;v;;a;;r;;d19,1552;;b0,0;;m0;;e">
 </treenode>
-<treenode node="compress_html;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1699;3;1704;;;;vpos;;v;;a;;r;;d35,1699;;b0,0;;m0;;ecompress;;p">
+<treenode node="compress_html;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1698;3;1703;;;;vpos;;v;;a;;r;;d35,1698;;b0,0;;m0;;ecompress;;p">
 </treenode>
-<treenode node="get_phpmorphy;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1667;3;1697;;;;vpos;;v;;a;;r;;d37,1667;;b0,0;;m0;;edescr_str;;p">
+<treenode node="get_phpmorphy;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1666;3;1696;;;;vpos;;v;;a;;r;;d37,1666;;b0,0;;m0;;edescr_str;;p">
 </treenode>
-<treenode node="get404Content;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1000;3;1042;;;;vpos;;v;;a;;r;;d26,1000;;b0,0;;m0;;e">
+<treenode node="get404Content;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;999;3;1041;;;;vpos;;v;;a;;r;;d26,999;;b0,0;;m0;;e">
 </treenode>
-<treenode node="getAdminPanel;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1044;3;1103;;;;vpos;;v;;a;;r;;d26,1044;;b0,0;;m0;;e">
+<treenode node="getAdminPanel;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1043;3;1102;;;;vpos;;v;;a;;r;;d26,1043;;b0,0;;m0;;e">
 </treenode>
 <treenode node="getBlockSwitchSelector;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;781;3;818;;;;vpos;;v;;a;;r;;d49,781;;b0,0;;m0;;es;;pcont;;p">
 </treenode>
 <treenode node="getCmsFooter;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;307;3;389;;;;vpos;;v;;a;;r;;d25,307;;b0,0;;m0;;e">
 </treenode>
-<treenode node="getContent;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;899;3;959;;;;vpos;;v;;a;;r;;d23,899;;b0,0;;m0;;e">
+<treenode node="getContent;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;898;3;958;;;;vpos;;v;;a;;r;;d23,898;;b0,0;;m0;;e">
 </treenode>
-<treenode node="getContentPostfix;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;886;3;897;;;;vpos;;v;;a;;r;;d47,886;;b0,0;;m0;;eleft_menu;;p">
+<treenode node="getContentPostfix;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;885;3;896;;;;vpos;;v;;a;;r;;d47,885;;b0,0;;m0;;eleft_menu;;p">
 </treenode>
-<treenode node="getContentPrefix;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;868;3;884;;;;vpos;;v;;a;;r;;d46,868;;b0,0;;m0;;eleft_menu;;p">
+<treenode node="getContentPrefix;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;867;3;883;;;;vpos;;v;;a;;r;;d46,867;;b0,0;;m0;;eleft_menu;;p">
 </treenode>
-<treenode node="getFeedbackForm;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1253;3;1362;;;;vpos;;v;;a;;r;;d28,1253;;b0,0;;m0;;e">
+<treenode node="getFeedbackForm;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1252;3;1361;;;;vpos;;v;;a;;r;;d28,1252;;b0,0;;m0;;e">
 </treenode>
 <treenode node="getFooter;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;391;3;446;;;;vpos;;v;;a;;r;;d22,391;;b0,0;;m0;;e">
 </treenode>
@@ -6521,29 +6521,29 @@
 </treenode>
 <treenode node="getIndexContent;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;821;3;838;;;;vpos;;v;;a;;r;;d28,821;;b0,0;;m0;;e">
 </treenode>
-<treenode node="getInnerContent;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;842;3;866;;;;vpos;;v;;a;;r;;d33,842;;b0,0;;m0;;econt;;p">
+<treenode node="getInnerContent;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;840;3;865;;;;vpos;;v;;a;;r;;d35,840;;b0,0;;m0;;econt;;p">
 </treenode>
 <treenode node="getMineFerrumForm;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;603;3;779;;;;vpos;;v;;a;;r;;d30,603;;b0,0;;m0;;e">
 </treenode>
 <treenode node="getMineHeader;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;214;3;266;;;;vpos;;v;;a;;r;;d26,214;;b0,0;;m0;;e">
 </treenode>
-<treenode node="getMineReviews;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1105;3;1166;;;;vpos;;v;;a;;r;;d27,1105;;b0,0;;m0;;e">
+<treenode node="getMineReviews;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1104;3;1165;;;;vpos;;v;;a;;r;;d27,1104;;b0,0;;m0;;e">
 </treenode>
 <treenode node="getMineSlider;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;511;3;601;;;;vpos;;v;;a;;r;;d26,511;;b0,0;;m0;;e">
 </treenode>
 <treenode node="getMineTopMenu;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;268;3;305;;;;vpos;;v;;a;;r;;d27,268;;b0,0;;m0;;e">
 </treenode>
-<treenode node="getMobal;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1364;3;1551;;;;vpos;;v;;a;;r;;d21,1364;;b0,0;;m0;;e">
+<treenode node="getMobal;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1363;3;1550;;;;vpos;;v;;a;;r;;d21,1363;;b0,0;;m0;;e">
 </treenode>
 <treenode node="getModule;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;127;3;129;;;;vpos;;v;;a;;r;;d22,127;;b0,0;;m0;;e">
 </treenode>
 <treenode node="getModuleId;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;131;3;133;;;;vpos;;v;;a;;r;;d24,131;;b0,0;;m0;;e">
 </treenode>
-<treenode node="getPlane;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;961;3;998;;;;vpos;;v;;a;;r;;d21,961;;b0,0;;m0;;e">
+<treenode node="getPlane;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;960;3;997;;;;vpos;;v;;a;;r;;d21,960;;b0,0;;m0;;e">
 </treenode>
 <treenode node="getStylesheetAndJs;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;448;3;491;;;;vpos;;v;;a;;r;;d31,448;;b0,0;;m0;;e">
 </treenode>
-<treenode node="getVisitedPage;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1168;3;1185;;;;vpos;;v;;a;;r;;d67,1168;;b0,0;;m0;;elink;;pimg;;ptitle;;p">
+<treenode node="getVisitedPage;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1167;3;1184;;;;vpos;;v;;a;;r;;d67,1167;;b0,0;;m0;;elink;;pimg;;ptitle;;p">
 </treenode>
 <treenode node="route;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;148;3;177;;;;vpos;;v;;a;;r;;d18,148;;b0,0;;m0;;e">
 </treenode>
@@ -6553,9 +6553,9 @@
 </treenode>
 <treenode node="setSiteTitle;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;135;3;137;;;;vpos;;v;;a;;r;;d30,135;;b0,0;;m0;;etext;;p">
 </treenode>
-<treenode node="showSite;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1706;3;1751;;;;vpos;;v;;a;;r;;d38,1706;;b0,0;;m0;;eview;;p">
+<treenode node="showSite;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1705;3;1750;;;;vpos;;v;;a;;r;;d38,1705;;b0,0;;m0;;eview;;p">
 </treenode>
-<treenode node="showVisitedPage;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1208;3;1251;;;;vpos;;v;;a;;r;;d40,1208;;b0,0;;m0;;eoutput;;p">
+<treenode node="showVisitedPage;PHP:Function Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php;f2;1207;3;1250;;;;vpos;;v;;a;;r;;d40,1207;;b0,0;;m0;;eoutput;;p">
 </treenode>
 </treenode>
 <treenode node="SiteCorporate;PHP:Class Name;E:\яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.Site.php;f0;7;1;184;;;;vpos;;v;;aSiteBase;;c;;r;;d36,7;;b0,0;;m0;;e">

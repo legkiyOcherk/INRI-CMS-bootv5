@@ -2,32 +2,6 @@
 <project name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\INRI-CMS-bootv5.clpprj">
 	<settings><PM_URL><![CDATA[E:\Яндекс диск\gitHub\INRI-CMS-bootv5]]></PM_URL><PM_HOME_URL><![CDATA[E:\Яндекс диск\gitHub\INRI-CMS-bootv5]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
 	</lastopfiles>
-	<errors version="5.11">
-		<errfile name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\vendors\phpmorphy\src\morphiers.php">
-			<error val="116;1887;117;1887;901;2;"/>
-		</errfile>
-		<errfile name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\lib\simple_html_dom.php">
-			<error val="30;1077;31;1077;901;2;"/>
-		</errfile>
-		<errfile name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\css\style.css">
-			<error val="2;70;27;70;2502;1;"/>
-			<error val="2;73;27;73;2502;1;"/>
-			<error val="14;78;17;78;2501;1;"/>
-		</errfile>
-		<errfile name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\admin_inri\reviews.php">
-			<error val="72;46;73;46;102;1;"/>
-			<error val="23;50;24;50;102;1;"/>
-			<error val="75;60;76;60;102;1;"/>
-		</errfile>
-	</errors>
-	<cakedata>
-	</cakedata>
-	<dplmenupath>
-	</dplmenupath><laravael>
-	</laravael><smartyassings>
-	</smartyassings><twigtemplate>
-	</twigtemplate><yiidata>
-	</yiidata>
 	<todoblock>
 		<todofile name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\admin_inri\elfinder\php\elFinderVolumeDriver.class.php">
 			<todo name="TODO crypt path and return hash" pos="4;1778"/>
@@ -301,7 +275,7 @@
 		<file name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\lib\smtpconfig.php" crc="1654604739"/>
 		<file name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\lib\simple_html_dom.php" crc="1654604739"/>
 		<file name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.smtp.php" crc="1654604739"/>
-		<file name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php" crc="1654695128"/>
+		<file name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.SiteBase.php" crc="1654849983"/>
 		<file name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.Site.php" crc="1654682473"/>
 		<file name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.Search.php" crc="1654604739"/>
 		<file name="E:\Яндекс диск\gitHub\INRI-CMS-bootv5\lib\class.Reviews.php" crc="1654604739"/>
