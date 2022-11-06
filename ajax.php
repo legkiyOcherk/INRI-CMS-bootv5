@@ -329,16 +329,37 @@ if(isset($_POST['good_buy'])){
   	if(isset($_SESSION['city_id']) && $_SESSION['city_id']  ){
       $default_phone = db::value("val", DB_PFX."config", "name = 'phone'", 0 );
     }
-        
-    $res = $mail->smtpmail ($email_order, $subject, $tosend);
-    //$headers = 'From: test <'.$from.'>' . "\r\n";
     
     
-    /*$headers = "Content-type: text/html; charset=\"utf-8\"";
+    // Если несколько адресов перечисленно через запятую
+    $exp_email_order = explode(',', $email_order);
+    if(is_array($exp_email_order)){
+      $email_order = array();
+      foreach($exp_email_order as $ee_mail){
+        $email_order[] = $ee_mail;
+      }
+    } # pri($email_order);
+    # ini_set('display_errors', 0);
+    # ini_set('display_startup_errors', 0);
+    # error_reporting(E_ALL);
+    # $res = $mail->smtpmail ($email_order, $subject, $tosend, 'robot.repra@yandex.ru');
     
-    $res = mail($email_order, $subject, $tosend, $headers);
-    */
-        
+    $to_mail = '';
+    if(is_array($email_order)){
+      foreach($email_order as $k => $v){
+        if($to_mail) $to_mail .= ', ';
+        $to_mail .= $v;
+      }
+    }else{
+      $to_mail = $email_order;                //кому письмо  
+    }
+    
+    
+    $headers = "Content-type: text/html; charset=\"utf-8\"";
+    #$res = mail($to_mail, $subject, $tosend, $headers);
+    $res = send_mail_only_php_methods($to_mail, $subject, $tosend, $headers);
+    
+    
     if($res){
       $is_send = true;
     }else{
@@ -364,6 +385,52 @@ if(isset($_POST['good_buy'])){
   }
   
 }
+
+function send_mail_only_php_methods($to, $thm, $html, $path){ 
+    $headers = $multipart = $message_part = '';
+    
+    $boundary = "--".md5(uniqid(time())); # разделитель 
+    
+    $headers .= "MIME-Version: 1.0\n"; 
+    $headers .="Content-Type: multipart/mixed; boundary=\"$boundary\"\n"; 
+    
+    $multipart .= "--$boundary\n"; 
+    $multipart .= "Content-Type: text/html; charset=utf-8\n"; 
+    $multipart .= "Content-Transfer-Encoding: Quot-Printed\n\n"; 
+    $multipart .= "$html\n\n"; 
+    
+    if(isset($_FILES['fileFF']) && $_FILES['fileFF'] ){ 
+      for($i=0;$i<count($_FILES['fileFF']['name']);$i++) {
+        if(is_uploaded_file($_FILES['fileFF']['tmp_name'][$i])) {
+          $ff_file     = $_FILES['fileFF']['tmp_name'][$i];
+          $ff_filename = $_FILES['fileFF']['name'][$i];
+          
+          $fp = fopen($ff_file,"r"); 
+      		if (!$fp) { echo "Не удается открыть $ff_filename"; exit();} 
+          $file = fread($fp, filesize($ff_file)); 
+          fclose($fp); 
+          
+          //$filename = $attach['fileFF']['name'][$i];
+          //$filetype = $attach['fileFF']['type'][$i];
+          //$filesize += $attach['fileFF']['size'][$i];
+          #$mail->AddAttachment($attach['fileFF']['tmp_name'][$i], $attach['fileFF']['name'][$i]);
+           
+          $message_part .= "--$boundary\n";   
+          $message_part .= "Content-Type: application/octet-stream name=\"$ff_filename\"\n"; 
+          $message_part .= "Content-Transfer-Encoding: base64\n"; 
+          $message_part .= "Content-Disposition: attachment; filename = \"$ff_filename\"\n\n"; 
+          $message_part .= chunk_split(base64_encode( $file ))."\n";       
+          
+          
+        }
+      } 
+    }
+    
+    $multipart .= $message_part."--$boundary--\n"; 
+    
+    return mail($to, $thm, $multipart, $headers); 
+    
+  } 
 
 if(isset($_POST['feedback'])){
 	if(!$_POST['requestName']) return 'Не заданно имя';

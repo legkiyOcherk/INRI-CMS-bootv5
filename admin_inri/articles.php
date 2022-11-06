@@ -528,8 +528,10 @@ class Article extends BlockClass{
     $this->header = '<h1><a href = "'.IA_URL.$this->carusel_name.'.php?c_id=root">'.$this->header.'</a></h1>';
     $output .=  '
     <table class="table table-condensed">
-      <tr class="r0"><td><a href="?view_tree">Дерево всех категорий</a></td></tr>
-      <tr class="r1"><td><a href="?full_tree">Полный каталог</a></td></tr>
+      <tr class="r0">
+        <a href="?view_tree"          class = "btn btn-default" ><i class="fas fa-tree"></i> Дерево всех категорий</a>
+        <a href="?full_tree"          class = "btn btn-default" ><i class="fas fa-server"></i> Полный каталог</a>
+      </tr>
     </table>';
     $output .= '
 		  <script>

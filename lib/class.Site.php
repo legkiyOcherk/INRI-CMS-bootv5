@@ -18,8 +18,8 @@ class SiteCorporate extends SiteBase{
               <nav class= "navbar navbar-expand-sm navbar-dark bg-dark">
                 <a class="navbar-brand d-sm-none" href="#">Меню</a>
                 <button class="navbar-toggler" type="button" 
-                  data-toggle="collapse" 
-                  data-target="#navbarsTop" 
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#navbarsTop" 
                   aria-controls="navbarsTop" 
                   aria-expanded="false" 
                   aria-label="Toggle navigation">
@@ -248,7 +248,7 @@ class SiteOnlineshop extends SiteBase{
                   <div class="col-12 col-sm-4 col-lg-auto">
                     <div class="header_callback_box">
                       <div class="header_callback">
-                        <button class="btn flmenu1" data-id="0" data-target="#myModal" data-title="Заказать обратный звонок" data-toggle="modal">Заказать обратный звонок</button>
+                        <button class="btn btn-outline-success flmenu1" data-id="0" data-bs-target="#myModal" data-title="Заказать обратный звонок" data-bs-toggle="modal">Заказать обратный звонок</button>
                       </div>
                       <div class="header_soc">
                         '.$this->soc_net.'

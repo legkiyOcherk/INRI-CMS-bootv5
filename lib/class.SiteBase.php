@@ -190,7 +190,7 @@ class SiteBase {
     }
     
     $output .= '
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css?v=1" rel="stylesheet">
     ';
     $output .= $this->user_meta;
@@ -246,8 +246,8 @@ class SiteBase {
                   <div class="col-12 col-sm-4 col-lg-auto">
                     <div class="header_callback_box">
                       <div class="header_callback">
-                        <button class="btn flmenu1" data-id="0" data-target="#myModal" data-title="Заказать обратный звонок" data-toggle="modal">Заказать обратный звонок</button>
-                      </div>
+                        <button class="btn btn-outline-success flmenu1" data-id="0" data-bs-target="#myModal" data-title="Заказать обратный звонок" data-bs-toggle="modal">Заказать обратный звонок</button>
+                      </div> 
                       <div class="header_soc">
                         '.$this->soc_net.'
                       </div>
@@ -277,8 +277,8 @@ class SiteBase {
               <nav class= "navbar navbar-expand-sm navbar-dark bg-dark">
                 <a class="navbar-brand d-sm-none" href="#">Меню</a>
                 <button class="navbar-toggler" type="button" 
-                  data-toggle="collapse" 
-                  data-target="#navbarsTop" 
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#navbarsTop" 
                   aria-controls="navbarsTop" 
                   aria-expanded="false" 
                   aria-label="Toggle navigation">
@@ -454,8 +454,8 @@ class SiteBase {
     <link rel="stylesheet" type="text/css" media="all" href="/css/font-awesome/css/font-awesome.min.css">
     
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" ></script>
     
     <script src="/vendors/maskedinput/jquery.maskedinput.min.js"></script>
     <script type="text/javascript">
@@ -560,13 +560,13 @@ class SiteBase {
                   </a>';
           if($r['txt1'] || $r['longtxt1']){
             $output .= '
-                   <div class="carousel-caption d-none d-md-block bg-light text-dark shadow-lg">';
+                   <div class = "carousel-caption d-none d-md-block text-dark text-white">';
             if($r['txt1'])
               $output .= '     
-                    <h5>'.$r['txt1'].'</h5>';
+                    <h5 class = "fs-1 text-shadow ">'.$r['txt1'].'</h5>';
             if($r['longtxt1'])
               $output .= '                  
-                    <p>'.$r['longtxt1'].'</p>';
+                    <p class = "fs-3">'.$r['longtxt1'].'</p>';
             $output .= '
                   </div>';
           
@@ -683,7 +683,7 @@ class SiteBase {
               <div class="modal-header">
                 <p class="modal-title" id="myModalCallLabel"><strong>Заявка</strong></p>
               
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">×</span>
                 </button>
               
@@ -693,7 +693,7 @@ class SiteBase {
                 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Закрыть</button>
                 <!--<button type="button" class="btn btn-primary">Сохранить изменения</button>-->
               </div>
             </div>
@@ -1072,7 +1072,7 @@ class SiteBase {
         	position:fixed; 
         	top:0; 
         	right:0; 
-        	width:160px; 
+        	width: 75px; 
         	overflow:hidden;	
         	border-radius:0 0 10px 10px;
         	-webkit-box-shadow: 0 5px 3px 2px #999; 
@@ -1088,15 +1088,15 @@ class SiteBase {
         #trigger,#trigger2{
         	cursor:pointer;
         }
+      
       </style>';
       
       $output .= '
       <div class="container-fluid " id="wa_panel">
         <div class="row-fluid">
-          <div class="span2"><a class="btn btn-sm" target = "_blank" href="/'.ADM_DIR.$this->adminLink.'">править в '.ADM_DIR.'</a></div>
-        </div>
-        <div class="row-fluid" style="text-align:center">
-          <i class="icon-chevron-up" id="trigger"> Х скрыть </i>
+          <div class="span2">
+            <a class="btn btn-sm btn-warning" target = "_blank" href="/'.ADM_DIR.$this->adminLink.'">в ADM</a>
+            <i class="icon-chevron-up" id="trigger"> Х </i> 
         </div>
      </div>';
     }
@@ -1261,14 +1261,14 @@ class SiteBase {
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
               <h4 class="modal-title" id="getCardModalLabel"><strong>Заказ обратного звонка</strong></h4>
             </div>
             <div class="modal-body getCard-body ">
               
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+              <button type="button" class="btn btn-default" data-bs-dismiss="modal">Закрыть</button>
               <!--<button type="button" class="btn btn-primary">Сохранить изменения</button>-->
             </div>
           </div>
@@ -1373,38 +1373,30 @@ class SiteBase {
         <div class="modal-content">
           <div class="modal-header">
             <p class="modal-title" id="myModalLabel"></p>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+          
           <input type = "hidden" id = "goods_id" value = "">
 
           <div class="modal-body">            
             <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-addon input-group-text">Имя</span>
-              </div>
+              <span class="input-group-addon input-group-text">Имя</span>
               <input type="text" class="form-control" id = "UserName" placeholder="Иван"  >
             </div>
             <br>
             <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-addon input-group-text">Телефон <span style = "color:#d73200;">*</span></span>
-              </div>
+              <span class="input-group-addon input-group-text">Телефон <span style = "color:#d73200;">*</span></span>
               <input type="text" class="form-control req" id = "UserPhone" placeholder="+7 900 800-800-80" required="required" >
             </div>
             <br>
             <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-addon input-group-text">Почта</span>
-              </div>  
+              <span class="input-group-addon input-group-text">Почта</span>
+              
               <input type="mail" class="form-control" id = "UserMail" placeholder="ivan@mail.ru"  pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
             </div>
             <br>
             <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-addon input-group-text">Текст</span>
-              </div> 
+              <span class="input-group-addon input-group-text">Текст</span>
               <textarea class="form-control glyphicon-ok" rows="5" id = "UserText"></textarea>
             </div>
             <br>
@@ -1423,17 +1415,20 @@ class SiteBase {
     <div id="modal_alert" class="modal fade " >
       <div class="modal-dialog alert alert-succes">
         <div class="modal-content alert alert-succes">
+          
           <div class="modal-header">
-            <p class="modal-title" id = "modal_alert_title"></p>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <p class="modal-title" id="modal_alert_title"></p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+          
           <div class="modal-body" id = "modal_alert_body">
             <b>Спасибо! Ваша заявка успешно отправлена.</b><br><br>
             Менеджер свяжется с Вами.
           </div>
-          <div class="modal-footer"><button class="btn btn-success" type="button" data-dismiss="modal">Закрыть</button></div>    </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" type="button" data-bs-dismiss="modal">Закрыть</button>
+          </div>    
+        </div>
       </div>
     </div>';
     
@@ -1513,8 +1508,8 @@ class SiteBase {
               $("#UserPhone").val("");
               $("#UserMail").val("");
               $("#UserText").val("");
-              $(".good_buy_mobal").parents(".input-group").removeClass("has-success");
-              $(".good_buy_mobal").parents(".input-group").removeClass("has-error");
+              $("#myModal .input-group").removeClass("has-success");
+              $("#myModal .input-group").removeClass("has-error");
               $("#modal_alert").modal("show");
               
               if(user_title == "Записаться на приём"){

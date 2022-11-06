@@ -775,6 +775,22 @@ HTML;
     return $output;
   }
   
+  function get_show_table_menu_btn( $c_id ){
+    $output = "";
+    
+    $output .=  '
+      <table class="table table-sm">
+        <tr class="r0">
+          <td>
+            <a href="?view_tree"          class = "btn btn-default" ><i class="fas fa-tree"></i>  Дерево всех категорий</a>
+            <a href="?full_tree"          class = "btn btn-default" ><i class="fas fa-server"></i> Полный каталог</a>
+          </td>
+        </tr>
+      </table>';
+    
+    return $output;
+  }
+  
   function show_table(){
     $output = "";
     
@@ -795,11 +811,7 @@ HTML;
     $this->header = $header;
     (!is_null($this->admin)) ?  : $output .=  $header;
     
-    $output .=  '
-    <table class="table table-sm">
-      <tr class="r0"><td><a href="?view_tree">Дерево всех категорий</a></td></tr>
-      <tr class="r1"><td><a href="?full_tree">Полный каталог</a></td></tr>
-    </table>';
+    $output .= $this->get_show_table_menu_btn( $c_id );
     
     $bread_crumbs = $this->show_bread_crumbs();
     (!is_null($this->admin))?  : $output .=  $bread_crumbs;
@@ -1836,8 +1848,10 @@ HTML;
     $this->header = '<h1><a href = "'.IA_URL.$this->carusel_name.'.php?c_id=root">'.$this->header.'</a></h1>';
     $output .=  '
     <table class="table table-sm">
-      <tr class="r0"><td><a href="?view_tree">Дерево всех категорий</a></td></tr>
-      <tr class="r1"><td><a href="?full_tree">Полный каталог</a></td></tr>
+      <tr class="r0">
+          <a href="?view_tree"          class = "btn btn-default" ><i class="fas fa-tree"></i> Дерево всех категорий</a>
+          <a href="?full_tree"          class = "btn btn-default" ><i class="fas fa-server"></i> Полный каталог</a>
+      </tr>
     </table>';
     $output .= '<table class="catalog" width="990"><tr><td style="text-align: left;">';
 		$output .= '<div class="well">';
@@ -1907,8 +1921,10 @@ HTML;
     $this->header = '<h1><a href = "'.IA_URL.$this->carusel_name.'.php?c_id=root">'.$this->header.'</a></h1>';
     $output .=  '
     <table class="table table-sm">
-      <tr class="r0"><td><a href="?view_tree">Дерево всех категорий</a></td></tr>
-      <tr class="r1"><td><a href="?full_tree">Полный каталог</a></td></tr>
+      <tr class="r0">
+        <a href="?view_tree"          class = "btn btn-default" ><i class="fas fa-tree"></i> Дерево всех категорий</a>
+        <a href="?full_tree"          class = "btn btn-default" ><i class="fas fa-server"></i> Полный каталог</a>
+      </tr>
     </table>';
      
     $output .= '

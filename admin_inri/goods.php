@@ -558,6 +558,28 @@ class Goods extends BlockClass{
     return $output;
   }
   
+    function get_show_table_menu_btn( $c_id ){
+    $output = "";
+    
+    $output .=  '
+      <table class="table table-sm">
+        <tr class="r0">
+          <td>
+            <a href="?view_tree"          class = "btn btn-default" ><i class="fas fa-tree"></i>  Дерево всех категорий</a>
+            <a href="?full_tree"          class = "btn btn-default" ><i class="fas fa-server"></i> Полный каталог</a>';
+            #<a href="?uploadPrice"        class = "btn btn-default" ><i class="fas fa-sync"></i> Обновить каталог</a>
+            #<a href="?upload_img"         class = "btn btn-default" ><i class="fas fa-upload"></i> Загрузить изображения</a>
+            #<a href="?update_information" class = "btn btn-default" ><i class="fas fa-exchange-alt"></i> Обновление цен</a>
+    $output .=  '
+            <a href="?xls_id='.$c_id.'"   class = "btn btn-default" ><i class="fas fa-download"></i> Скачть ВЕСЬ катлог в xls</a>
+          </td>
+        </tr>
+      </table>';
+    
+    return $output;
+  }
+  
+  
   function show_table_header_rows(){
     $output = '
           <tr class="tth nodrop nodrag">
@@ -723,8 +745,12 @@ class Goods extends BlockClass{
     $this->header = '<h1><a href = "'.IA_URL.$this->carusel_name.'.php?c_id=root">'.$this->header.'</a></h1>';
     $output .=  '
     <table class="table table-condensed">
-      <tr class="r0"><td><a href="?view_tree">Дерево всех категорий</a></td></tr>
-      <tr class="r1"><td><a href="?full_tree">Полный каталог</a></td></tr>
+      <tr class="r0">
+        <td>
+          <a href="?view_tree"          class = "btn btn-default" ><i class="fas fa-tree"></i> Дерево всех категорий</a>
+          <a href="?full_tree"          class = "btn btn-default" ><i class="fas fa-server"></i> Полный каталог</a>
+        </td>
+      </tr>
     </table>';
     $output .= '
 		  <script>
@@ -808,6 +834,285 @@ class Goods extends BlockClass{
       
       </style>
     ';
+    
+    return $output;
+  }
+  
+  function get_xls_table_header(){ # Заголовок таблицы
+    $output = '';
+    
+    foreach($this->date_arr as $k => $v ){      
+      if( !isset($this->date_arr_not_xls_export[$k]) ){ # Не входит в исключенные поля
+        $output .= '
+          <th>'.$v.'</th> ';
+      }
+    }
+    
+    return $output;
+  }
+  
+  function get_xls_table_cat_row( $cat_item, $style_td ){ # Строка категории
+    $output = '';
+    $output .= '
+        <tr>
+          <td style = "'.$style_td.'"><b>'.$this->cat_numbers[$cat_item['id']].'</b></td>
+          <td style = "'.$style_td.'"><b>'.$cat_item['title'].'</b></td>
+          <td style = "'.$style_td.'"></td>'; # '.$cat_item['id'].'
+          
+    foreach($this->date_arr as $k => $v ){ 
+      if( !isset($this->date_arr_not_xls_export[$k]) ){ # Не входит в исключенные поля
+        $output .= '
+            <td style = "'.$style_td.'"></td> ';
+      }
+    }
+    $output .= '
+        </tr>';
+    
+    return $output;
+  }
+  
+  function get_cat_numbers( $cid, $prefix = '' ){
+    $cat_items = db::select(  '*', DB_PFX.'goods_cat', "parent_id = ".$cid, 'ord', null, null, 0 );
+    #pri($cat_items);
+    
+    $i = 1;
+    foreach($cat_items as $cat_item){
+      $number = $i++.'.';
+      $this->cat_numbers[$cat_item['id']] = $prefix.$number;
+      $this->get_cat_numbers( $cat_item['id'], $prefix.$number );
+    }
+  }
+  
+  function xls_cat_slide( $id ){ #pri('xls_cat_slide');
+    $output = '';
+    
+    $this->date_arr_not_xls_export = array( # Не экспортировать поля
+      'title'             => 'Название',    # расчитывается отдельно
+      'cat_id'            => 'Категория',   # расчитывается отдельно
+      'article'           => 'Артикул',     # расчитывается отдельно
+      /*'article_provider'  => 'Артикул поставщика',
+      'old_price'         => 'Старая цена',
+      'price'             => 'Цена',
+      'amount'            => 'Количество',
+      
+      'availability_id'   => 'Варианты наличия',
+      'country_id'        => 'Страна',
+      'brand_id'          => 'Бренд',
+      'units_id'          => 'Еденицы измерения',
+      
+      'longtxt1'          => 'Краткое описание',
+      'longtxt2'          => 'Полное описание',
+      'longtxt3'          => 'Технические характеристики',
+      
+      'is_hit'            => 'Хит продаж', 
+      'is_new'            => 'Новинка',
+      'is_sale'           => 'Скидка',
+      
+      'seo_h1'            => 'SEO h1',
+      'seo_title'         => 'SEO Title',
+      'seo_description'   => 'SEO Description',
+      'seo_keywords'      => 'SEO Keywords',
+      'img_alt'           => 'Alt изображение',
+      'img_title'         => 'Title изображение',*/
+      
+      'orm_search_name'   => 'поле для поискового индекса orm_search_name', # расчитывается отдельно
+      'orm_search'        => 'поле для поискового индекса orm_search',      # расчитывается отдельно
+    );
+    
+    $header .='<h1><a href="'.IA_URL.$this->carusel_name.'.php">'.$this->header.'</a></h1>';
+    $this->header = $header;
+    (!is_null($this->admin)) ?  : $output .=  $header;
+    
+    if($id){
+      $c_title = db::value('title', '`'.$this->prefix.$this->carusel_name.'_cat'.'`', "id = ".$id );
+      $title .='<a href="?c_id='.$id.'"> '.$c_title.' </a> → '; 
+    }
+    
+    $title .=' выгрузка в xls каталога';
+    
+    $this->title  = $title;
+    (!is_null($this->admin)) ?  : $output .=  '<h3>'.$title.'</h3><br><br>';
+    
+    if(!isset($this->brand)){
+      $brands = db::select('*', DB_PFX.'brand' );
+      foreach( $brands as $brand){
+        $this->brand[$brand['id']] = $brand;
+      } #pri($this->brand);
+    }
+    
+    if(!isset($this->availability)){
+      $availabilitys = db::select('*', DB_PFX.'availability' );
+      foreach( $availabilitys as $availability){
+        $this->availability[$availability['id']] = $availability;
+      } #pri($this->availability);
+    }
+    
+    if(!isset($this->units)){
+      $units = db::select('*', DB_PFX.'units' );
+      foreach( $units as $unit){
+        $this->units[$unit['id']] = $unit;
+      } #pri($this->units);
+    }
+    if(!isset($this->cat_numbers)){
+      $this->get_cat_numbers(0);
+    } #pri($this->cat_numbers);
+    
+    
+    
+    if($xls_cat_rows = $this->get_xls_cat_rows( $id )){
+      $output .= '
+      <div> <a href="/'.ADM_DIR.'/goods.php?xls_id='.$id.'&get_xls=1" class = "btn btn-success" target = "_blank">Скачать xls</a> </div>';
+      $output_table = '
+      <div class="table-responsive">
+        <table class = "table table-sm table-bordered" cellspacing="0 cellpadding="0 >
+          <thead>
+            <tr>
+              <th>№ раздела</th>
+              <th>Наименование</th>
+              <th>Артикул</th>';
+      $output_table .= $this->get_xls_table_header();
+      $output_table .= '
+            </tr>
+          </thead>
+          <tbody>
+            '.$xls_cat_rows.'
+          </tbody>
+        </table>
+      </div>';
+      
+    }
+    if(isset($_GET['get_xls'])){
+      header("Content-Type: application/force-download");
+      header("Content-Type: application/octet-stream");
+      header("Content-Type: application/download");
+      header("Content-Disposition: attachment;filename=lampa66_".date('d.m.Y H:i:s').".xls"); 
+      header("Content-Transfer-Encoding: binary");
+      
+      echo $output_table;
+      die();
+    }else{
+      $output .= '
+      <div class="table-responsive">';
+      $output .= $output_table;
+      $output .= '
+      </div>';
+    }
+    
+    #pri($this);
+    
+    return $output;
+  }
+  
+  function get_xls_cat_rows($cid){ 
+    $output = '';
+    
+    $cat_item = db::row( '*', DB_PFX.'goods_cat', "id = ".$cid );
+    $style_td = 'border: 1px solid #777;';
+    $output  .= $this->get_xls_table_cat_row($cat_item, $style_td);
+    
+    
+    $items = db::select(  '*', DB_PFX.'goods', "cat_id = ".$cid, 'ord' );
+    
+    # Узнаем последнее время обновления в разделе
+    #$last_update_time = '';
+    #if($last_update_time_row = db::row( '*', $this->prefix.$this->carusel_name, "cat_id = ".$cid, "update_date DESC " )){
+    #  $last_update_time = $last_update_time_row['update_date'];  
+    #} pri($last_update_time); 
+    
+    foreach($items as $item){
+      $brand = $availability = '';
+     
+      if( isset($item['brand_id']) )        $brand_id        = $this->brand[$item['brand_id']]['title'];
+      if( isset($item['availability_id']) ) $availability_id = $this->availability[$item['availability_id']]['title'];
+      if( isset($item['units_id']) )        $units_id        = $this->units[$item['units_id']]['title']; 
+      $article = $item['article'];
+      if( !$article ) $article = $item['id'];
+      $output .= '
+      <tr style = "vertical-align: top;">
+        <td style = "'.$style_td.'"></td>
+        <td style = "'.$style_td.'">'.$item['title'].'</td>
+        <td style = "'.$style_td.' text-align: right;">'.$article.'</td>'; 
+        
+      foreach($this->date_arr as $k => $v ){      
+        if( !isset($this->date_arr_not_xls_export[$k]) ){ # Не входит в исключенные поля
+          $item_val = $item[$k];
+          
+          
+          if( isset($$k) && $$k) $item_val = $$k;
+          #$item_val = str_replace("\r\n","", $item_val);
+          if(isset($_GET['get_xls'])){
+            $item_val = htmlspecialchars($item_val);
+          }
+          $output .= '
+            <td style = "'.$style_td.'">'.$item_val.'</td> '; 
+        }
+      }    
+      #if( $last_update_time && ( $last_update_time == $item['update_date'] ) ){
+      #  $output .= '<td style = "'.$style_td.' background: yellow;">'.$item['update_date'].'</td>';
+      #}else{
+      #  $output .= '<td style = "'.$style_td.'">'.$item['update_date'].'</td>';
+      #}
+      
+      $output .= '
+      </tr>';
+      
+    }
+    
+    $cat_items = db::select(  '*', DB_PFX.'goods_cat', "parent_id = ".$cid, 'ord' );
+    
+    foreach($cat_items as $cat_item){
+      $output .= $this->get_xls_cat_rows( $cat_item['id'] );
+    }
+    
+    return $output;
+  }
+  
+  function getContent(&$admin = null){
+    $carisel = $this;
+    
+    if(!is_null($admin)){
+      if(isset($admin->is_admin_navigation) && ($admin->is_admin_navigation) ){
+        $this->admin = &$admin;
+      }
+    }
+    
+    $output = '';
+        
+    if (isset($_SESSION["WA_USER"])){
+      
+      if(isset($_GET['view_tree'])){
+        $output .= $carisel->view_tree();
+      }elseif(isset($_GET['full_tree'])){
+        $output .= $carisel->full_tree();
+      }
+      
+      // Обновить каталог
+      elseif(isset($_GET['uploadPrice'])){
+        $output .= $carisel->upload_price();
+      }
+      elseif(isset($_GET['upload_img'])){ // Загрузить кртинки
+        $output .= $this->viewFormUploadZip(); 
+  			if ( $_FILES ) {
+  				$output .= $this->uploadZipImg();
+  			}
+      }elseif(isset($_GET['update_information'])){ // Обновить цены
+        $output .= $this->updateInformation(); 
+        
+      }elseif(isset($_GET["xls_id"])){
+        $output .= $carisel->xls_cat_slide(intval($_GET["xls_id"]));  
+      }
+    }
+      
+    if(!$output){
+      $output .= parent::getContent( $admin);
+    }else{
+       if(!is_null($admin)){
+        $admin->setForName('header', $this->getForName('header'));
+        $admin->setForName('bread', $this->getForName('bread'));
+        $admin->setForName('title', $this->getForName('title'));
+        $admin->setForName('cont_footer', $this->getForName('cont_footer'));
+      }
+    }
     
     return $output;
   }
