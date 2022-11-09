@@ -162,6 +162,7 @@ class Goods extends BlockClass{
             		  <td style="width: 50px;">Скрыть</td>
                   <td style="width: 50px;">На главной</td>
             		  <td colspan = "2">Название</td>
+                  <td >Выгрузка в xls</td>
             		  <td style="width: 80px">Действие</td>
                 </tr>';
     
@@ -203,6 +204,9 @@ class Goods extends BlockClass{
                     <a href="'.IA_URL.$this->carusel_name.'.php?c_id='.$id.'" title="редактировать">'.$title.'</a>
                   </td>
               	  
+                  <td style="text-align: left;">
+                    <a href="'.IA_URL.$this->carusel_name.'.php?xls_id='.$id.'" title="Выгрузка в xls" class = "btn btn-sm btn-warning text-light">в .xls <i class="fas fa-table"></i></a>
+                  </td>
             	';
 
               $output .= '

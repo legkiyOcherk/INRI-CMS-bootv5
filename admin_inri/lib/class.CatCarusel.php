@@ -605,7 +605,7 @@ class CatCarusel extends BaseCarusel{
     
     if($c_id){
       $this->title .= '
-        <a href="/'.ADM_DIR.'/'.$this->carusel_name.'.php?editc='.$c_id.'" class="btn btn-info btn-sm px-1 py-0 mt-1" title = "Редактировать категорию">
+        <a href="/'.ADM_DIR.'/'.$this->carusel_name.'.php?editc='.$c_id.'" class="text-light btn btn-info btn-sm px-1 py-0 mt-1" title = "Редактировать категорию">
           <i class="fas fa-pencil-alt"></i> 
         </a>'; 
     }
