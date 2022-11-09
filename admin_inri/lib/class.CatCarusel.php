@@ -601,9 +601,15 @@ class CatCarusel extends BaseCarusel{
       if($title = db::value( 'title' ,$this->prefix.$this->carusel_name.'_cat', "id = $c_id"))
         $this->title = $title;
         
-    /*$where = "`parent_id` IS NULL";
-    if($c_id ) $where = "`parent_id` =  $c_id";*/
     if(!$c_id) $c_id = '0';
+    
+    if($c_id){
+      $this->title .= '
+        <a href="/'.ADM_DIR.'/'.$this->carusel_name.'?editc='.$c_id.'" class="btn btn-info btn-sm px-1 py-0 mt-1" title = "Редактировать категорию">
+          <i class="fas fa-pencil-alt"></i> 
+        </a>'; 
+    }
+    
     $where = "`parent_id` =  $c_id";
     $s_order = "`ord` ASC";
     $s = "
