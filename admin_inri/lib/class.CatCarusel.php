@@ -820,8 +820,8 @@ HTML;
         
       case 'remuve_cat':
         if ( !empty($group_items) ){
-          if(isset($_POST['remuve_cat_id']) && $_POST['remuve_cat_id']){
-            $remuve_cat_id = $_POST['remuve_cat_id'];
+          if(isset($_POST['remuve_cat_id'])){
+            $remuve_cat_id = intval($_POST['remuve_cat_id']);
             
             $i = 0; $str_item_id = '';
             foreach ($group_items as $g_item_id){
@@ -836,6 +836,12 @@ HTML;
             $res = $this->pdo->query( $s ); 
             if( $res ){
               $cat_name = db::value( 'title', $this->prefix.$this->carusel_name.'_cat', 'id = '.$remuve_cat_id );
+              
+              if($remuve_cat_id == 0){
+                $cat_name      = 'Корень';
+                $remuve_cat_id = 'root';
+              }
+              
               $output .= $this->getNotiseMobalWindow('Успешно!', 'Товары успешно перенесены в Категорию<br/><a href="/'.ADM_DIR.'/'.$this->carusel_name.'.php?c_id='.$remuve_cat_id.'">'.$cat_name.'</a>');
             }
           }
