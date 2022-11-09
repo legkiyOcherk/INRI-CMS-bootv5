@@ -836,7 +836,7 @@ HTML;
             $res = $this->pdo->query( $s ); 
             if( $res ){
               $cat_name = db::value( 'title', $this->prefix.$this->carusel_name.'_cat', 'id = '.$remuve_cat_id );
-              $output .= $this->getNotiseMobalWindow('Успешно!', 'Товары успешно перенесены в Категорию<br/><a href="/'.ADM_DIR.'/goods.php?c_id='.$remuve_cat_id.'">'.$cat_name.'</a>');
+              $output .= $this->getNotiseMobalWindow('Успешно!', 'Товары успешно перенесены в Категорию<br/><a href="/'.ADM_DIR.'/'.$this->carusel_name.'.php?c_id='.$remuve_cat_id.'">'.$cat_name.'</a>');
             }
           }
         }
@@ -886,7 +886,6 @@ HTML;
     
     return $output;
   }
-  
   
   function getGroupOperations(){
     $output = '';
@@ -978,7 +977,6 @@ HTML;
     
     return $output;
   }
-  
   
   function show_table(){
     $output = "";

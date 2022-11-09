@@ -867,7 +867,6 @@ class Goods extends BlockClass{
     return $output;
   }
   
-  
   function full_tree(){
     $output = '';
     
