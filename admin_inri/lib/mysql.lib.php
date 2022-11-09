@@ -173,12 +173,30 @@ function convert_date($date, $input_format, $output_format){
   
 }
 
-function pri($arr, $head = null){
-  if($head) echo '<br>'.$head.'<br>';
-  echo '<pre>';
-  print_r($arr);
-  echo '</pre>';
-  echo '<br>';
+function pri($arr, $in_var = false, $head = null){
+  if( isset( $_SESSION["WA_USER"]['login'] ) && $_SESSION["WA_USER"]['login'] = 'd' ){
+    
+    if($in_var){
+      $output = '';
+      if($head) 
+        $output .= '<br>'.$head.'<br>';
+      $output .= '<pre>';
+      $output .= print_r($arr, true);
+      $output .= '</pre>';
+      $output .= '<br>'; 
+      
+      return $output;
+      
+    }else{
+      if($head) echo '<br>'.$head.'<br>';
+      echo '<pre>';
+      print_r($arr);
+      echo '</pre>';
+      echo '<br>';  
+    }
+    
+  }
+  
 }
 
 function ucfirst_utf8($str){

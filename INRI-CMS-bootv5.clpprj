@@ -283,7 +283,7 @@
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.HavingPoorVision.php" crc="1654712290"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php" crc="1654711938"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.EMail.php" crc="1654712327"/>
-		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.basket.php" crc="1654711952"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.basket.php" crc="1667847535"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Article.php" crc="1654711943"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\js\nselect-master\jquery.nselect.min.js" crc="1654712473"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\js\nselect-master\jquery.nselect.js" crc="1654712071"/>
@@ -324,7 +324,7 @@
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\css\font-awesome\css\font-awesome.css" crc="1654711957"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\css\style.css" crc="1667654904"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\css\ckeditor.css" crc="1654712309"/>
-		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\mysql.lib.php" crc="1654712099"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\mysql.lib.php" crc="1667741123"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\global.lib.php" crc="1654712012"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\formvalidator.php" crc="1654712017"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.Url.php" crc="1654711969"/>
@@ -334,7 +334,7 @@
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.Image.php" crc="1654711944"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.Files.php" crc="1654711949"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.db.php" crc="1654712321"/>
-		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php" crc="1667676099"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php" crc="1667768276"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.Carusel.php" crc="1654711993"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.BaseCarusel.php" crc="1654711949"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.AjaxCatCarusel.php" crc="1654711992"/>
@@ -1589,6 +1589,232 @@
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\yandex\Geo\Api.php" crc="1654712076"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\slimScroll\jquery.slimscroll.min.js" crc="1654712119"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\slimScroll\jquery.slimscroll.js" crc="1654712018"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\vendor\jquery-2.1.0.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\vendor\qunit-1.23.1.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\vendor\qunit-1.23.1.css" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\vendor\jquery-1.7.2.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\utils\escapeMarkup-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\utils\decorator-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\selection\stopPropagation-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\selection\single-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\selection\search-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\selection\placeholder-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\selection\multiple-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\selection\containerCss-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\selection\allowClear-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\results\focusing-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\options\width-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\options\translation-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\options\deprecated-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\options\data-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\options\ajax-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\integration\select2-methods.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\integration\jquery-calls.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\integration\dom-changes.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\dropdown\stopPropagation-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\dropdown\selectOnClose-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\dropdown\positioning-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\dropdown\dropdownCss-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\data\tokenizer-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\data\tags-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\data\select-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\data\minimumInputLength-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\data\maximumSelectionLength-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\data\maximumInputLength-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\data\inputData-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\data\base-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\data\array-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\a11y\selection-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\a11y\search-tests.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\unit.html" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\integration.html" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\tests\helpers.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\scss\theme\default\layout.scss" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\scss\theme\default\_single.scss" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\scss\theme\default\_multiple.scss" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\scss\theme\classic\layout.scss" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\scss\theme\classic\_single.scss" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\scss\theme\classic\_multiple.scss" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\scss\theme\classic\_defaults.scss" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\scss\mixins\_gradients.scss" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\scss\core.scss" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\scss\_single.scss" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\scss\_multiple.scss" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\scss\_dropdown.scss" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\selection\stopPropagation.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\selection\single.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\selection\search.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\selection\placeholder.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\selection\multiple.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\selection\eventRelay.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\selection\clickMask.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\selection\base.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\selection\allowClear.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\zh-TW.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\zh-CN.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\vi.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\uk.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\tr.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\tk.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\th.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\sv.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\sr.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\sr-Cyrl.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\sl.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\sk.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\ru.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\ro.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\pt.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\pt-BR.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\ps.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\pl.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\nl.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\nb.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\ms.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\mk.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\lv.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\lt.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\ko.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\km.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\ja.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\it.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\is.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\id.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\hy.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\hu.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\hsb.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\hr.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\hi.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\he.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\gl.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\fr.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\fi.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\fa.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\eu.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\et.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\es.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\en.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\el.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\dsb.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\de.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\da.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\cs.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\ca.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\bs.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\bg.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\az.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\ar.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\i18n\af.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\dropdown\stopPropagation.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\dropdown\selectOnClose.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\dropdown\search.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\dropdown\minimumResultsForSearch.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\dropdown\infiniteScroll.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\dropdown\hidePlaceholder.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\dropdown\closeOnSelect.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\dropdown\attachContainer.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\dropdown\attachBody.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\data\tokenizer.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\data\tags.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\data\select.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\data\minimumInputLength.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\data\maximumSelectionLength.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\data\maximumInputLength.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\data\base.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\data\array.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\data\ajax.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\compat\utils.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\compat\query.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\compat\matcher.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\compat\inputData.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\compat\initSelection.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\compat\dropdownCss.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\compat\containerCss.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\utils.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\translation.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\results.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\options.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\keys.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\dropdown.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\diacritics.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\defaults.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\select2\core.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\wrapper.start.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\wrapper.end.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\jquery.shim.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\jquery.select2.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\jquery.mousewheel.shim.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\banner.start.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\src\js\banner.end.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\docs\options.html" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\docs\options-old.html" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\docs\index.html" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\docs\examples.html" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\docs\community.html" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\docs\announcements-4.0.html" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\zh-TW.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\zh-CN.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\vi.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\uk.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\tr.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\tk.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\th.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\sv.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\sr.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\sr-Cyrl.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\sl.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\sk.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\ru.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\ro.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\pt.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\pt-BR.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\ps.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\pl.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\nl.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\nb.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\ms.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\mk.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\lv.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\lt.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\ko.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\km.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\ja.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\it.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\is.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\id.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\hy.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\hu.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\hsb.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\hr.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\hi.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\he.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\gl.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\fr.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\fi.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\fa.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\eu.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\et.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\es.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\en.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\el.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\dsb.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\de.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\da.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\cs.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\ca.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\bs.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\bg.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\az.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\ar.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\i18n\af.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\select2.min.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\select2.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\select2.full.min.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\js\select2.full.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\css\select2.min.css" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\dist\css\select2.css" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\Gruntfile.js" crc="1511277416"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\select2-4.0.6-rc.1\.travis.yml" crc="1511277416"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\raphael\raphael.min.js" crc="1654711929"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\raphael\raphael.js" crc="1654711911"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\morrisjs\morris.min.js" crc="1654711966"/>
@@ -1844,7 +2070,7 @@
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\news.php" crc="1654712037"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\mine_block.php" crc="1654712317"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\index.php" crc="1654712037"/>
-		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php" crc="1667676063"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php" crc="1667744798"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\design.php" crc="1654711963"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\currency.php" crc="1654711947"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\country.php" crc="1654712489"/>
@@ -1866,7 +2092,7 @@
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\robots.php" crc="1654712004"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\require.php" crc="1654712380"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\index.php" crc="1654711915"/>
-		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php" crc="1654712503"/>
+		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php" crc="1667767387"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\ckeditor_upload_img.php" crc="1654712516"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\ajx.basket.php" crc="1654711896"/>
 		<file name="C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\ajax.php" crc="1667648744"/>

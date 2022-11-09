@@ -46,25 +46,87 @@ class AjaxCarusel extends Carusel{
       .'.$this->carusel_name.'_popup_form_box{
         position: fixed;
         top: 0;
-        left: 50px;
+        left: 0px;
         z-index: 1040;
         background: #F5F5F5;
         height: 100vh;
-        padding: 15px;
         overflow: scroll;
         display: none;
         max-width: 100%;
-        width: 700px;
+        width: calc(100% - 50px);
         overflow-x: auto;
       }
+      .'.$this->carusel_name.'_popup_form{
+        padding: 15px;
+        position: relative;
+        z-index: 10000;
+        background: #F5F5F5;  
+        border: 4px solid #008d4c;
+      }
+      .'.$this->carusel_name.'_popup_form_bg{
+          position: fixed;
+          max-width: 100%;
+          width: 100%;
+          background-color: #000000aa;
+          left: 0;
+          height: 100vh;
+      }
+      .'.$this->carusel_name.'_close_btn{
+          position: fixed;
+          top: 15px;
+          right: 0;
+      }
       .'.$this->carusel_name.'_popup_form_box #submit {
-        /*position: relative;
-        float: right;*/
-        left: 625px; 
+          position: fixed;
+          width: min-content;
+          top: calc(100% - 45px);
+          right: 0px;
+          bottom: inherit;
       } 
+      @media (min-width: 768px){
+        .'.$this->carusel_name.'_popup_form_box{
+          left: 50px;
+          width: calc(100% - 175px);
+        }
+        .'.$this->carusel_name.'_popup_form_bg{
+          left: 50px;;
+        }
+        .'.$this->carusel_name.'_popup_form_box #submit {
+          right: 15px;
+        } 
+        .'.$this->carusel_name.'_close_btn{
+          position: fixed;
+          top: 15px; 
+          right: 15px;
+        }
+      }
+      @media (min-width: 1070px){
+        .'.$this->carusel_name.'_popup_form_box{
+          width: 700px;
+          left:  230px;
+        }
+        .'.$this->carusel_name.'_popup_form_bg{
+          left:  230px;
+        }
+        .'.$this->carusel_name.'_popup_form_box #submit {
+          left: 935px; 
+        } 
+        .'.$this->carusel_name.'_close_btn{
+          position: fixed;
+          top: 15px;
+          left: 935px;
+          right: inherit;
+        }
+      }
+      
     </style>
     <div class = "'.$this->carusel_name.'_popup_form_box">
+      <div class = "'.$this->carusel_name.'_popup_form_bg"></div>
+      <div class = "'.$this->carusel_name.'_close_btn btn btn-danger"><i class="far fa-window-close"></i>
+        <span class = "d-none d-md-inline">&nbsp;Закрыть</span>
+      </div>
       <div class = "'.$this->carusel_name.'_popup_form">
+         
         
       </div>
     </div>';
@@ -77,14 +139,14 @@ class AjaxCarusel extends Carusel{
     $output = '';
     
     $output .= '
-              <span class = "btn btn-info btn-sm ajax_edit_item"
+              <span class = "btn btn-info btn-sm my-1 ajax_edit_item"
                   title = "Редактировать"
                   onclick="'.$this->carusel_name.'_edit_item('.$id.', \'Редактирование\', \'tr_'.$id.'\')">
                 <i class="fas fa-pencil-alt"></i>
               </span>';
                         
     $output .= '          
-              <span class="btn btn-danger btn-sm" 
+              <span class="btn btn-danger btn-sm my-1" 
                     title="удалить" 
                     onclick="delete_item('.$id.', \'Удалить элеемент?\', \'tr_'.$id.'\')">
                 <i class="far fa-trash-alt"></i>
@@ -144,12 +206,18 @@ class AjaxCarusel extends Carusel{
       var is_ajx_send_form = true;
       $(document).ready(function() {
         
-        $(document).mouseup(function (e){ // событие клика по веб-документу
+        $( ".'.$this->carusel_name.'_popup_form_box" ).on( "click", ".'.$this->carusel_name.'_popup_form_bg", function(e){
+          $(".'.$this->carusel_name.'_popup_form_box").hide();
+        });
+        $( ".'.$this->carusel_name.'_popup_form_box" ).on( "click", ".'.$this->carusel_name.'_close_btn", function(e){
+          $(".'.$this->carusel_name.'_popup_form_box").hide();
+        });
+        
+        /*$(document).mouseup(function (e){ // событие клика по веб-документу
       		var div = $(".'.$this->carusel_name.'_popup_form_box");
          
           if ($(event.target).closest(".'.$this->carusel_name.'_popup_form_box").length) return;
           if ($(event.target).closest(".ajax_edit_item").length) return;
-          /*if ($(event.target).closest(".select2-results__option").length) return;*/
           if ($(event.target).closest(".select2-container").length) return;
           
           
@@ -157,7 +225,7 @@ class AjaxCarusel extends Carusel{
           //div.slideUp(300); // скрываем его
       		//event.stopPropagation();  
           
-      	});
+      	});*/
         
         function CKEDITOR_update(){  // Обновление данных с CKEDITOR - ов
           for ( instance in CKEDITOR.instances ){

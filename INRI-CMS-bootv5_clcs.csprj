@@ -8,7 +8,7 @@
 </treenode>
 <treenode node="ADM_DIR;PHP:PHP Word;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php;f41;5;48;5;;;;vpos;;v;;r&quot;admin_inri&quot;;;d-1,-1;;b0,0;;m">
 </treenode>
-<treenode node="ADMIN_FAVICON;PHP:PHP Word;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php;f47;17;60;17;;;;vpos;;v;;r&quot;http://in-ri.ru/css/img/favicon_white.ico&quot;;;d-1,-1;;b0,0;;m">
+<treenode node="ADMIN_FAVICON;PHP:PHP Word;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php;f47;17;60;17;;;;vpos;;v;;r&quot;https://in-ri.ru/css/img/favicon_white.ico&quot;;;d-1,-1;;b0,0;;m">
 </treenode>
 <treenode node="ADMIN_NAME;PHP:PHP Word;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php;f41;8;51;8;;;;vpos;;v;;r&quot;Admin PANEL&quot;;;d-1,-1;;b0,0;;m">
 </treenode>
@@ -848,11 +848,11 @@
 </treenode>
 <treenode node="SITE_TYPE;PHP:PHP Word;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php;f36;14;45;14;;;;vpos;;v;;r&quot;ONLINESHOP&quot;;;d-1,-1;;b0,0;;m">
 </treenode>
-<treenode node="SOURCE_SITE_CORPORATE;PHP:PHP Word;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php;f47;19;68;19;;;;vpos;;v;;r&quot;http://corporate.ready.in-ri.ru&quot;;;d-1,-1;;b0,0;;m">
+<treenode node="SOURCE_SITE_CORPORATE;PHP:PHP Word;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php;f47;19;68;19;;;;vpos;;v;;r&quot;https://corporate.ready.in-ri.ru&quot;;;d-1,-1;;b0,0;;m">
 </treenode>
-<treenode node="SOURCE_SITE_CUTAWAY;PHP:PHP Word;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php;f47;18;66;18;;;;vpos;;v;;r&quot;http://cutaway.ready.in-ri.ru&quot;;;d-1,-1;;b0,0;;m">
+<treenode node="SOURCE_SITE_CUTAWAY;PHP:PHP Word;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php;f47;18;66;18;;;;vpos;;v;;r&quot;https://cutaway.ready.in-ri.ru&quot;;;d-1,-1;;b0,0;;m">
 </treenode>
-<treenode node="SOURCE_SITE_ONLINESHOP;PHP:PHP Word;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php;f48;20;70;20;;;;vpos;;v;;r&quot;http://onlineshop.ready.in-ri.ru&quot;;;d-1,-1;;b0,0;;m">
+<treenode node="SOURCE_SITE_ONLINESHOP;PHP:PHP Word;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php;f48;20;70;20;;;;vpos;;v;;r&quot;https://onlineshop.ready.in-ri.ru&quot;;;d-1,-1;;b0,0;;m">
 </treenode>
 <treenode node="TIME_LIFE_COOKIE;PHP:PHP Word;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\define.php;f8;26;24;26;;;;vpos;;v;;r604800;;d-1,-1;;b0,0;;m">
 </treenode>
@@ -1015,9 +1015,9 @@
 </treenode>
 <treenode node="OneFormAdmin;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\global.lib.php;f2;47;3;102;;;;vpos;;v;;r;;d65,47;;b0,0;;mtitle;;psql_table;;padmin;;p">
 </treenode>
-<treenode node="OneSeoFormAdmin;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\global.lib.php;f2;114;3;197;;;;vpos;;v;;r&#10;Definition&#10;    OneSeoFormAdmin( $title = &apos;&apos;, $sql_table, &amp;$admin = null)&#10;&#10;Description&#10;     Работа со справочной таблицей Seo id	title	type	view	ord	hide	value&#10;&#10;Parameters:&#10;    undefined $title - - Заголовок&#10;    undefined $sql_table_form - - таблица;;d68,114;;b0,0;;mtitle;;psql_table;;padmin;;p">
+<treenode node="OneSeoFormAdmin;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\global.lib.php;f2;114;3;197;;;;vpos;;v;;r&#10;Definition&#10;    OneSeoFormAdmin( $title = &apos;&apos;, $sql_table, &amp;$admin = null)&#10;&#10;Description&#10;     Работа со справочной таблицей Seo id title type view ord hide value&#10;&#10;Parameters:&#10;    undefined $title - - Заголовок&#10;    undefined $sql_table_form - - таблица;;d68,114;;b0,0;;mtitle;;psql_table;;padmin;;p">
 </treenode>
-<treenode node="setHeaderForAdm;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\global.lib.php;f9;33;3;45;;;;vpos;;v;;r&#10;Definition&#10;    setHeaderForAdm($header, $title, &amp;$admin = null)&#10;&#10;Description&#10;     Работа со справочной таблицей id	name	title	val	type	comment&#10;&#10;Parameters:&#10;    undefined $title - - Заголовок&#10;    undefined $sql_table_form - - таблица;;d66,33;;b0,5;;mheader;;ptitle;;padmin;;p">
+<treenode node="setHeaderForAdm;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\global.lib.php;f9;33;3;45;;;;vpos;;v;;r&#10;Definition&#10;    setHeaderForAdm($header, $title, &amp;$admin = null)&#10;&#10;Description&#10;     Работа со справочной таблицей id name title val type comment&#10;&#10;Parameters:&#10;    undefined $title - - Заголовок&#10;    undefined $sql_table_form - - таблица;;d66,33;;b0,5;;mheader;;ptitle;;padmin;;p">
 </treenode>
 <treenode node="validate_post_vars;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\global.lib.php;f9;4;3;21;;;;vpos;;v;;r;;d47,4;;b0,5;;ma;;p">
 </treenode>
@@ -1354,7 +1354,7 @@
 <treenode node="xls_order;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.basket.php;f8;1133;3;1185;;;;vpos;;v;;r;;d33,1133;;b0,5;;msite;;p">
 </treenode>
 </treenode>
-<treenode node="BlockClass;PHP:Class Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\units.php;f2;6;37;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\news.php;f2;5;37;8;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\mine_block.php;f2;5;37;8;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\country.php;f2;6;37;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\carusel.php;f2;6;37;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\brand.php;f2;6;37;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\availability_items.php;f2;6;37;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\availability.php;f2;6;37;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;6;40;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\articles.php;f2;6;40;9;;;;vpos;;vAjaxCatCarusel;;cCatCarusel;;c;;r;;d38,9;;b0,0;;m">
+<treenode node="BlockClass;PHP:Class Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\units.php;f2;6;37;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\news.php;f2;5;37;8;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\mine_block.php;f2;5;37;8;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\country.php;f2;6;37;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\carusel.php;f2;6;37;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\brand.php;f2;6;37;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\availability_items.php;f2;6;37;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\availability.php;f2;6;37;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\articles.php;f2;6;40;9;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;6;40;9;;;;vpos;;vAjaxCatCarusel;;cCatCarusel;;c;;r;;d38,9;;b0,0;;m">
 </treenode>
 <treenode node="BolmerCMS;PHP:Class Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\kcfinder\integration\BolmerCMS.php;f0;13;1;41;;;;vpos;;v;;r;;d15,13;;b0,0;;m">
 <treenode node="checkAuth;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\kcfinder\integration\BolmerCMS.php;f11;15;5;40;;;;vpos;;v;;r;;d32,15;;b0,5;;m">
@@ -1484,38 +1484,38 @@
 <treenode node="convert;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\vendors\phpmorphy\bin\extract_gramtab.php;f4;162;5;164;;;;vpos;;v;;r;;d27,162;;b0,0;;mstr;;p">
 </treenode>
 </treenode>
-<treenode node="CatCarusel;PHP:Class Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f0;3;1;2450;;;;vpos;;vBaseCarusel;;c;;r;;d36,3;;b0,0;;m">
+<treenode node="CatCarusel;PHP:Class Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f0;3;1;2637;;;;vpos;;vBaseCarusel;;c;;r;;d36,3;;b0,0;;m">
 <treenode node="__construct;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;66;3;139;;;;vpos;;v;;r;;d142,66;;b0,0;;mcarusel_name;;pdate_arr;;pdate_cat_arr;;pgenSqlTable;;pgenImgDir;;ppager;;p">
 </treenode>
-<treenode node="add_cat_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1432;3;1469;;;;vpos;;v;;r;;d38,1432;;b0,0;;mitem;;p">
+<treenode node="add_cat_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1619;3;1656;;;;vpos;;v;;r;;d38,1619;;b0,0;;mitem;;p">
 </treenode>
-<treenode node="add_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1017;3;1060;;;;vpos;;v;;r;;d34,1017;;b0,0;;mitem;;p">
+<treenode node="add_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1204;3;1247;;;;vpos;;v;;r;;d34,1204;;b0,0;;mitem;;p">
 </treenode>
 <treenode node="ajx_pager;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;415;3;440;;;;vpos;;v;;r;;d22,415;;b0,0;;m">
 </treenode>
-<treenode node="count_goods;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2069;2;2097;;;;vpos;;v;;r;;d35,2069;;b0,0;;mid;;pc;;p">
+<treenode node="count_goods;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2256;2;2284;;;;vpos;;v;;r;;d35,2256;;b0,0;;mid;;pc;;p">
 </treenode>
-<treenode node="create_cat_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1485;3;1551;;;;vpos;;v;;r;;d29,1485;;b0,0;;m">
+<treenode node="create_cat_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1672;3;1738;;;;vpos;;v;;r;;d29,1672;;b0,0;;m">
 </treenode>
 <treenode node="create_img_dir;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;264;3;292;;;;vpos;;v;;r;;d27,264;;b0,0;;m">
 </treenode>
-<treenode node="create_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1076;3;1142;;;;vpos;;v;;r;;d25,1076;;b0,0;;m">
+<treenode node="create_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1263;3;1329;;;;vpos;;v;;r;;d25,1263;;b0,0;;m">
 </treenode>
 <treenode node="create_sql_table;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;142;3;262;;;;vpos;;v;;r;;d29,142;;b0,0;;m">
 </treenode>
-<treenode node="delete_cat_picture;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1757;3;1785;;;;vpos;;v;;r;;d34,1757;;b0,0;;mid;;p">
+<treenode node="delete_cat_picture;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1944;3;1972;;;;vpos;;v;;r;;d34,1944;;b0,0;;mid;;p">
 </treenode>
-<treenode node="delete_cat_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1787;3;1827;;;;vpos;;v;;r;;d54,1787;;b0,0;;mid;;pview;;p">
+<treenode node="delete_cat_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1974;3;2014;;;;vpos;;v;;r;;d54,1974;;b0,0;;mid;;pview;;p">
 </treenode>
-<treenode node="delete_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1280;3;1324;;;;vpos;;v;;r;;d51,1280;;b0,0;;mid;;pview;;p">
+<treenode node="delete_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1467;3;1511;;;;vpos;;v;;r;;d51,1467;;b0,0;;mid;;pview;;p">
 </treenode>
-<treenode node="edit_cat_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1553;3;1644;;;;vpos;;v;;r;;d44,1553;;b0,0;;mid;;pitem;;p">
+<treenode node="edit_cat_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1740;3;1831;;;;vpos;;v;;r;;d44,1740;;b0,0;;mid;;pitem;;p">
 </treenode>
-<treenode node="edit_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1144;3;1212;;;;vpos;;v;;r;;d41,1144;;b0,0;;mid;;pitem;;p">
+<treenode node="edit_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1331;3;1399;;;;vpos;;v;;r;;d41,1331;;b0,0;;mid;;pitem;;p">
 </treenode>
-<treenode node="full_tree;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1903;3;1987;;;;vpos;;v;;r;;d22,1903;;b0,0;;m">
+<treenode node="full_tree;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2090;3;2174;;;;vpos;;v;;r;;d22,2090;;b0,0;;m">
 </treenode>
-<treenode node="get_add_btn_show_table;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;895;3;901;;;;vpos;;v;;r;;d35,895;;b0,0;;m">
+<treenode node="get_add_btn_show_table;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1082;3;1088;;;;vpos;;v;;r;;d35,1082;;b0,0;;m">
 </treenode>
 <treenode node="get_add_cat_btn_show_table;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;640;3;646;;;;vpos;;v;;r;;d39,640;;b0,0;;m">
 </treenode>
@@ -1523,53 +1523,53 @@
 </treenode>
 <treenode node="get_category_option;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;470;3;494;;;;vpos;;v;;r;;d82,470;;b0,0;;mcid;;pparent;;ppadding;;poutput;;p">
 </treenode>
+<treenode node="get_show_table_menu_btn;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;777;3;791;;;;vpos;;v;;r;;d43,777;;b0,0;;mc_id;;p">
+</treenode>
 <treenode node="getCatErrorForKey;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;297;3;306;;;;vpos;;v;;r;;d34,297;;b0,0;;mkey;;p">
 </treenode>
 <treenode node="getCatImg_ideal_height;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;346;3;348;;;;vpos;;v;;r;;d36,346;;b0,0;;m">
 </treenode>
 <treenode node="getCatImg_ideal_width;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;338;3;340;;;;vpos;;v;;r;;d35,338;;b0,0;;m">
 </treenode>
-<treenode node="getContent;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2331;3;2441;;;;vpos;;v;;r;;d37,2331;;b0,0;;madmin;;p">
+<treenode node="getContent;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2518;3;2628;;;;vpos;;v;;r;;d37,2518;;b0,0;;madmin;;p">
 </treenode>
-<treenode node="getCreateCatSlide_SqlNames_SqlVals;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1471;3;1483;;;;vpos;;v;;r;;d70,1471;;b0,0;;msql_names;;psql_vals;;p">
+<treenode node="getCreateCatSlide_SqlNames_SqlVals;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1658;3;1670;;;;vpos;;v;;r;;d70,1658;;b0,0;;msql_names;;psql_vals;;p">
 </treenode>
-<treenode node="getDeleteCatImgBtn;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1646;3;1652;;;;vpos;;v;;r;;d34,1646;;b0,0;;mid;;p">
+<treenode node="getDeleteCatImgBtn;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1833;3;1839;;;;vpos;;v;;r;;d34,1833;;b0,0;;mid;;p">
 </treenode>
 <treenode node="getFormStyleAndScript;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;649;3;705;;;;vpos;;v;;r;;d34,649;;b0,0;;m">
 </treenode>
-<treenode node="getPager;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2223;3;2329;;;;vpos;;v;;r;;d86,2223;;b0,0;;mcountItems;;poffset;;pid_cat;;pshow_pager_always;;p">
+<treenode node="getGroupOperations;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;880;3;969;;;;vpos;;v;;r;;d31,880;;b0,0;;m">
 </treenode>
-<treenode node="getPagerScript;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2182;3;2221;;;;vpos;;v;;r;;d27,2182;;b0,0;;m">
+<treenode node="getNotiseMobalWindow;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;840;3;877;;;;vpos;;v;;r;;d55,840;;b0,0;;mmob_tit;;pmob_content;;p">
 </treenode>
-<treenode node="getUpdateCatSlide_SqlVals;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1654;3;1666;;;;vpos;;v;;r;;d38,1654;;b0,0;;m">
+<treenode node="getPager;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2410;3;2516;;;;vpos;;v;;r;;d86,2410;;b0,0;;mcountItems;;poffset;;pid_cat;;pshow_pager_always;;p">
 </treenode>
-<treenode node="load_cat_picture;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1718;3;1755;;;;vpos;;v;;r;;d32,1718;;b0,0;;mid;;p">
+<treenode node="getPagerScript;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2369;3;2408;;;;vpos;;v;;r;;d27,2369;;b0,0;;m">
 </treenode>
-<treenode node="search;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2099;3;2180;;;;vpos;;v;;r;;d19,2099;;b0,0;;m">
+<treenode node="getUpdateCatSlide_SqlVals;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1841;3;1853;;;;vpos;;v;;r;;d38,1841;;b0,0;;m">
+</treenode>
+<treenode node="load_cat_picture;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1905;3;1942;;;;vpos;;v;;r;;d32,1905;;b0,0;;mid;;p">
+</treenode>
+<treenode node="makeGroupOperations;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;793;3;838;;;;vpos;;v;;r;;d32,793;;b0,0;;m">
+</treenode>
+<treenode node="search;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2286;3;2367;;;;vpos;;v;;r;;d19,2286;;b0,0;;m">
 </treenode>
 <treenode node="setCatImg_ideal_height;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;350;3;352;;;;vpos;;v;;r;;d43,350;;b0,0;;mheight;;p">
 </treenode>
 <treenode node="setCatImg_ideal_width;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;342;3;344;;;;vpos;;v;;r;;d41,342;;b0,0;;mwidth;;p">
 </treenode>
 <treenode node="setIsFiles;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;364;3;367;;;;vpos;;v;;r;;d33,364;;b0,0;;mis_files;;p">
-<treenode node="lib/class.Files.php;PHP:PHP Include;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f18;365;37;365;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-</treenode>
 </treenode>
 <treenode node="setIsImages;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;359;3;362;;;;vpos;;v;;r;;d35,359;;b0,0;;mis_images;;p">
-<treenode node="lib/class.Images.php;PHP:PHP Include;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f18;360;38;360;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-</treenode>
 </treenode>
 <treenode node="setIsLog;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;369;3;372;;;;vpos;;v;;r;;d29,369;;b0,0;;mis_log;;p">
-<treenode node="lib/class.Log.php;PHP:PHP Include;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f18;370;35;370;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-</treenode>
 </treenode>
 <treenode node="setIsUrl;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;354;3;357;;;;vpos;;v;;r;;d29,354;;b0,0;;mis_url;;p">
-<treenode node="lib/class.Url.php;PHP:PHP Include;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f18;355;35;355;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-</treenode>
 </treenode>
 <treenode node="show_bread_crumbs;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;445;3;453;;;;vpos;;v;;r;;d42,445;;b0,0;;mc_id;;p">
 </treenode>
-<treenode node="show_cat_form;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1327;3;1430;;;;vpos;;v;;r;;d64,1327;;b0,0;;mitem;;poutput;;pid;;p">
+<treenode node="show_cat_form;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1514;3;1617;;;;vpos;;v;;r;;d64,1514;;b0,0;;mitem;;poutput;;pid;;p">
 </treenode>
 <treenode node="show_cat_table;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;589;3;638;;;;vpos;;v;;r;;d36,589;;b0,0;;mc_id;;p">
 </treenode>
@@ -1579,11 +1579,11 @@
 </treenode>
 <treenode node="show_cat_table_rows;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;508;3;542;;;;vpos;;v;;r;;d45,508;;b0,0;;mitem;;pi;;p">
 </treenode>
-<treenode node="show_entrie_catalog;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1989;2;2067;;;;vpos;;v;;r;;d44,1989;;b0,0;;mparent;;p">
+<treenode node="show_entrie_catalog;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2176;2;2254;;;;vpos;;v;;r;;d44,2176;;b0,0;;mparent;;p">
 </treenode>
-<treenode node="show_form;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;903;3;1015;;;;vpos;;v;;r;;d60,903;;b0,0;;mitem;;poutput;;pid;;p">
+<treenode node="show_form;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1090;3;1202;;;;vpos;;v;;r;;d60,1090;;b0,0;;mitem;;poutput;;pid;;p">
 </treenode>
-<treenode node="show_table;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;777;3;893;;;;vpos;;v;;r;;d23,777;;b0,0;;m">
+<treenode node="show_table;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;972;3;1080;;;;vpos;;v;;r;;d23,972;;b0,0;;m">
 </treenode>
 <treenode node="show_table_header_rows;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;708;3;719;;;;vpos;;v;;r;;d35,708;;b0,0;;m">
 </treenode>
@@ -1591,19 +1591,19 @@
 </treenode>
 <treenode node="show_table_rows;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;721;3;756;;;;vpos;;v;;r;;d33,721;;b0,0;;mitem;;p">
 </treenode>
-<treenode node="show_tree_catalog;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1855;2;1901;;;;vpos;;v;;r;;d56,1855;;b0,0;;mparent;;poutput;;p">
+<treenode node="show_tree_catalog;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2042;2;2088;;;;vpos;;v;;r;;d56,2042;;b0,0;;mparent;;poutput;;p">
 </treenode>
 <treenode node="sort_cat_item;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;408;3;413;;;;vpos;;v;;r;;d26,408;;b0,0;;m">
 </treenode>
 <treenode node="star_cat_check;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;378;3;406;;;;vpos;;v;;r;;d27,378;;b0,0;;m">
 </treenode>
-<treenode node="update_cat_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1668;3;1716;;;;vpos;;v;;r;;d32,1668;;b0,0;;mid;;p">
+<treenode node="update_cat_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1855;3;1903;;;;vpos;;v;;r;;d32,1855;;b0,0;;mid;;p">
 </treenode>
-<treenode node="update_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1228;3;1278;;;;vpos;;v;;r;;d28,1228;;b0,0;;mid;;p">
+<treenode node="update_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1415;3;1465;;;;vpos;;v;;r;;d28,1415;;b0,0;;mid;;p">
 </treenode>
 <treenode node="validationCatValue;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;308;3;332;;;;vpos;;v;;r;;d34,308;;b0,0;;mid;;p">
 </treenode>
-<treenode node="view_tree;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;1831;3;1853;;;;vpos;;v;;r;;d22,1831;;b0,0;;m">
+<treenode node="view_tree;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\class.CatCarusel.php;f2;2018;3;2040;;;;vpos;;v;;r;;d22,2018;;b0,0;;m">
 </treenode>
 </treenode>
 <treenode node="ConstNames_Base;PHP:Class Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\vendors\phpmorphy\utils\dict_stuff\dict\convert\names\convert_gramtab_names.php;f9;6;1;46;;;;vpos;;vConstNames_Interface;;c;;r;;d63,6;;b0,0;;m">
@@ -2564,16 +2564,24 @@
 <treenode node="getThoroughfareName;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\admin_style\vendor\yandex\Geo\GeoObject.php;f11;173;5;176;;;;vpos;;vstring;;r&#10;Definition&#10;    getThoroughfareName()&#10;&#10;Description&#10;     Улица&#10;&#10;Return:&#10;   |null;;d4,174;;b1,0;;m">
 </treenode>
 </treenode>
-<treenode node="Goods;PHP:Class Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f0;1;1;1894;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f0;47;1;818;;;;vpos;;vBlockClass;;c;;r;;d30,47;;b0,0;;m">
+<treenode node="Goods;PHP:Class Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f0;1;1;1894;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f0;50;1;1686;;;;vpos;;vBlockClass;;c;;r;;d30,50;;b0,0;;m">
 <treenode node="__construct;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f2;3;3;5;;;;vpos;;v;;r;;d25,3;;b0,0;;m">
 </treenode>
-<treenode node="full_tree;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;713;3;816;;;;vpos;;v;;r;;d22,713;;b0,0;;m">
+<treenode node="add_inri_csv_goods;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;1397;3;1546;;;;vpos;;v;;r;;d46,1397;;b0,0;;mdata_xls_row;;p">
+</treenode>
+<treenode node="cleanValueCh;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f10;843;2;855;;;;vpos;;v;;r;;d40,843;;b3,0;;mvalue;;p">
+</treenode>
+<treenode node="conv;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;1393;3;1395;;;;vpos;;v;;r;;d21,1393;;b0,0;;mstr;;p">
+</treenode>
+<treenode node="full_tree;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;738;3;841;;;;vpos;;v;;r;;d22,738;;b0,0;;m">
 </treenode>
 <treenode node="get_arr_act_cat_items;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;36;3;45;;;;vpos;;v;;r;;d51,36;;b0,5;;msid;;parr;;p">
 </treenode>
 <treenode node="get_arr_parent_cat_items;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;424;3;433;;;;vpos;;v;;r;;d66,424;;b0,5;;msid;;pcat_arr;;parr;;p">
 </treenode>
 <treenode node="get_arr_sub_cat_items;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;413;3;422;;;;vpos;;v;;r;;d63,413;;b0,5;;msid;;pcat_arr;;parr;;p">
+</treenode>
+<treenode node="get_cat_numbers;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;1137;3;1147;;;;vpos;;v;;r;;d48,1137;;b0,0;;mcid;;pprefix;;p">
 </treenode>
 <treenode node="get_chaild_cat_arr;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;283;3;302;;;;vpos;;v;;r;;d52,283;;b0,5;;mcat_id;;parr;;p">
 </treenode>
@@ -2585,39 +2593,53 @@
 </treenode>
 <treenode node="get_path_link;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;22;2;34;;;;vpos;;v;;r;;d80,22;;b0,5;;mcid;;pstr;;pseparator;;psid;;p">
 </treenode>
-<treenode node="getAjaxCompleteScript;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;49;3;62;;;;vpos;;v;;r;;d34,49;;b0,0;;m">
+<treenode node="get_show_table_menu_btn;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;563;3;582;;;;vpos;;v;;r;;d43,563;;b0,0;;mc_id;;p">
 </treenode>
-<treenode node="getCreateCatSlide_SqlNames_SqlVals;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;120;3;136;;;;vpos;;v;;r;;d70,120;;b0,0;;msql_names;;psql_vals;;p">
+<treenode node="get_xls_cat_rows;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;1281;3;1342;;;;vpos;;v;;r;;d33,1281;;b0,0;;mcid;;p">
 </treenode>
-<treenode node="getCreateSlide_SqlNames_SqlVals;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;64;3;85;;;;vpos;;v;;r;;d67,64;;b0,0;;msql_names;;psql_vals;;p">
+<treenode node="get_xls_table_cat_row;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;1117;3;1135;;;;vpos;;v;;r;;d56,1117;;b0,0;;mcat_item;;pstyle_td;;p">
+</treenode>
+<treenode node="get_xls_table_header;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;1104;3;1115;;;;vpos;;v;;r;;d33,1104;;b0,0;;m">
+</treenode>
+<treenode node="getAjaxCompleteScript;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;52;3;65;;;;vpos;;v;;r;;d34,52;;b0,0;;m">
+</treenode>
+<treenode node="getContent;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;1635;3;1684;;;;vpos;;v;;r;;d37,1635;;b0,0;;madmin;;p">
+</treenode>
+<treenode node="getCreateCatSlide_SqlNames_SqlVals;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;123;3;139;;;;vpos;;v;;r;;d70,123;;b0,0;;msql_names;;psql_vals;;p">
+</treenode>
+<treenode node="getCreateSlide_SqlNames_SqlVals;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;67;3;88;;;;vpos;;v;;r;;d67,67;;b0,0;;msql_names;;psql_vals;;p">
 </treenode>
 <treenode node="getPrice;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;1068;3;1075;;;;vpos;;v;;r;;d45,1068;;b0,5;;msite;;prub;;pye;;p">
 </treenode>
-<treenode node="getUpdateCatSlide_SqlVals;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;138;3;154;;;;vpos;;v;;r;;d38,138;;b0,0;;m">
+<treenode node="getUpdateCatSlide_SqlVals;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;141;3;157;;;;vpos;;v;;r;;d38,141;;b0,0;;m">
 </treenode>
-<treenode node="getUpdateSlide_SqlVals;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;87;3;118;;;;vpos;;v;;r;;d35,87;;b0,0;;m">
+<treenode node="getUpdateSlide_SqlVals;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;90;3;121;;;;vpos;;v;;r;;d35,90;;b0,0;;m">
+</treenode>
+<treenode node="parseCSVData;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;1548;2;1614;;;;vpos;;v;;r;;d27,1548;;b0,0;;m">
+</treenode>
+<treenode node="set_handbook_linked;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;1149;3;1213;;;;vpos;;v;;r;;d32,1149;;b0,0;;m">
 </treenode>
 <treenode node="show_cat_all_goods;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;584;3;629;;;;vpos;;v;;r;;d72,584;;b0,5;;msite;;pcat_id;;pindent;;p">
 </treenode>
-<treenode node="show_cat_form;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;382;3;506;;;;vpos;;v;;r;;d64,382;;b0,0;;mitem;;poutput;;pid;;p">
+<treenode node="show_cat_form;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;385;3;509;;;;vpos;;v;;r;;d64,385;;b0,0;;mitem;;poutput;;pid;;p">
 </treenode>
 <treenode node="show_cat_items;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;631;3;962;;;;vpos;;v;;r;;d66,631;;b0,5;;msite;;pcid;;pcat_table;;ptable;;p">
 </treenode>
-<treenode node="show_cat_table_header_rows;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;156;3;167;;;;vpos;;v;;r;;d39,156;;b0,0;;m">
+<treenode node="show_cat_table_header_rows;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;159;3;170;;;;vpos;;v;;r;;d39,159;;b0,0;;m">
 </treenode>
-<treenode node="show_cat_table_rows;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;169;3;208;;;;vpos;;v;;r;;d45,169;;b0,0;;mitem;;pi;;p">
+<treenode node="show_cat_table_rows;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;172;3;211;;;;vpos;;v;;r;;d45,172;;b0,0;;mitem;;pi;;p">
 </treenode>
 <treenode node="show_catalog_items;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;964;3;1066;;;;vpos;;v;;r;;d98,964;;b0,5;;msite;;ps;;pfilter_count;;pfilter;;pprefix_url;;p">
 </treenode>
-<treenode node="show_entrie_catalog;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;632;2;711;;;;vpos;;v;;r;;d44,632;;b0,0;;mparent;;p">
+<treenode node="show_entrie_catalog;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;657;2;736;;;;vpos;;v;;r;;d44,657;;b0,0;;mparent;;p">
 </treenode>
 <treenode node="show_feedback;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;1406;3;1606;;;;vpos;;v;;r;;d39,1406;;b0,5;;msite;;p">
 </treenode>
-<treenode node="show_form;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;210;3;380;;;;vpos;;v;;r;;d60,210;;b0,0;;mitem;;poutput;;pid;;p">
+<treenode node="show_form;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;213;3;383;;;;vpos;;v;;r;;d60,213;;b0,0;;mitem;;poutput;;pid;;p">
 </treenode>
 <treenode node="show_goods_cat_card;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;474;3;501;;;;vpos;;v;;r;;d53,474;;b0,5;;mgoods_cat_arr;;p">
 </treenode>
-<treenode node="show_iCheck;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;536;3;558;;;;vpos;;v;;r;;d58,536;;b0,0;;mcheck_class;;pitem;;pkey;;pval;;p">
+<treenode node="show_iCheck;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;539;3;561;;;;vpos;;v;;r;;d58,539;;b0,0;;mcheck_class;;pitem;;pkey;;pval;;p">
 </treenode>
 <treenode node="show_item_full;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;1077;2;1404;;;;vpos;;v;;r;;d70,1077;;b0,5;;msite;;pitem;;pbread_crumbs;;p">
 </treenode>
@@ -2631,21 +2653,31 @@
 </treenode>
 <treenode node="show_path_link;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;7;2;20;;;;vpos;;v;;r;;d96,7;;b0,5;;mcategory_id;;ptitle;;pseparator;;pline;;p">
 </treenode>
-<treenode node="show_select;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;508;3;534;;;;vpos;;v;;r;;d83,508;;b0,0;;mtable;;pname;;pitem;;pkey;;pis_not_val;;p">
+<treenode node="show_select;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;511;3;537;;;;vpos;;v;;r;;d83,511;;b0,0;;mtable;;pname;;pitem;;pkey;;pis_not_val;;p">
 </treenode>
 <treenode node="show_sub_cats;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;435;3;472;;;;vpos;;v;;r;;d56,435;;b0,5;;msite;;psid;;ps;;p">
 </treenode>
 <treenode node="show_sub_mine_menu;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;375;3;411;;;;vpos;;v;;r;;d48,375;;b0,5;;mparent_id;;p">
 </treenode>
-<treenode node="show_table_header_rows;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;560;3;580;;;;vpos;;v;;r;;d35,560;;b0,0;;m">
+<treenode node="show_table_header_rows;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;585;3;605;;;;vpos;;v;;r;;d35,585;;b0,0;;m">
 </treenode>
-<treenode node="show_table_rows;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;582;3;630;;;;vpos;;v;;r;;d33,582;;b0,0;;mitem;;p">
+<treenode node="show_table_rows;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;607;3;655;;;;vpos;;v;;r;;d33,607;;b0,0;;mitem;;p">
 </treenode>
 <treenode node="tmp_cat_item;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;1608;3;1706;;;;vpos;;v;;r;;d45,1608;;b0,5;;marr;;pi;;p">
 </treenode>
 <treenode node="tmp_cat_page;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;1708;3;1726;;;;vpos;;v;;r;;d37,1708;;b0,5;;marr;;p">
 </treenode>
 <treenode node="tmp_full_item;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\lib\class.Goods.php;f9;1728;3;1879;;;;vpos;;v;;r;;d38,1728;;b0,5;;marr;;p">
+</treenode>
+<treenode node="updateInformation;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;857;3;1102;;;;vpos;;v;;r;;d30,857;;b0,0;;m">
+</treenode>
+<treenode node="upload_good_from_csv_file;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;1616;3;1633;;;;vpos;;v;;r;;d38,1616;;b0,0;;m">
+</treenode>
+<treenode node="uploadCSV;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f10;1380;2;1391;;;;vpos;;v;;r;;d31,1380;;b3,0;;m">
+</treenode>
+<treenode node="viewFormUploadCSV;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;1344;3;1378;;;;vpos;;v;;r;;d30,1344;;b0,0;;m">
+</treenode>
+<treenode node="xls_cat_slide;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f2;1215;3;1279;;;;vpos;;v;;r;;d31,1215;;b0,0;;mid;;p">
 </treenode>
 </treenode>
 <treenode node="GrammemsProcessor;PHP:Class Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\vendors\phpmorphy\bin\extract_gramtab.php;f9;45;1;63;;;;vpos;;v;;r;;d33,45;;b0,0;;m">
@@ -6702,8 +6734,8 @@
 <treenode node="seek;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\vendors\phpmorphy\utils\autogen\lib\autogen.php;f4;68;41;68;;;;vpos;;v;;r;;d27,68;;b0,0;;moffset;;p">
 </treenode>
 </treenode>
-<treenode node="string_tools;PHP:Class Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\mysql.lib.php;f0;190;1;200;;;;vpos;;v;;r;;d19,190;;b0,0;;m">
-<treenode node="get_int_text;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\mysql.lib.php;f8;192;2;198;;;;vpos;;v;;r;;d59,192;;b0,5;;mfirst;;pmiddle;;pend;;pint;;p">
+<treenode node="string_tools;PHP:Class Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\mysql.lib.php;f0;208;1;218;;;;vpos;;v;;r;;d19,208;;b0,0;;m">
+<treenode node="get_int_text;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\mysql.lib.php;f8;210;2;216;;;;vpos;;v;;r;;d59,210;;b0,5;;mfirst;;pmiddle;;pend;;pint;;p">
 </treenode>
 </treenode>
 <treenode node="text;PHP:Class Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\kcfinder\lib\helper_text.php;f0;16;1;52;;;;vpos;;v;;r;;d11,16;;b0,0;;m">
@@ -6888,7 +6920,7 @@
 </treenode>
 <treenode node="get_locale;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\vendors\phpmorphy\bin\build_dict.php;f0;120;1;140;;;;vpos;;v;;r;;d26,120;;b0,0;;mxml;;p">
 </treenode>
-<treenode node="get_phpmorphy;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\smpl_article.php;f0;8;1;38;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\news.php;f0;13;1;43;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f0;15;1;45;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\articles.php;f0;14;1;44;;;;vpos;;v;;r;;d35,14;;b0,0;;mdescr_str;;p">
+<treenode node="get_phpmorphy;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\smpl_article.php;f0;8;1;38;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\news.php;f0;13;1;43;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\articles.php;f0;14;1;44;;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\goods.php;f0;18;1;48;;;;vpos;;v;;r;;d35,18;;b0,0;;mdescr_str;;p">
 </treenode>
 <treenode node="get_row_by_id;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\mysql.lib.php;f0;41;1;46;;;;vpos;;v;;r;;d39,41;;b0,0;;mtablename;;pid;;p">
 </treenode>
@@ -6914,7 +6946,7 @@
 </treenode>
 <treenode node="phpmorphy_overload_mb_funcs;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\vendors\phpmorphy\src\common.php;f0;39;1;47;;;;vpos;;v;;r;;d46,39;;b0,0;;mprefix;;p">
 </treenode>
-<treenode node="pri;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\mysql.lib.php;f0;175;1;181;;;;vpos;;v;;r;;d32,175;;b0,0;;marr;;phead;;p">
+<treenode node="pri;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\mysql.lib.php;f0;175;1;199;;;;vpos;;v;;r;;d49,175;;b0,0;;marr;;pin_var;;phead;;p">
 </treenode>
 <treenode node="replace_keys_with_name;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\vendors\phpmorphy\bin\extract_gramtab.php;f0;31;1;43;;;;vpos;;v;;r;;d38,31;;b0,0;;mmap;;p">
 </treenode>
@@ -6930,7 +6962,7 @@
 </treenode>
 <treenode node="transliterate;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\mysql.lib.php;f0;62;1;127;;;;vpos;;v;;r;;d28,62;;b0,0;;mst;;p">
 </treenode>
-<treenode node="ucfirst_utf8;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\mysql.lib.php;f0;183;1;188;;;;vpos;;v;;r;;d27,183;;b0,0;;mstr;;p">
+<treenode node="ucfirst_utf8;PHP:Function Name;C:\Users\ilyao\YandexDisk\gitHub\INRI-CMS-bootv5\admin_inri\lib\mysql.lib.php;f0;201;1;206;;;;vpos;;v;;r;;d27,201;;b0,0;;mstr;;p">
 </treenode>
 </phptree>
 </codestructure>

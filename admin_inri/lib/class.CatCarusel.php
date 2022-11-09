@@ -530,6 +530,12 @@ class CatCarusel extends BaseCarusel{
                   </td>
               	  
                   <td style="text-align: left;">
+                    <a  href="..'.IA_URL.$this->carusel_name.'.php?editc='.$id.'" 
+                        class = "btn btn-info btn-sm"
+                        title = "Редактировать"
+                        style = "color: #fff;">
+                        <i class="fas fa-pencil-alt"></i>
+                    </a> &nbsp;
                     <a href="'.IA_URL.$this->carusel_name.'.php?c_id='.$id.'" title="редактировать">'.$title.'</a>
                   </td>
                   
@@ -761,12 +767,12 @@ HTML;
     
     $output .= '
               <a  href="..'.IA_URL.$this->carusel_name.'.php?edits='.$id.'" 
-                  class = "btn btn-info btn-sm"
+                  class = "btn btn-info btn-sm my-1"
                   title = "Редактировать">
                 <i class="fas fa-pencil-alt"></i>
               </a>
               
-              <span class="btn btn-danger btn-sm" 
+              <span class="btn btn-danger btn-sm my-1" 
                     title="удалить" 
                     onclick="delete_item('.$id.', \'Удалить элеемент?\', \'tr_'.$id.'\')">
                 <i class="far fa-trash-alt"></i>
@@ -775,21 +781,198 @@ HTML;
     return $output;
   }
   
-  function get_show_table_menu_btn( $c_id ){
-    $output = "";
+  function get_show_table_menu_btn( $c_id = ''){
+    $output = '';
+    $btn_class = 'btn btn-default btn-sm mb-1';
     
     $output .=  '
-      <table class="table table-sm">
-        <tr class="r0">
-          <td>
-            <a href="?view_tree"          class = "btn btn-default" ><i class="fas fa-tree"></i>  Дерево всех категорий</a>
-            <a href="?full_tree"          class = "btn btn-default" ><i class="fas fa-server"></i> Полный каталог</a>
-          </td>
-        </tr>
-      </table>';
+    <div class="expansion_table_box py-2">
+      <a href="/'.ADM_DIR.'/'.$this->carusel_name.'.php" class="'.$btn_class.'" title = "Каталог"><i class="fas fa-home"></i></a>
+      <a href="?view_tree" class="'.$btn_class.'"><i class="fas fa-tree"></i> Дерево всех категорий</a>
+      <a href="?full_tree" class="'.$btn_class.'"><i class="fas fa-sitemap"></i></i> Полный каталог</a>
+    </div>';
     
     return $output;
   }
+  
+  function makeGroupOperations(){
+    $output = "";
+    $group_action = '';
+    $group_items = '';
+    
+    if(isset($_POST['group_action']) && $_POST['group_action']){
+      $group_action = $_POST['group_action'];
+    }
+    
+    if(isset($_POST['group_item']) && $_POST['group_item']){
+      $group_items = $_POST['group_item'];
+    }
+    
+    $output .= parent::makeGroupOperations();
+    
+    switch($group_action){
+        
+      case 'remuve_cat':
+        if ( !empty($group_items) ){
+          if(isset($_POST['remuve_cat_id']) && $_POST['remuve_cat_id']){
+            $remuve_cat_id = $_POST['remuve_cat_id'];
+            
+            $i = 0; $str_item_id = '';
+            foreach ($group_items as $g_item_id){
+              if($i++)$str_item_id .= ", ";
+              $str_item_id .= intval( $g_item_id );
+            }
+            $s = "
+              UPDATE  `".$this->prefix.$this->carusel_name."` 
+              SET     `".$this->prefix.$this->carusel_name."`.`cat_id` = '$remuve_cat_id'
+              WHERE   `".$this->prefix.$this->carusel_name."`.`id` IN ( $str_item_id );
+            "; # pri($s);
+            $res = $this->pdo->query( $s ); 
+            if( $res ){
+              $cat_name = db::value( 'title', $this->prefix.$this->carusel_name.'_cat', 'id = '.$remuve_cat_id );
+              $output .= $this->getNotiseMobalWindow('Успешно!', 'Товары успешно перенесены в Категорию<br/><a href="/'.ADM_DIR.'/goods.php?c_id='.$remuve_cat_id.'">'.$cat_name.'</a>');
+            }
+          }
+        }
+        break;
+        
+    }
+    
+    return $output;
+    
+  }
+  
+  function getNotiseMobalWindow($mob_tit, $mob_content){
+    $output = '';
+    
+    $output .= '
+      <div class="modal fade show" id="notice_ad_modal" tabindex="-1" aria-labelledby="noticeModalLabel" aria-hidden="true" style="display: block;">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="noticeModalLabel">'.$mob_tit.'</h5>
+              <button type="button" class="close notice_ad_modal_close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              '.$mob_content.'
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary notice_ad_modal_close" data-dismiss="modal">Close</button>';
+              #<button type="button" class="btn btn-primary">Save changes</button>
+    $output .= '
+            </div>
+          </div>
+        </div>
+      </div>';
+    
+    $this->admin->adminFooterScripts .= '
+    <script>
+      $(document).ready(function() {
+        $(".notice_ad_modal_close").click(function() { 
+          $("#notice_ad_modal").hide();
+          
+          /*$("#notice_ad_modal").modal("show");*/
+        });  
+      });
+    </script>';
+    
+    return $output;
+  }
+  
+  
+  function getGroupOperations(){
+    $output = '';
+    #pri($_POST);
+    
+    $output .= $this->makeGroupOperations();
+    
+    $output .= parent::getGroupOperations();
+    
+    $tmp  = '
+    
+    <div class = "group_operation_box">
+      <div class="remuve_cat_box pt-1 pl-1">
+        <div class="btn-group">
+          <select name  = "remuve_cat_id" 
+                  class = "form-control remuve_cat_id" 
+                  style = "max-width: 320px; display: inline-block; float: left;"
+                  >
+            '.$this->get_category_option(0).'
+          </select>
+          <button type    = "submit" 
+                  class   = "btn btn-info btn-sm" 
+                  name    = "group_action" 
+                  value   = "remuve_cat"  
+                  style   = "vertical-align: top; width: 170px;"
+                  onclick = "javascript: if (confirm(\'Переместить выделеные?\')) { return true;} else { return false;}">
+            <span class="fas fa-file-import"></span>&nbsp;Переместить
+          </button>
+        </div>  
+      </div>
+    </div>';
+      
+    
+    
+    $output .= $tmp;
+    
+    $this->admin->adminFooterScripts .= '
+      <script src  = "'.IA_URL.'admin_style/vendor/select2-4.0.6-rc.1/dist/js/select2.js"></script>
+      <link   href = "'.IA_URL.'admin_style/vendor/select2-4.0.6-rc.1/dist/css/select2.css" rel="stylesheet" />
+      <style>
+      .select2-container--default .select2-results>.select2-results__options {
+        max-height: 350px;
+        overflow-y: auto;
+      }
+      .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+          color: #fff;
+      }
+      .select2-container--default .select2-selection--multiple .select2-selection__choice {
+          background-color: #3c8dbc;
+          border: 1px solid #3c8dbc;
+      }
+      .select2-container--default .select2-selection--multiple .select2-selection__choice {
+          background-color: #3c8dbc;
+          border-color: #367fa9;
+      }
+      .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+          /*padding-bottom: 5px;*/
+      }
+      .select2-container--default .select2-selection--single {
+        height: 34px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .select2-container--default.select2-container--open {
+          float: left;
+          border-color: #3c8dbc;
+      }
+      .select2-container {
+            box-sizing: border-box;
+            display: inline-block;
+            margin: 0;
+            position: relative;
+            vertical-align: middle;
+            float: left;
+        }
+      .select2-container{
+        width: 400px;
+        float: left;
+      }
+      </style>
+      
+      <script>
+        $(document).ready(function() {
+          $(".remuve_cat_id").select2({
+            width: \'500\'
+          });
+        });
+      </script>';
+    
+    return $output;
+  }
+  
   
   function show_table(){
     $output = "";
@@ -1054,7 +1237,13 @@ HTML;
                   action="'.IA_URL.$this->carusel_name.'.php?creates"
                   class="form-horizontal form-label-left"
                 >';
-
+    
+    if( isset($_GET['copyid']) && intval($_GET['copyid']) ){
+      $copyid = intval($_GET['copyid']);
+      $copy_item = db::row( '*', $this->prefix.$this->carusel_name, 'id = '.$copyid, null, 0 ); #pri($copy_item);
+      $item = $copy_item;
+    }
+    
     $output .= $this->show_form($item);
 
     $output .= ' <BR/><BR/><INPUT type="submit" value="сохранить" class="btn btn-success btn-large submit_form" id="submit">';
@@ -1838,6 +2027,8 @@ HTML;
   // END Категории
   
   function view_tree(){
+    $output = '';
+    
     if( isset($_SESSION[$this->carusel_name]['c_id']) && $_SESSION[$this->carusel_name]['c_id'] ){
       $item_cat_id = $_SESSION[$this->carusel_name]['c_id'];
       $this->bread = array();
@@ -1846,13 +2037,8 @@ HTML;
     }
     $this->title = 'Дерево всех категорий'; 
     $this->header = '<h1><a href = "'.IA_URL.$this->carusel_name.'.php?c_id=root">'.$this->header.'</a></h1>';
-    $output .=  '
-    <table class="table table-sm">
-      <tr class="r0">
-          <a href="?view_tree"          class = "btn btn-default" ><i class="fas fa-tree"></i> Дерево всех категорий</a>
-          <a href="?full_tree"          class = "btn btn-default" ><i class="fas fa-server"></i> Полный каталог</a>
-      </tr>
-    </table>';
+    
+    $output .= $this->get_show_table_menu_btn();
     $output .= '<table class="catalog" width="990"><tr><td style="text-align: left;">';
 		$output .= '<div class="well">';
 		$output .= $this->show_tree_catalog();
@@ -1861,7 +2047,391 @@ HTML;
     return $output;
   }
   
-  function show_tree_catalog($parent = 0, $output = '') {
+  function show_tree_catalog(){
+    
+    $output = $count_items_arr = $category_arr = '';
+    $total_cat = $total_item = 0;
+    
+    $tbl_cat = $this->cat_carusel_name;
+    $tbl     = $this->prefix.$this->carusel_name;
+    
+    $s_count = "
+      SELECT    `cat_id`, count(*) AS `cnt`
+      FROM      `$tbl`
+      GROUP BY  `cat_id`
+    "; #pri($s_count); 
+    
+    if($q_count = $this->pdo->query($s_count)){
+      if ( $q_count->rowCount() ){
+        $count_items_arr = array();
+        while($r = $q_count->fetch()){
+          $count_items_arr[$r['cat_id']] = $r['cnt'];
+          $total_item += $r['cnt'];
+        }
+      }
+    }
+    
+    $s = "
+      SELECT    `$tbl_cat`.*
+      FROM      `$tbl_cat`
+      ORDER BY  `$tbl_cat`.`parent_id` ASC,
+                `$tbl_cat`.`ord` ASC
+    "; #pri($s);
+    
+    
+    if($q = $this->pdo->query($s)){
+      if ( $q->rowCount() ){
+        $category_arr = array();
+        while($row = $q->fetch()){
+          if($row["parent_id"] === NULL) $row["parent_id"] = 0; 
+          $category_arr[$row["parent_id"]][] = $row;
+          $total_cat++;
+        }
+      }
+    } 
+    
+    $output .= '
+      <div class = "py-2"><b>Всего:</b> разделов: <b>'.$total_cat.'</b>; позиций: <b>'.$total_item.'</b>;</div>
+    ';
+    $output .= $this->out_tree(0, 0, $category_arr, $count_items_arr);
+     
+    return $output;
+  }
+  
+  function out_tree($parent_id, $level, &$category_arr, &$count_items_arr) {
+    $output = '';
+           
+    if (isset($category_arr[$parent_id])) {              
+        foreach ($category_arr[$parent_id] as $value) {  
+          $count = 0;
+          $lnk = '?c_id='.$value['id'];
+          
+          if(isset($count_items_arr[$value['id']]) && $count_items_arr[$value['id']]){
+            $count = $count_items_arr[$value['id']];
+          }
+          #<div style = "margin-left:'.($level * 25).'px;">
+          #$output .= '
+          #  <div style = "">';
+          #for($i=0; $i < $level; $i++ ){
+          #  if($i == ($level - 1 ) ){
+          #    $output .= ' &rarr; ';
+          #  }else{
+          #    $output .= ' &mdash; ';
+          #  }
+          #}
+          $output .= '
+            <div style = "margin-left:'.($level * 25).'px;">';
+          if($level){
+            $output .= '
+              <sub style = "color: #ccc;">'.$level.'</sub>';
+          }
+          $output .= '
+              <span style = "color: #aaa;">'.$value['id'].'</span> 
+              <a href = "'.$lnk.'" target = "_blank" title = "Перейти в категорию">'.$value['title'].'</a> ('.$count.')
+              <a href="?editc='.$value['id'].'" class="btn btn-info btn-sm px-1 py-0 mt-1" title = "Редактировать категорию">
+                <i class="fas fa-pencil-alt"></i>  
+              </a>';   
+          if( isset($value['markup']) && $value['markup'] ) $output .= '(<span style = "color: red;">Наценка: '.$value['markup'].' %</span> )';
+          $output .= '
+            </div>';
+            
+          $level   = $level + 1;                            
+          $output .= $this->out_tree($value["id"], $level, $category_arr, $count_items_arr);
+          $level   = $level - 1;                             
+        }
+    }
+    
+    return $output;
+	}
+  
+  function full_tree(){
+    $output = '';
+    
+    if( isset($_SESSION[$this->carusel_name]['c_id']) && $_SESSION[$this->carusel_name]['c_id'] ){
+      $item_cat_id = $_SESSION[$this->carusel_name]['c_id'];
+      $this->bread = array();
+      $this->show_bread_crumbs($item_cat_id);
+      $this->admin->setForName('bread', $this->getForName('bread')); 
+    }
+    $this->title = 'Полный каталог'; 
+    $this->header = '<h1><a href = "'.IA_URL.$this->carusel_name.'.php?c_id=root">'.$this->header.'</a></h1>';
+    
+    $output .= $this->get_show_table_menu_btn();
+    
+    $output .= $this->full_tree_content();
+    
+    return $output;
+  }
+  
+  function full_tree_content(){
+    $output = '';
+    
+    $output .= '
+		  <script>
+		  $(function(){
+        
+			  $("#article").keyup(function(){
+			    var q=$(this).val();
+			    $.post("'.$this->carusel_name.'.php?ajx&act=search", {que:q}).done(function( data ){
+				  	$("#exists").html(data);
+				  });
+		    });
+
+      });
+      
+      function star_check(id, field) {
+    		$.post(\''.$this->carusel_name.'.php?ajx&act=star_check\', {id:id, field:field}, function(data) {
+    			if (data == 1) {
+    				$("#"+field+"_"+id).removeClass("far fa-star");
+    				$("#"+field+"_"+id).addClass("fas fa-star");
+    			} else {
+    				$("#"+field+"_"+id).removeClass("fas fa-star");
+    				$("#"+field+"_"+id).addClass("far fa-star");
+    			}
+    		});
+	    };
+      
+		  </script>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-7 col-lg-8">
+            <div class="row">
+              <div class="col-xs-12">';
+    $output .= $this->show_entrie_catalog_content();
+    #$output .= $this->show_entrie_catalog(); 
+    $output .= '
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-5 col-lg-4">
+            <div class="row">
+              
+                <div class="box box-primary box-solid">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">Поиск</h3>
+
+                    <div class="box-tools pull-right">
+                      <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>                    <!-- /.box-tools -->
+                  </div>                      <!-- /.box-header -->
+                  <div class="box-body">
+                    <div class="form-group">
+                      <input type="text" class="text form-control" name="article" id="article" placeholder="Запрос..."> 
+                    </div>
+                  </div>                      <!-- /.box-body -->
+                </div>
+              
+                
+            </div>
+            
+            <div class="row">
+              <div class="" id="exists"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+      var popover = new bootstrap.Popover(document.querySelector(".posit"), {
+        container: "body"
+      }); 
+      $(function(){
+        $(".posit").popover({
+          trigger:   "hover",
+          placement: "left",
+          html:      true,
+          offset:    1 
+        })
+      });
+      </script>
+      
+      <style>
+      .listingb li
+      {
+	      padding: 5px 0 0 0;
+      }
+      .listingb{
+        padding:5px 0;
+        margin: 0 0 0 15px;
+      }
+      .listingb a{
+        color: #265c88;
+      }
+      .container{
+        width: 100%;
+      }
+      .listingb .label{
+        color: #000000;
+      }
+      .popover.fade:not(.show) {
+        opacity: 1; 
+      }
+      
+      </style>
+    ';
+    
+    return $output;
+  }
+  
+    function show_entrie_catalog_content( ){
+    $output = '';
+    $tbl_cat      = $this->cat_carusel_name;
+    $tbl          = $this->prefix.$this->carusel_name;
+    $category_arr = $items_arr  = array();
+    $total_cat    = $total_item = 0;
+    
+    $s_item = "
+      SELECT    *
+      FROM      `$tbl`
+      ORDER BY  `$tbl`.`cat_id` ASC,
+                `$tbl`.`ord` ASC
+    "; #pri($s_count); 
+    
+    if($q_item = $this->pdo->query($s_item)){
+      if ( $q_item->rowCount() ){
+        while($r = $q_item->fetch()){
+          $items_arr[$r['cat_id']][] = $r;
+          $total_item++; #pri($r['cat_id']);
+        }
+      }
+    } # pri($items_arr[357]);
+    
+    $s = "
+      SELECT    `$tbl_cat`.*
+      FROM      `$tbl_cat`
+      ORDER BY  `$tbl_cat`.`parent_id` ASC,
+                `$tbl_cat`.`ord` ASC
+    "; #pri($s);
+    
+    
+    if($q = $this->pdo->query($s)){
+      if ( $q->rowCount() ){
+        while($row = $q->fetch()){
+          if($row["parent_id"] === NULL) $row["parent_id"] = 0; 
+          $category_arr[$row["parent_id"]][] = $row;
+          $total_cat++;
+        }
+      }
+    }
+    
+    $output .= '
+      <div class = "py-2"><b>Всего:</b> разделов: <b>'.$total_cat.'</b>; позиций: <b>'.$total_item.'</b>;</div>';
+      
+    $output .= $this->show_entrie_catalog_v2( 0, 0, $category_arr, $items_arr );
+    
+    return $output;
+  }
+  
+    function show_entrie_catalog_v2( $parent_id, $level, &$category_arr, &$items_arr ) {
+    
+		$output = '';
+    
+    if (isset($category_arr[$parent_id])) {              
+      foreach ($category_arr[$parent_id] as $value) {  
+        $count = 0; 
+        $itms_str = $liclass = "";
+        $lnk = '?c_id='.$value['id'];
+        
+        if(isset($items_arr[$value['id']]) && $items_arr[$value['id']]){
+          $count = count($items_arr[$value['id']]); #pri($count);
+          
+          $itms_str .= '
+            <div class = "listitem_box" style = "margin-left: 15px;">';
+    			foreach ( $items_arr[$value['id']] as $k_item => $v_item ){ 
+            #$count++;
+    				$itms_str .= $this->get_full_tree_line($v_item);
+    			}
+    			$itms_str .= '
+            </div>'; 
+        }
+        
+        if ($value['hide']) $liclass = "subhide";
+        
+        $output .= '
+          <div class = "listingb" style = "margin-left:'.($level * 25).'px;">';
+        
+        $output .= '
+            <div class = "'.$liclass.'">';
+        if($level) $output .= '<sub style = "color: #ccc;">'.$level.'</sub>';
+        
+        $output .= '
+            <span class = "label">'.$value['id'].'</span>';
+        if($value['img']){
+          $output .= '
+            <span class = "posit label" 
+                  data-content = \'<img style="max-height:150px; max-width:150px;" src = "/images/'.$this->carusel_name.'/cat/slide/'.$value['img'].'">\'>
+              image
+            </span> &nbsp;
+          ';
+        }
+        $output .= '
+            <a href = "'.$lnk.'" target = "_blank">
+              <strong>'.$value['title'].'</strong>
+            </a> 
+            ('.$count.')';   
+        $output .= '
+            </div>';
+        $output .= $itms_str;
+        
+        $output .= '
+          </div>';
+          
+        $level   = $level + 1;                            
+        $output .= $this->show_entrie_catalog_v2($value["id"], $level, $category_arr, $items_arr);
+        $level   = $level - 1;                             
+      }
+    }
+    
+    return $output;
+	}
+  
+    function get_full_tree_line( $item ){
+    $output = '';
+    
+    $output .= '
+      <div style = "listitem_item">
+        <span class = "label" >
+          '.$item['id'].'
+        </span> 
+    ';
+    if($item['img']){
+      $output .= '
+        <span class = "posit label" 
+              data-container = "body" 
+              data-toggle    = "popover"
+              data-placement = "top" 
+              data-content   = \'<img style="max-height:150px; max-width:150px;" src = "/images/'.$this->carusel_name.'/slide/'.$item['img'].'">\' 
+        > 
+        
+          image
+        </span> &nbsp;
+      ';
+    }
+    $output .= '
+        <span title="Скрыть" onclick="star_check('.$item['id'].', \'hide\')" class="star_check '.$this->getStarValStyle($item['hide']).'" id="hide_'.$item['id'].'"></span>';
+    if(isset($item['fl_show_mine'])){
+      $output .= '
+        <span title="На главной" onclick="star_check('.$item['id'].', \'fl_show_mine\')" class="star_check '.$this->getStarValStyle($item['fl_show_mine']).'" id="fl_show_mine_'.$item['id'].'"></span>';
+    }
+    $output .= '
+        <a href="?edits='.$item['id'].'">'.$item['title'].'</a>';
+    if(isset($item['price'])){
+      $output .= '
+        <span class="badge badge-success">'.$item['price'].'</span>';
+    }
+    if(isset($item['price_ye'])){
+      $output .= '
+        <span class="badge badge-success">'.$item['price_ye'].'</span>';
+    }
+    $output .= '
+      </div>';
+    
+    return $output;
+  }
+  
+  
+  function show_tree_catalog_old($parent = 0, $output = '') {
 		
 		#$list = db::select('id, title', '`'.$this->cat_carusel_name.'`', "parent_id = $parent", "`ord`");
     $s = "
@@ -1909,7 +2479,8 @@ HTML;
     return $output;
 	}
   
-  function full_tree(){
+  function full_tree_old(){
+    $output = '';
     
     if( isset($_SESSION[$this->carusel_name]['c_id']) && $_SESSION[$this->carusel_name]['c_id'] ){
       $item_cat_id = $_SESSION[$this->carusel_name]['c_id'];
@@ -1919,13 +2490,8 @@ HTML;
     }
     $this->title = 'Полный каталог'; 
     $this->header = '<h1><a href = "'.IA_URL.$this->carusel_name.'.php?c_id=root">'.$this->header.'</a></h1>';
-    $output .=  '
-    <table class="table table-sm">
-      <tr class="r0">
-        <a href="?view_tree"          class = "btn btn-default" ><i class="fas fa-tree"></i> Дерево всех категорий</a>
-        <a href="?full_tree"          class = "btn btn-default" ><i class="fas fa-server"></i> Полный каталог</a>
-      </tr>
-    </table>';
+    
+    $output .= $this->get_show_table_menu_btn( );
      
     $output .= '
 		  <script>
@@ -1945,7 +2511,7 @@ HTML;
           <div class="col-sm-12 col-md-7 col-lg-8">
             <div class="row">
               <div class="col-12 alert alert-info">';
-	  $output .= $this->show_entrie_catalog();
+	  $output .= $this->show_entrie_catalog_old();
     $output .= '
               </div>
             </div>
@@ -1995,8 +2561,8 @@ HTML;
     return $output;
   }
   
-  function show_entrie_catalog($parent = 0) {
-    
+  function show_entrie_catalog_old($parent = 0) {
+    $output = '';
 		#$list = db::select('id, title, `hide`, `img`', '`'.$this->cat_carusel_name.'`', "parent_id = $parent", "`ord`");
     
     $s = "
@@ -2060,14 +2626,20 @@ HTML;
           ';
         }
         $output .= '
-            <a href="?edits='.$posi['id'].'">'.$posi['title'].'</a> 
-            <span class="badge badge-success">'.$posi['price'].'</span>
-            <span class="badge badge-success">'.$posi['price_ye'].'</span>
+            <a href="?edits='.$posi['id'].'">'.$posi['title'].'</a>';
+        if(isset($item['price'])){
+          $output .= '<span class="badge badge-success">'.$posi['price'].'</span>';
+        }
+        if(isset($item['price_ye'])){
+          $output .= '
+            <span class="badge badge-success">'.$posi['price_ye'].'</span>';
+        }
+        $output .= '
           </li>
         ';
 			}
 			$output .= '</ul>';
-			$output .= $this->show_entrie_catalog($id);
+			$output .= $this->show_entrie_catalog_old($id);
 			$output .= '</li>';
 		}
 		$output .= '</ul>'; 

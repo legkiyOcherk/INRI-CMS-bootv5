@@ -291,12 +291,12 @@ class Carusel extends BaseCarusel{
     
     $output .= '
               <a  href="..'.IA_URL.$this->carusel_name.'.php?edits='.$id.'" 
-                  class = "btn btn-info btn-sm"
+                  class = "btn btn-info btn-sm my-1"
                   title = "Редактировать">
                 <i class="fas fa-pencil-alt"></i>
               </a>
               
-              <span class="btn btn-danger btn-sm" 
+              <span class="btn btn-danger btn-sm my-1" 
                     title="удалить" 
                     onclick="delete_item('.$id.', \'Удалить элеемент?\', \'tr_'.$id.'\')">
                 <i class="far fa-trash-alt"></i>

@@ -567,14 +567,14 @@ class Basket {
           </div>
         </div>
         <div class="basket_form_cont">
-          <div class="form-group row">
+          <div class="form-group row mb-3">
             <label for="fio" class="col-sm-3 col-form-label">Имя:&nbsp;<span style = "color: red;">*</span></label>
             <div class="col-sm-9">
               <input type="text" class="form-control" name="fio" id="fio" placeholder="" required value="'.$fio.'">
             </div>
           </div>
           
-          <div class="form-group row">
+          <div class="form-group row mb-3">
             <label for="phone" class="col-sm-3 col-form-label ">Телефон:&nbsp;<span style = "color: red;">*</span></label>
             <div class="col-sm-9">
               <input type="text" name="phone" id="phone" class = "form-control" required value="" placeholder="+7 (___) ___-____" />
@@ -582,21 +582,21 @@ class Basket {
             <div class="hidden-xs col-sm-1"></div>
           </div>
           
-          <div class="form-group row">
+          <div class="form-group row mb-3">
             <label for="email" class="col-sm-3 col-form-label">E-mail:&nbsp;<span style = "color: red;">*</span></label>
             <div class="col-sm-9">
               <input type = "email" required placeholder = "your@email.com" class="form-control" name="email" id="email" value="'.$email.'">
             </div>
           </div>
           
-          <div class="form-group row">
+          <div class="form-group row mb-3">
             <label for="address" class="col-sm-3 control-label">Адрес:</label>
             <div class="col-sm-9">
               <input type="text" name="address" class="form-control" id="address" value=""  />
             </div>
           </div>
           
-          <div class="form-group row">
+          <div class="form-group row mb-3">
             <label for="address" class="col-sm-3 control-label">Доставка:&nbsp;<span style = "color: red;">*</span></label>
             <div class="col-sm-9 radio_basked_box">
               <div class="row">
@@ -612,14 +612,14 @@ class Basket {
             </div>
           </div>
           
-          <div class="form-group row">
+          <div class="form-group row mb-3">
             <label for="comment" class="col-sm-3 col-form-label ">Комментарий:</label>
             <div class="col-sm-9">
               <textarea name="comment" id="comment" class = "form-control" rows = "3"></textarea>
             </div>
           </div>
           
-           <div class="form-group row">
+           <div class="form-group row mb-4">
             <label for="comment" class="col-sm-3 col-form-label ">Согласие:&nbsp;<span style = "color: red;">*</span></label>
             <div class="col-sm-9 radio_basked_box">
               <div class="row">
@@ -636,7 +636,7 @@ class Basket {
         </div>
 
         <input type = "hidden" name = "address" id = "address" value = "Уточнить">
-        <br /><br />
+        
         
         <div class="order_submit_b">
           <div class="catalog_download_btn_box">

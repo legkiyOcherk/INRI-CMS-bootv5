@@ -121,7 +121,7 @@
   border-radius: 2px;
   display: inline-block;
 }
-
+ 
 .icheckbox_flat-red{
   margin-top: 6px !important;
 }
@@ -346,3 +346,15 @@
   }
 
 /* --- END bootstrap 4 --- */
+.full_tree_price{
+  width: 120px;
+  display: inline;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+  height: 24px;
+  margin-left: 10px;
+  border-radius: 7px;
+  background-color: #88d888;
+  font-weight: bold;
+}

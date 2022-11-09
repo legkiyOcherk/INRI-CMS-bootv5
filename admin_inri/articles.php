@@ -516,7 +516,7 @@ class Article extends BlockClass{
     
   }
   
-  function full_tree(){
+  function full_tree_22(){
     
     if( isset($_SESSION[$this->carusel_name]['c_id']) && $_SESSION[$this->carusel_name]['c_id'] ){
       $item_cat_id = $_SESSION[$this->carusel_name]['c_id'];

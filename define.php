@@ -14,11 +14,11 @@ if (!defined("IS_AJAX_BACKEND")) define("IS_AJAX_BACKEND", 1);
 #if (!defined("SITE_TYPE")) define("SITE_TYPE",  "CORPORATE");
 if (!defined("SITE_TYPE"))  define("SITE_TYPE",  "ONLINESHOP");
 
-#if (!defined("ADMIN_FAVICON"))        define("ADMIN_FAVICON",          "http://in-ri.ru/css/img/favicon_black.ico");
-if (!defined("ADMIN_FAVICON"))         define("ADMIN_FAVICON",          "http://in-ri.ru/css/img/favicon_white.ico");
-if (!defined("SOURCE_SITE_CUTAWAY"))   define("SOURCE_SITE_CUTAWAY",    "http://cutaway.ready.in-ri.ru");
-if (!defined("SOURCE_SITE_CORPORATE")) define("SOURCE_SITE_CORPORATE",  "http://corporate.ready.in-ri.ru");  
-if (!defined("SOURCE_SITE_ONLINESHOP")) define("SOURCE_SITE_ONLINESHOP", "http://onlineshop.ready.in-ri.ru");   
+#if (!defined("ADMIN_FAVICON"))        define("ADMIN_FAVICON",           "https://in-ri.ru/css/img/favicon_black.ico");
+if (!defined("ADMIN_FAVICON"))         define("ADMIN_FAVICON",           "https://in-ri.ru/css/img/favicon_white.ico");
+if (!defined("SOURCE_SITE_CUTAWAY"))   define("SOURCE_SITE_CUTAWAY",     "https://cutaway.ready.in-ri.ru");
+if (!defined("SOURCE_SITE_CORPORATE")) define("SOURCE_SITE_CORPORATE",   "https://corporate.ready.in-ri.ru");  
+if (!defined("SOURCE_SITE_ONLINESHOP")) define("SOURCE_SITE_ONLINESHOP", "https://onlineshop.ready.in-ri.ru");   
 
   
 

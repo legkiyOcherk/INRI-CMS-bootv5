@@ -12,6 +12,9 @@ if(  ( IS_AJAX_BACKEND == 1 ) ){
 require_once('lib/class.Image.php');
 require_once('../vendors/phpmorphy/phpmorphy_init.php'); // Морфология
 
+ini_set('display_errors', 0);
+ini_set('display_startup_errors', 0);
+error_reporting(E_ALL);
 
 function get_phpmorphy($descr_str) {
     global $morphy;
@@ -109,8 +112,6 @@ class Goods extends BlockClass{
         }
       }
       
-      
-      
       $sql_vals .= $prefix.'  `'.$key.'` = \''.addslashes($_POST[$key]).'\'';
       $i++;
     }
@@ -191,8 +192,14 @@ class Goods extends BlockClass{
               }
               $output .= '
                   </td>
-              	  
+              	   
                   <td style="text-align: left;">
+                    <a  href="..'.IA_URL.$this->carusel_name.'.php?editc='.$id.'" 
+                        class = "btn btn-info btn-sm"
+                        title = "Редактировать"
+                        style = "color: #fff;">
+                        <i class="fas fa-pencil-alt"></i>
+                    </a> &nbsp;
                     <a href="'.IA_URL.$this->carusel_name.'.php?c_id='.$id.'" title="редактировать">'.$title.'</a>
                   </td>
               	  
@@ -215,9 +222,7 @@ class Goods extends BlockClass{
     
     $output .= '
       <style>
-        input[type="text"].price_input{
-        background-color: #88d888; font-weight: bold;  font-size: 20px; text-align: right;
-      }
+        input[type="text"].price_input{ background-color: #88d888; font-weight: bold;  font-size: 20px; }
     </style>';
     
     $output .= '<div class = "c_form_box">';
@@ -558,27 +563,25 @@ class Goods extends BlockClass{
     return $output;
   }
   
-    function get_show_table_menu_btn( $c_id ){
-    $output = "";
+  function get_show_table_menu_btn( $c_id = ''){
+    $output = '';
+    $btn_class = 'btn btn-default btn-sm mb-1';
     
     $output .=  '
-      <table class="table table-sm">
-        <tr class="r0">
-          <td>
-            <a href="?view_tree"          class = "btn btn-default" ><i class="fas fa-tree"></i>  Дерево всех категорий</a>
-            <a href="?full_tree"          class = "btn btn-default" ><i class="fas fa-server"></i> Полный каталог</a>';
-            #<a href="?uploadPrice"        class = "btn btn-default" ><i class="fas fa-sync"></i> Обновить каталог</a>
-            #<a href="?upload_img"         class = "btn btn-default" ><i class="fas fa-upload"></i> Загрузить изображения</a>
-            #<a href="?update_information" class = "btn btn-default" ><i class="fas fa-exchange-alt"></i> Обновление цен</a>
+    <div class="expansion_table_box py-2">
+      <a href="/'.ADM_DIR.'/'.$this->carusel_name.'.php" class="'.$btn_class.'" title = "Каталог"><i class="fas fa-home"></i></a>
+      <a href="?view_tree"          class = "'.$btn_class.'" ><i class="fas fa-tree"></i> Дерево всех категорий</a>
+      <a href="?full_tree"          class = "'.$btn_class.'" ><i class="fas fa-sitemap"></i> Полный каталог</a>
+      <a href="?upload_good_csv"    class = "'.$btn_class.'" ><i class="fas fa-sync"></i> Обновить каталог</a>
+      <a href="?update_information" class = "'.$btn_class.'" ><i class="fas fa-exchange-alt"></i> Обновление цен</a>';
+      #<a href="?upload_img"        class = "'.$btn_class.'" ><i class="fas fa-upload"></i> Загрузить изображения</a>
     $output .=  '
-            <a href="?xls_id='.$c_id.'"   class = "btn btn-default" ><i class="fas fa-download"></i> Скачть ВЕСЬ катлог в xls</a>
-          </td>
-        </tr>
-      </table>';
+      <a href="?xls_id='.$c_id.'"   class = "'.$btn_class.'" ><i class="fas fa-download"></i> Скачть раздел в xls</a>';
+    $output .=  '
+    </div>';
     
     return $output;
   }
-  
   
   function show_table_header_rows(){
     $output = '
@@ -587,15 +590,16 @@ class Goods extends BlockClass{
       		  <td style="width: 50px;">Скрыть</td>
             <td style="width: 50px;">На главной</td>
             <td style="width: 60px;">Картинка</td>
-      		  <td>Название</td>
-      		  <td>Ед. изм.</td>
+      		  <td>Название</td>';
+      		  #<td>Ед. изм.</td>
+    $output .= '
+            <td style="width: 140px">Наличие</td>
             <td style="width: 140px">Цена</td>
-            <td style="width: 80px">Действие</td>
+            <td style="width: 120px">Действие</td>
           </tr>
     <style>
-      input[type="text"].price_input{
-      background-color: #88d888; font-weight: bold;  font-size: 20px;   text-align: right;
-    }
+      input[type="text"].price_input{ background-color: #88d888; font-weight: bold; font-size: 15px; }
+      tr.r1>td>input[type="text"].price_input{padding: 0px 2px;text-align: right;}
     </style>
     ';
     
@@ -611,6 +615,14 @@ class Goods extends BlockClass{
       
       foreach($unit_items as $unit_item){
         $this->units[ $unit_item['id'] ] = $unit_item['reduction'];
+      }
+    }
+    
+    if(!isset($this->availability) || !$this->availability){
+      $sitems =  db::select("*", DB_PFX."availability", null, "ord" );
+      
+      foreach($sitems as $sitem){
+        $this->availability[ $sitem['id'] ] = $sitem['title'];
       }
     }
     
@@ -638,11 +650,50 @@ class Goods extends BlockClass{
             </td>
         	  
             <td style="text-align: left;">
+              <a  href="..'.IA_URL.$this->carusel_name.'.php?edits='.$id.'" 
+                  class = "btn btn-info btn-sm"
+                  title = "Редактировать"
+                  style = "color: #fff;">
+                  <i class="fas fa-pencil-alt"></i>
+              </a> &nbsp;
               <a href="'.IA_URL.$this->carusel_name.'.php?edits='.$id.'" title="редактировать">'.$title.'</a>
-            </td>
+            </td>';
             
-            <td>'.$portion.' '.$this->units[$units_id].'</td>
-            <td><input class="form-control price_input" type="text" name="price" value="'.$price.'"></td>
+    #$output .= '
+    #        <td>
+    #          <select class="form-control" 
+    #                  name="form_tbl_dt['.$id.'][units_id]"
+    #                  style = "width: 80px; padding-left: 2px; padding-right: 2px;"> ';
+    #foreach($this->units as $k => $v){
+    #  $selected = '';
+    #  if( $k == $units_id) $selected = ' selected ';
+    #  $output .= '
+    #          <option value="'.$k.'" '.$selected.' >'.$v.'</option>';
+    #}
+    #$output .= '
+    #          </select>
+    #        </td>';
+    
+    #        <td><input class="form-control " type="text" name="form_tbl_dt['.$id.'][old_price]" value="'.$old_price.'"></td>          
+    $output .= '  
+            <td>
+              <select class="form-control" 
+                      name="form_tbl_dt['.$id.'][availability_id]"
+                      style = "width: 180px; padding-left: 2px; padding-right: 2px;"> ';
+    foreach($this->availability as $k => $v){
+      $selected = '';
+      if( $k == $availability_id) $selected = ' selected ';
+      $output .= '
+              <option value="'.$k.'" '.$selected.' >'.$v.'</option>';
+    }
+    $output .= '
+              </select>
+            </td>';
+    
+    $output .= '
+            <td>
+              <input class="form-control price_input" type="text" name="form_tbl_dt['.$id.'][price]" value="'.$price.'">
+            </td>
             
             <td style="" class="action_btn_box">
               '.$this->show_table_row_action_btn($id).' 
@@ -651,6 +702,21 @@ class Goods extends BlockClass{
     
     return $output;
   }
+  
+  function show_table_row_action_btn($id){
+    $output = '';
+    
+    $output .= '
+              <a  class = "btn btn-warning btn-sm my-1 ajax_edit_item"
+                  title = "Копировать"
+                  href  = "?adds&copyid='.$id.'">
+                <i class="far fa-copy"></i>
+              </a>';
+              
+    $output .= parent::show_table_row_action_btn($id);
+    
+    return $output;
+  }  
   
   function show_entrie_catalog($parent = 0) {
     
@@ -733,7 +799,73 @@ class Goods extends BlockClass{
     return $output;
 	}
   
+  function makeGroupOperations(){
+    
+    $output = "";
+    $group_action = '';
+    $group_items = '';
+    
+    if(isset($_POST['group_action']) && $_POST['group_action']){
+      $group_action = $_POST['group_action'];
+    }
+    
+    if(isset($_POST['group_item']) && $_POST['group_item']){
+      $group_items = $_POST['group_item'];
+    }
+    
+    $output .= parent::makeGroupOperations();
+    
+    switch($group_action){
+        
+      case 'set_new_tbl_date':
+        
+          if(isset($_POST['form_tbl_dt']) && $_POST['form_tbl_dt']){
+            $form_tbl_dt = $_POST['form_tbl_dt'];
+            
+            foreach ($form_tbl_dt as $k => $v){
+              $updt_arr = array();
+              foreach($v as $field_name => $field_val){
+                $updt_arr[$field_name] = $field_val;
+              } #pri($updt_arr);
+              $res = db::update( $this->prefix.$this->carusel_name, $updt_arr, 'id = '.$k, null, 0); #pri($res);
+               
+            }
+          }
+        
+        break;
+        
+    }
+    
+  }
+  
+  function getGroupOperations(){
+    $output = '';
+    #pri($_POST);
+    
+    $output .= $this->makeGroupOperations();
+    
+    $output .= parent::getGroupOperations();
+    
+    $output .= '
+    <div class = "group_operation_box">
+      <button type    = "submit" 
+              class   = "btn btn-warning" 
+              name    = "group_action"  
+              value   = "set_new_tbl_date"  
+              style   = "position: fixed; right: 107px; bottom: 10px; z-index: 100;"
+              onclick = "javascript: if (confirm(\'Сохранить новые цены и статусы?\')) { return true;} else { return false;}">
+        <i class="fas fa-coins"></i> </span> Сохранить новые цены
+      </button>
+    </div>';
+    
+    $this->admin->adminFooterScripts .= '';
+    
+    return $output;
+  }
+  
+  
   function full_tree(){
+    $output = '';
     
     if( isset($_SESSION[$this->carusel_name]['c_id']) && $_SESSION[$this->carusel_name]['c_id'] ){
       $item_cat_id = $_SESSION[$this->carusel_name]['c_id'];
@@ -743,97 +875,400 @@ class Goods extends BlockClass{
     }
     $this->title = 'Полный каталог'; 
     $this->header = '<h1><a href = "'.IA_URL.$this->carusel_name.'.php?c_id=root">'.$this->header.'</a></h1>';
-    $output .=  '
-    <table class="table table-condensed">
-      <tr class="r0">
-        <td>
-          <a href="?view_tree"          class = "btn btn-default" ><i class="fas fa-tree"></i> Дерево всех категорий</a>
-          <a href="?full_tree"          class = "btn btn-default" ><i class="fas fa-server"></i> Полный каталог</a>
-        </td>
-      </tr>
-    </table>';
+    
+    $output .= $this->get_show_table_menu_btn();
+    
+    if( isset($_POST['goods_price']) && $_POST['goods_price'] ){
+      $carusel_error = '';
+      $curent_prices = $cprace_row = array();
+      
+      $arr_curent_price = db::select("`id`, `price`, `title`", $this->prefix.$this->carusel_name );
+      foreach($arr_curent_price as $kc => $vc ){
+        $curent_prices[$vc['id']] = $vc['price'];
+        $cprace_row[$vc['id']]    = $vc;
+      }
+      $res_table = '';
+      $res_table .= '
+        <table class = "table table-sm" style = "width:inherit;">
+          <thead>
+            <tr>
+              <td>id</td>
+              <td>Наименование</td>
+              <td style = "color: orangered;">Старая цена</td>
+              <td style = "color: green;">Новая цена</td>     
+            </tr>
+          </thead>
+          <tbody>';
+            
+      foreach($_POST['goods_price'] as $k => $v){
+        
+        #$curent_price = db::value("price", $this->prefix.$this->carusel_name, "id = $k", 0 );
+        $curent_price = '';
+        if( $v <> $curent_prices[$k] ){
+          #pri($curent_prices[$k]);
+          
+          $res_table .= '
+            <tr>
+              <td>'.$k.'</td>
+              <td>'.$cprace_row[$k]['title'].'</td> 
+              <td style = "color: orangered;">'.number_format($curent_prices[$k], 0, ',', ' ').'</td>
+              <td style = "color: green;">'.number_format($v, 0, ',', ' ').'</td>
+            </tr>';
+          
+          if($res = db::update( $this->prefix.$this->carusel_name, array ("price" => $v), "id = $k" )){
+            if($this->log){ // Ведение лога
+              $res_log = $this->log->addLogRecord("Обновление цены", "update_price", $this->prefix.$this->carusel_name, $k, $curent_price ); 
+            } 
+          }else{
+            $carusel_error = "Произошла ошибка при ОБНОВЛЕНИИ цены в бд функсия full_tree()";
+            if($this->log){ // Ведение лога
+                $res_log = $this->log->addLogRecord($carusel_error, "update_price", $this->prefix.$this->carusel_name, $k, $curent_price ); 
+            }
+          }
+        
+        }
+      }
+      
+      $res_table .= '
+          </tbody>
+        </table>';
+      
+      if($carusel_error){
+        $output .= '
+          <div class="alert alert-danger" role="alert">
+            '.$carusel_error.'<br />
+            <p>
+              <a href="/'.$this->admin_dir.'/all_log.php">Перейти к логам</a>
+            </p>
+          </div>';
+      }else{
+        $output .= '
+          <div class="alert alert-success" role="alert">
+            Цены успешно обновлены
+          </div>';
+        $output .= $res_table; 
+      }
+      
+    }
+    
+    $output .= $this->full_tree_content();
+    
+    return $output;
+  }
+  
+  function show_entrie_catalog_content(){
+    $output = '';
     $output .= '
-		  <script>
-		  $(function(){
-			  $("#article").keyup(function(){
-			    var q=$(this).val();
-			    $.post("'.$this->carusel_name.'.php?ajx&act=search", {que:q}).done(function( data ) 
-				  {
-				  	$("#exists").html(data);
-				  });
-		    });
-		  });
-		  </script>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-7 col-lg-8">
-            <div class="row">
-              <div class="col-xs-12">';
-	  $output .= $this->show_entrie_catalog();
+      <form action="" method = "post">';
+    $output .= parent::show_entrie_catalog_content();            
+        $output .= '
+        <input type="submit" value="сохранить" class="btn btn-success btn-large" id="submit">
+      </form>';
+      
+    return $output;
+  }
+  
+  function get_full_tree_line( $item ){
+    $output = '';
+    
     $output .= '
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-4">
-            <div class="row">
+      <div style = "listitem_item">
+        <span class = "label" style = "color: #888;" >
+          '.$item['id'].'
+        </span> 
+    ';
+    if($item['img']){
+      $output .= '
+      <span class = "posit label" data-content=\'<img style="max-height:150px; max-width:150px;" src = "/images/'.$this->carusel_name.'/slide/'.$item['img'].'">\'>
+        image
+      </span> 
+      ';
+    }
+    $output .= '
+        <span title="Скрыть" onclick="star_check('.$item['id'].', \'hide\')" class="star_check '.$this->getStarValStyle($item['hide']).'" id="hide_'.$item['id'].'"></span>';
+    if(isset($item['fl_show_mine'])){
+      $output .= '
+        <span title="На главной" onclick="star_check('.$item['id'].', \'fl_show_mine\')" class="star_check '.$this->getStarValStyle($item['fl_show_mine']).'" id="fl_show_mine_'.$item['id'].'"></span>';
+    }
+    $output .= '
+        <a href="?edits='.$item['id'].'">'.$item['title'].'</a>';
+    if(isset($item['is_yandex_market_xml'])){
+      $output .= '
+        <span title="Показывать в яндекс Маркет" onclick="star_check('.$item['id'].', \'is_yandex_market_xml\')" class="star_check '.$this->getStarValStyle($item['is_yandex_market_xml']).'" id="is_yandex_market_xml_'.$item['id'].'"></span>';
+    } 
+    if(isset($item['price'])){
+      #$output .= '
+      #  <span class="badge badge-success">'.$item['price'].'</span>';
+      $output .= '
+            <input class = "form-control full_tree_price" type = "text" name = "goods_price['.$item['id'].']" value = "'.$item['price'].'">';
+    }
+    if(isset($item['price_ye'])){
+      $output .= '
+        <span class="badge badge-success">'.$item['price_ye'].'</span>';
+    }
+    $output .= '
+      </div>';
+    
+    return $output;
+  }
+  
+  private function cleanValueCh($value) {
+		$result = $value;
+		$v = explode(' ', $result);
+		if ( !empty($v[0]) and '"' != mb_substr(trim($v[0]), -1) ) {
+			$result = ltrim($result, '"');
+		}
+		$result = preg_replace('~(?=("))\1{2,}~', '"' , $result);
+		$count_ch = substr_count($result, '"');
+		if ( $count_ch and $count_ch%2 ) {
+			$result = rtrim($result, '"');
+		}
+		return $result;
+	}
+  
+  function updateInformation(){
+    $output = '';
+    
+   	try {
+        $c_id = $_SESSION[$this->carusel_name]['c_id']; 
+       
+        if( isset($_SESSION[$this->carusel_name]['c_id']) && $_SESSION[$this->carusel_name]['c_id'] ){
+          $item_cat_id = $_SESSION[$this->carusel_name]['c_id'];
+          $this->bread = array();
+          $this->show_bread_crumbs($item_cat_id); 
+          $this->admin->setForName('bread', $this->getForName('bread')); 
+        }
+        
+        $this->title = 'Обновление цен'; 
+        $this->header = '<h1><a href = "'.IA_URL.$this->carusel_name.'.php?c_id=root">'.$this->header.'</a></h1>';
+        
+        $output .= $this->get_show_table_menu_btn( $c_id );
+          
+        
+        $information_text ='';
+        
+        if( isset( $_POST['information_text'])  ){
+        
+          $update_info      = '';
+          $information_text = $_POST['information_text'];
+          $data_in          = explode("\n", $information_text);
+          
+      		for( $i = 0; $i < count($data_in); $i++ ) {
+      			$row = trim($data_in[$i]);
+      			if ( !empty($row) ) {
+      				$data_in[$i] = explode("\t", $data_in[$i]);
+      				for($j = 0; $j < count($data_in[$i]); $j++) {
+      					$data[$i][$j] = trim(str_replace("…", '-', $data_in[$i][$j]));
+      				}
+      			}
+      		} #pri($data); 
+          
+          #$all_brand_arr    = array();
+          #$all_brand_id_arr = array();
+          #$all_brand = db::select('id, title', DB_PFX.'brand');
+          #foreach($all_brand as $k => $v){
+          #  $all_brand_arr[$v['title']] = $v['id'];
+          #  $all_brand_id_arr[$v['id']] = $v['title'];
+          #} #pri( $all_brand_arr ); die();
+          
+        	$order = 0;
+        	$i     = 0;
+          $td_style = 'padding: 2px 5px; border: 1px solid #ddd;';
+          foreach ( $data as $row ) {    # pri($row);                                     
+      			$i++;
+            if ( !empty($row[0])  ) { 
+              # $brand_name = $this->cleanValueCh($row[0]);
               
-                <div class="box box-primary box-solid">
-                  <div class="box-header with-border">
-                    <h3 class="box-title">Поиск</h3>
-
-                    <div class="box-tools pull-right">
-                      <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                    </div>                    <!-- /.box-tools -->
-                  </div>                      <!-- /.box-header -->
-                  <div class="box-body">
-                    <div class="form-group">
-                      <input type="text" class="text form-control" name="article" id="article" placeholder="Запрос..."> 
-                    </div>
-                  </div>                      <!-- /.box-body -->
+      				$article      = $this->cleanValueCh($row[0]);
+              $price        = str_replace( ' ', '', $this->cleanValueCh($row[1]));
+              $old_price    = str_replace( ' ', '', $this->cleanValueCh($row[2]));
+              
+              #$update_date  = $this->cleanValueCh($row[3]);
+              
+              
+              #$brand_id = '';
+              #if(isset($all_brand_arr[$brand_name]) && $all_brand_arr[$brand_name]){
+              #  $brand_id = intval($all_brand_arr[$brand_name]);
+              #}
+              
+              $s = 'article = "'.$article.'"';
+              #if($brand_id){
+              #  $s = 'article = "'.$article.'" AND brand_id = '.$brand_id;
+              #} #pri( $s );
+              
+              
+              if( $good_select = db::select ( "*", DB_PFX.'goods', $s, null, null, null, 0  ) ){ 
+                
+                
+                foreach($good_select as $good_row){ #pri($good_row);
+                  $arr_upd = array(
+                    'price'       =>  floatval(str_replace(',', '.', $price)),
+                    'old_price'   =>  floatval(str_replace(',', '.', $old_price)),
+                  #  'update_date' =>  addslashes($update_date),
+                  ); # pri($arr_upd); 
+                  
+                  $res_upd = db::update( DB_PFX.'goods', $arr_upd, 'id = '.$good_row['id'], null, 0 ); #pri($res_upd);
+                  $brand_name = '';
+                  if($res_upd){
+                    $new_row = db::row( '*', DB_PFX.'goods', 'id = '.$good_row['id'], null, 0  );
+                    
+                    #if(isset($new_row['brand_id']) && $new_row['brand_id']){
+                    #  $brand_name = $all_brand_id_arr[$new_row['brand_id']];
+                    #}
+                    
+                    $update_info .= '
+                      <tr>
+                        <td style="'.$td_style.'">'.$i.'</td>';
+                        #<td style="'.$td_style.'">'.$brand_name.'</td>
+                    $update_info .= '
+                        <td style="'.$td_style.'">'.$new_row['title'].'</td> 
+                        <td style="'.$td_style.' text-align:right;">'.$new_row['article'].'</td> 
+                        <td style="'.$td_style.' text-align:right;">'.$new_row['price'].'</td>
+                        <td style="'.$td_style.' text-align:right;">'.$new_row['old_price'].'</td>';
+                        #<td style="'.$td_style.'">'.$new_row['update_date'].'</td>
+                    $update_info .= '
+                        <td style="'.$td_style.'">обновлен</td>
+                        <td style="'.$td_style.'"><a href = "//'.$_SERVER['HTTP_HOST'].'/'.ADM_DIR.'/goods.php?edits='.$good_row['id'].'" target = "_blank">Админка</a></td> 
+                      </tr>
+                    ';
+                  }else{
+                    
+                    #if(isset($good_row['brand_id']) && $good_row['brand_id']){
+                    #  $brand_name = $all_brand_id_arr[$good_row['brand_id']];
+                    #}
+                    $update_info .= '
+                      <tr>
+                        <td style="'.$td_style.'">'.$i.'</td>';
+                        #<td style="'.$td_style.'">'.$brand_name.'</td>
+                    $update_info .= '
+                        <td style="'.$td_style.'">'.$good_row['title'].'</td> 
+                        <td style="'.$td_style.' text-align:right;">'.$good_row['article'].'</td> 
+                        <td style="'.$td_style.' text-align:right;">'.$good_row['price'].'</td>
+                        <td style="'.$td_style.' text-align:right;">'.$good_row['old_price'].'</td>';
+                        #<td style="'.$td_style.'">'.$good_row['update_date'].'</td>
+                    $update_info .= '
+                        <td style="'.$td_style.'"><span style = "color: red;">Ошибка при обновлении</span></td>
+                        <td style="'.$td_style.'"><a href = "//'.$_SERVER['HTTP_HOST'].'/'.ADM_DIR.'/goods.php?edits='.$good_row['id'].'" target = "_blank">Админка</a></td> 
+                      </tr>
+                    ';
+                     
+                  }
+                
+                }
+                
+                
+                
+              }else{
+                $update_info .= '
+                      <tr>
+                        <td style="'.$td_style.'">'.$i.'</td>';
+                        #<td style="'.$td_style.'">'.$brand_name.'</td>
+                $update_info .= '        
+                        <td style="'.$td_style.'"></td> 
+                        <td style="'.$td_style.' text-align:right;">'.$article.'</td> 
+                        <td style="'.$td_style.' text-align:right;">'.$price.'</td>
+                        <td style="'.$td_style.' text-align:right;">'.$old_price.'</td>';
+                        #<td style="'.$td_style.'"></td>
+                $update_info .= '
+                        <td style="'.$td_style.'"><span style = "color: red;">Товар не найден</span></td> 
+                        <td style="'.$td_style.'"></td> 
+                      </tr>
+                    ';
+              } 
+             
+            } # pri($row);
+          }
+            
+          if($update_info){
+            
+            $update_info = '
+              <p><b>Результаты обновления цен</b></p>
+              
+              <table cellpadding="4" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td style="'.$td_style.'">№</td>
+                    <td style="'.$td_style.'">Наименование</td> 
+                    <td style="'.$td_style.'">Артикул</td> 
+                    <td style="'.$td_style.'">Цена, руб.</td>
+                    <td style="'.$td_style.'">Старая цена, руб.</td>
+                    <td style="'.$td_style.'">Результат</td>
+                    <td style="'.$td_style.'">Админка</td>
+                  </tr>
+                <tr>
+                '.$update_info.'
+                
+              </table>';
+              #<td style="'.$td_style.'">Бренд</td>
+              #<td style="'.$td_style.'">Дата обновления</td>
+            $output .= $update_info; 
+            
+            $email_order = db::value('val', DB_PFX.'config', "name = 'email_order'");
+            #$email_order = '1@in-ri.ru';
+            #pri($email_order);
+            // Если несколько адресов перечисленно через запятую
+            
+            #$exp_email_order = explode(',', $email_order);
+            #if(is_array($exp_email_order)){
+            #  $email_order = array();
+            #  foreach($exp_email_order as $ee_mail){
+            #    $email_order[] = $ee_mail;
+            #  }
+            #}
+            
+            $date = date("d.m.y H:i:s");
+            $headers  = 'MIME-Version: 1.0' . "\r\n";
+            $headers .= "Content-type: text/html; charset=utf-8 \r\n";
+            $headers .= "From: ".$_SERVER['HTTP_HOST']." <info@".$_SERVER['HTTP_HOST'].">";
+            #$is_sending = mail($email_order.', 1@in-ri.ru', "Обновление цен ".$_SERVER['HTTP_HOST']."  $date", $update_info, $headers);
+            
+            $is_sending = mail($email_order, "Обновление цен ".$_SERVER['HTTP_HOST']." $date", $update_info, $headers);
+          } 
+            
+    			
+    		}
+        
+        $output .= '
+            <div class="container">
+<p>Пример файла в Excel</p>
+<pre style = "font-style: mono;" >
+| Артикул   | Цена      | Старая цена |
+---------------------------------------
+| 25310     | 465,6     | 507,5       |
+| EZ9S16240 | 749,77    | 817         |
+| EZ9S16140 | 482,09    | 525         |
+| EZ9S16340 | 1142,22   | 1245        |
+</pre>
+            </div>
+            <div class="container">
+              <form method="post" enctype="multipart/form-data" action="/'.ADM_DIR.'/goods.php?update_information" class="noprint mt20 form-horizontal">
+                <div class="form-group c_row">
+    							<div class=" col-xs-12">Текст из файла xls</div>
+    						</div>
+                <div class="form-group c_row">
+                  <div class="col-12 col-sm-12 col-md-12 c_title control-label">
+                    <textarea class = "form-control" name = "information_text" style = "min-height: 250px;">'.$information_text.'</textarea>
+                  
+                  </div>
+                </div>
+                <div class="form-group c_row">
+                  <div class="col-12 col-sm-12 col-md-12 c_cont">
+                    <input type="submit" value="Загрузить" class="btn btn-primary btn-sm float-l " />
+                  </div>
                 </div>
               
-                
-            </div>
-            
-            <div class="row">
-              <div class="" id="exists"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <script>
-      $(function(){
-        $(".posit").popover({
-	        html:true,
-	        trigger:"hover",
-	        placement:"top"
-        })
-      });
-      </script>
-      
-      <style>
-      .listingb li
-      {
-	      padding: 5px 0 0 0;
-      }
-      .listingb{
-        padding:5px 0;
-        margin: 0 0 0 15px;
-      }
-      .listingb a{
-        color: #265c88;
-      }
-      .container{
-        width: 100%;
-      }
-      .listingb .label{
-        color: #000000;
-      }
-      
-      </style>
-    ';
+    					</form>
+    					<div class="clear"></div>
+    					<br/>
+    		    </div>
+    					<br/>';
+        
+        return $output;
+    
+		}
+		catch (Exception $e) {
+			echo $e->getMessage();
+		} 
     
     return $output;
   }
@@ -883,9 +1318,8 @@ class Goods extends BlockClass{
     }
   }
   
-  function xls_cat_slide( $id ){ #pri('xls_cat_slide');
-    $output = '';
-    
+  function set_handbook_linked(){     # Справочник связанных значений
+  
     $this->date_arr_not_xls_export = array( # Не экспортировать поля
       'title'             => 'Название',    # расчитывается отдельно
       'cat_id'            => 'Категория',   # расчитывается отдельно
@@ -918,6 +1352,43 @@ class Goods extends BlockClass{
       'orm_search_name'   => 'поле для поискового индекса orm_search_name', # расчитывается отдельно
       'orm_search'        => 'поле для поискового индекса orm_search',      # расчитывается отдельно
     );
+    $this->float_field    = array('old_price', 'price');
+    $this->handbook_field = array('brand', 'availability', 'units');
+    
+    if(!isset($this->brand)){
+      $brands = db::select('*', DB_PFX.'brand' );
+      
+      foreach( $brands as $brand){
+        $this->brand[$brand['id']]         = $brand;
+        $this->brand_name[$brand['title']] = $brand;
+      } #pri($this->brand);
+    }
+    
+    if(!isset($this->availability)){
+      $availabilitys = db::select('*', DB_PFX.'availability' );
+      foreach( $availabilitys as $availability){
+        $this->availability[$availability['id']]         = $availability;
+        $this->availability_name[$availability['title']] = $availability;
+      } #pri($this->availability);
+    }
+    
+    if(!isset($this->units)){
+      $units = db::select('*', DB_PFX.'units' );
+      foreach( $units as $unit){
+        $this->units[$unit['id']]         = $unit;
+        $this->units_name[$unit['title']] = $unit;
+      } #pri($this->units);
+    }
+    if(!isset($this->cat_numbers)){
+      $this->get_cat_numbers(0);
+    } #pri($this->cat_numbers);
+  }
+  
+  function xls_cat_slide( $id ){ #pri('xls_cat_slide');
+    $output = '';
+    
+    $this->set_handbook_linked(); 
+    
     
     $header .='<h1><a href="'.IA_URL.$this->carusel_name.'.php">'.$this->header.'</a></h1>';
     $this->header = $header;
@@ -932,30 +1403,6 @@ class Goods extends BlockClass{
     
     $this->title  = $title;
     (!is_null($this->admin)) ?  : $output .=  '<h3>'.$title.'</h3><br><br>';
-    
-    if(!isset($this->brand)){
-      $brands = db::select('*', DB_PFX.'brand' );
-      foreach( $brands as $brand){
-        $this->brand[$brand['id']] = $brand;
-      } #pri($this->brand);
-    }
-    
-    if(!isset($this->availability)){
-      $availabilitys = db::select('*', DB_PFX.'availability' );
-      foreach( $availabilitys as $availability){
-        $this->availability[$availability['id']] = $availability;
-      } #pri($this->availability);
-    }
-    
-    if(!isset($this->units)){
-      $units = db::select('*', DB_PFX.'units' );
-      foreach( $units as $unit){
-        $this->units[$unit['id']] = $unit;
-      } #pri($this->units);
-    }
-    if(!isset($this->cat_numbers)){
-      $this->get_cat_numbers(0);
-    } #pri($this->cat_numbers);
     
     
     
@@ -985,7 +1432,7 @@ class Goods extends BlockClass{
       header("Content-Type: application/force-download");
       header("Content-Type: application/octet-stream");
       header("Content-Type: application/download");
-      header("Content-Disposition: attachment;filename=lampa66_".date('d.m.Y H:i:s').".xls"); 
+      header("Content-Disposition: attachment;filename=".$_SERVER['HTTP_HOST']."_".date('d.m.Y H:i:s').".xls"); 
       header("Content-Transfer-Encoding: binary");
       
       echo $output_table;
@@ -1025,8 +1472,7 @@ class Goods extends BlockClass{
       if( isset($item['brand_id']) )        $brand_id        = $this->brand[$item['brand_id']]['title'];
       if( isset($item['availability_id']) ) $availability_id = $this->availability[$item['availability_id']]['title'];
       if( isset($item['units_id']) )        $units_id        = $this->units[$item['units_id']]['title']; 
-      $article = $item['article'];
-      if( !$article ) $article = $item['id'];
+      $article = $item['article']; # if( !$article ) $article = $item['id'];
       $output .= '
       <tr style = "vertical-align: top;">
         <td style = "'.$style_td.'"></td>
@@ -1067,6 +1513,297 @@ class Goods extends BlockClass{
     return $output;
   }
   
+  function viewFormUploadCSV(){
+    $output = '';
+    
+    $c_id = $_SESSION[$this->carusel_name]['c_id']; 
+    
+    if( isset($_SESSION[$this->carusel_name]['c_id']) && $_SESSION[$this->carusel_name]['c_id'] ){
+      $item_cat_id = $_SESSION[$this->carusel_name]['c_id'];
+      $this->bread = array();
+      $this->show_bread_crumbs($item_cat_id);
+      $this->admin->setForName('bread', $this->getForName('bread')); 
+    } 
+    $this->title = 'Обновление каталога'; 
+    $this->header = '<h1><a href = "'.IA_URL.$this->carusel_name.'.php?c_id=root">'.$this->header.'</a></h1>';
+    $output .= $this->get_show_table_menu_btn( $c_id );
+    $output .= '
+        <div class="container">
+          <form method="post" enctype="multipart/form-data" action="" class="">
+            <div class="my-3">
+              <label for="price" class="form-label">
+                Прайс-лист в формате CSV (разделители ";")<br>
+                <small>Образец файла можно получить путем экспорта товаров в xls,<br> потом сохранить его как .csv</small>
+              </label>
+              
+              <input class="form-control" type="file" id="price" name="price"  />
+              
+            </div>
+            <div class="mb-3">   
+              <input type="submit" value="Загрузить файл" class="btn btn-primary " />
+            </div>  
+					</form>
+		    </div>
+				<br/>';
+    
+    return $output;
+  }
+  
+  private function uploadCSV() {
+		try {
+			if ( isset($_FILES['price']['tmp_name']) and file_exists($_FILES['price']['tmp_name']) ) {
+				if ( move_uploaded_file($_FILES['price']['tmp_name'], $this->source_file . 'price.csv') ) {
+					chmod($this->source_file . 'price.csv', 0777);
+				}
+			}
+		}
+		catch (Exception $e) {
+			echo $e->getMessage();
+		}
+	}
+  
+  function conv($str){
+    return mb_convert_encoding( $str, "utf-8", "windows-1251" );
+  }
+  
+  function add_inri_csv_goods( $data_xls_row ){ 
+    $output = '';
+    
+    if( $data_xls_row ){
+      $new_goods_cat_arr = array(
+        'id'                => $this->conv( $data_xls_row[0] )
+      );
+      $new_goods_arr = array(
+        'cat_id'            => $this->update_cat_id,             # Предпологается то первой строкой будет категория
+        'title'             => $this->conv( $data_xls_row[1] ),
+        'article'           => $this->conv( $data_xls_row[2] )
+      );
+      
+      $i = 3;  
+       
+      foreach($this->date_arr as $k => $v ){ 
+      
+        if( !isset($this->date_arr_not_xls_export[$k]) ){ # Не входит в исключенные поля
+          $item_val = $this->conv( $data_xls_row[$i] );
+          
+          if( in_array($k, $this->float_field ) ){
+            $item_val = str_replace( ',', '.', $data_xls_row[$i]);
+          }
+          
+          # $this->handbook_field = array('brand', 'availability', 'units'); 
+          # Обратный поиск id по значению для brand_id, availability_id, units_id и т.д.
+          foreach( $this->handbook_field as $valtit ){
+            
+            if( $k == $valtit.'_id' ){
+              $class_nm = $valtit.'_name'; 
+              if( isset($this->$class_nm[$item_val]['id']) ){ 
+                $item_val = $this->$class_nm[$item_val]['id'];  
+              }
+            }
+            
+            $new_goods_arr[$k]  = $item_val;
+          }
+          $i++;
+        }
+      }
+    
+    }
+    
+    
+    if( $new_goods_cat_arr['id'] ){ # Является разделом
+      
+      $is_goods_cat =  db::row( '*', DB_PFX.'goods_cat', "title = '".$new_goods_arr['title']."'", null, 0 );
+      if($is_goods_cat){
+        $this->update_cat_id = $is_goods_cat['id'];
+        $this->update_info['goods_cat_update'] += 1;
+      }else{
+        $insert_arr = array( 'title' => $new_goods_arr['title'] );
+        $this->update_cat_id = db::insert( DB_PFX.'goods_cat', $insert_arr, 0 );
+        $this->update_info['goods_cat_insert'] += 1;
+      }
+      $output .= '<p>Категория: '.$new_goods_arr['title'].' <a href="/'.ADM_DIR.'/goods.php?editc='.$this->update_cat_id.'" target = "_blank" >Админка</a> </p>';
+      
+    }else{                           # Является товаром
+      $fl_is_action = false;
+      
+      # Правка 1
+      # Если артикул и наименование совпадают,
+      # Но есть такой товар где то в другом разделе
+      # Не нужно добавлять позицую
+      # Вывести уведомление
+      
+      $is_double_goods = db::select(  
+        "*",
+        DB_PFX.'goods', 
+        "     `title`    = '".$new_goods_arr['title']."' 
+          AND `article`  = '".$new_goods_arr['article']."'
+          AND `cat_id`  != '".$this->update_cat_id."'
+        ",
+        null,
+        null,
+        null, 
+        0                          ); #pri($is_double_goods);  
+        
+      if( $is_double_goods ){
+        foreach( $is_double_goods as $kg => $vg ){
+          $this->update_info['double_goods'] += 1;
+          $vg_cat_title = db::value('title', DB_PFX.'goods_cat', 'id = '.$vg['cat_id'] );
+          $this->double_goods[] = 'Товар: '.$vg['title'].' <a href="/'.ADM_DIR.'/goods.php?edits='.$vg['id'].'" target = "_blank" >Админка</a> [Категория: <a href="/'.ADM_DIR.'/goods.php?c_id='.$vg['cat_id'].'" target = "_blank">'.$vg_cat_title.'</a> ]';  
+        }
+        $fl_is_action = true;
+      }
+      # Енд Правка 1
+      
+      
+      # Правка 2
+      # Если товар существцет 
+      # артикул совподает, а имена разные, то : 
+      # 1. создать новый товарони попадают в отдельный каталог админки «Неразобранные» 
+      # 2. переместить его в раздел Неразобранные /'.ADM_DIR.'/goods.php?c_id=594 
+      # 3. Вывести уведобление о позиции. 
+      # 4. ЧПУ при этом не формируеть
+      
+      #$is_unsorted_goods = db::row(  
+      #  "*", 
+      #  DB_PFX.'goods', 
+      #  "title != '".$new_goods_arr['title']."' AND label_id = '".$new_goods_arr['label_id']."'",
+      #  null, 
+      #  0                         ); 
+      #
+      #if( $is_unsorted_goods && !$fl_is_action){
+      #  $new_goods_arr['cat_id'] = 594; #pri('Товар: '.$new_goods_arr['title']);
+      #  $goods_id = $res_goods   = db::insert( DB_PFX.'goods', $new_goods_arr, 0 );
+      #  # $url = null;
+      #  # $this->url->set_url( $url, DB_PFX.'goods', $res_goods, $new_goods_arr['title'] );
+      #  $this->update_info['remuve_goods_unsorted'] += 1;
+      #  $this->goods_unsorted[] = 'Товар: '.$new_goods_arr['title'].' <a href="/'.ADM_DIR.'/goods.php?edits='.$goods_id.'" target = "_blank" >Админка</a>';
+      #  $fl_is_action = true;
+      #}
+      
+      # Енд Правка 2
+      
+      
+      
+      if(!$fl_is_action){                         # Является товаром
+        
+          $is_goods = db::row(
+            "*", 
+            DB_PFX.'goods', 
+            "     `title`    = '".$new_goods_arr['title']."' 
+              AND `article`  = '".$new_goods_arr['article']."'
+              AND `cat_id`   = '".$this->update_cat_id."'      ",
+            null,  
+            0); 
+            
+          if($is_goods){
+            $res_goods = db::update( DB_PFX.'goods', $new_goods_arr, "id = ".$is_goods['id'] );
+            $goods_id  = $is_goods['id'];
+            $this->update_info['goods_update'] += 1;
+          }else{
+            $goods_id = $res_goods = db::insert( DB_PFX.'goods', $new_goods_arr, 0 );
+            $url      = null;
+            $this->url->set_url( $url, DB_PFX.'goods', $res_goods, $new_goods_arr['title'] );
+            $this->update_info['goods_insert'] += 1;
+          } 
+          $output .= '<p>Товар: '.$new_goods_arr['title'].' <a href="/'.ADM_DIR.'/goods.php?edits='.$goods_id.'" target = "_blank" >Админка</a> </p>';
+      
+      }
+    }
+    
+    #pri($data_arr);
+    #pri($new_goods_arr);
+    $output .= pri( $new_goods_arr, 1);
+    
+    return $output;
+  }
+  
+  function parseCSVData( ) { 
+    $output = '<h2>Загрузка товаров</h2>';
+    
+    $this->update_info    = array(
+                              'goods_cat_insert'       => 0, # Кол-во добавленных Категорий
+                              'goods_cat_update'       => 0, # Кол-во обновленных Категорий
+                              'goods_insert'           => 0, # Кол-во добавленных Товаров
+                              'goods_update'           => 0, # Кол-во обновленных Товаров
+                              'remuve_goods_unsorted'  => 0, # Кол-во нераспознаных Товаров
+                              'double_goods'           => 0, # Кол-во дублей Товаров
+                            );
+    $this->goods_unsorted = array();
+    $this->double_goods   = array();
+    $this->url            = new Url('url');
+    $csv_file             = $this->source_file . 'price.csv';
+    
+    $this->set_handbook_linked();
+    
+    $row = 0;
+    if (($handle = fopen($csv_file, "r")) !== FALSE) {
+      
+      while (($data_xls_row = fgetcsv($handle, 100000, ";")) !== FALSE) {
+        $row++;
+        $num = count($data_xls_row);
+        
+        $output .= "<br /><p><b> $num полей в строке $row: </b></p>\n"; 
+        
+        if($row == 1){
+          # Пропускаем заголовки таблицы
+        }else{
+          $output .= $this->add_inri_csv_goods($data_xls_row);
+        }
+      }
+      
+      fclose($handle);
+    }
+    
+		$res =  '
+			<p>Добавлено категорий:        <strong>' . $this->update_info['goods_cat_insert']     . '</strong></p>
+			<p>Обновлено категорий:        <strong>' . $this->update_info['goods_cat_update']     . '</strong></p>
+			<p>Добавлено товаров:          <strong>' . $this->update_info['goods_insert']         . '</strong></p>
+			<p>Обновлено товаров:          <strong>' . $this->update_info['goods_update']         . '</strong></p>
+      <p>Дублей товаров:             <strong>' . $this->update_info['double_goods']         . '</strong></p>';
+      
+    #$res .=  '  
+    #  <p>Размещено в <a href="/'.ADM_DIR.'/goods.php?c_id=594" target = "_blank">нераспознаные</a>:
+    #                                 <strong>' . $this->update_info['remuve_goods_unsorted']. '</strong></p>';
+                                     
+    if($this->update_info['remuve_goods_unsorted']){
+      $res .= '
+        <p><b>Список нераспознаных товаров:</b></p>';
+      foreach($this->goods_unsorted as $k => $v ){
+        $res .= $v.'</br>';
+      }
+      $res .= '</br>';
+    }
+    if($this->update_info['double_goods']){
+      $res .= '
+        <p><b>Список Дулированых товаров:</b></p>';
+      foreach($this->double_goods as $k => $v ){
+        $res .= $v.'</br>';
+      }
+    }
+    
+    return $res.$output;
+    
+	}
+  
+  function upload_good_from_csv_file(){
+    $output = '';
+    
+    $output = $this->viewFormUploadCSV();
+    
+		if ( $_FILES ) {
+			$this->uploadCSV(); # die('ok');
+      if(file_exists ( $this->source_file . 'price.csv' ) ){
+			#$f = file_get_contents($this->source_file . 'price.csv');
+			$output .= $this->parseCSVData();
+			unlink($this->source_file . 'price.csv');
+      }else{
+        $output .= '<p><span style = "color: red;">Файл не выбран</span></p>';
+      }
+		}
+    
+    return $output;
+  }
+  
   function getContent(&$admin = null){
     $carisel = $this;
     
@@ -1086,19 +1823,20 @@ class Goods extends BlockClass{
         $output .= $carisel->full_tree();
       }
       
-      // Обновить каталог
-      elseif(isset($_GET['uploadPrice'])){
-        $output .= $carisel->upload_price();
+      
+      elseif(isset($_GET['upload_good_csv'])){           # Обновить каталог .csv
+        $output .= $carisel->upload_good_from_csv_file();
       }
-      elseif(isset($_GET['upload_img'])){ // Загрузить кртинки
-        $output .= $this->viewFormUploadZip(); 
-  			if ( $_FILES ) {
-  				$output .= $this->uploadZipImg();
-  			}
-      }elseif(isset($_GET['update_information'])){ // Обновить цены
+      #elseif(isset($_GET['upload_img'])){               # Загрузить кртинки
+      #  $output .= $this->viewFormUploadZip(); 
+  	  #	if ( $_FILES ) {
+  		#		$output .= $this->uploadZipImg();
+  		#	}
+      #}
+      elseif(isset($_GET['update_information'])){        # Обновить цены
         $output .= $this->updateInformation(); 
         
-      }elseif(isset($_GET["xls_id"])){
+      }elseif(isset($_GET["xls_id"])){                   # Сохранить в .xls
         $output .= $carisel->xls_cat_slide(intval($_GET["xls_id"]));  
       }
     }
@@ -1124,8 +1862,9 @@ $date_arr = array(
     'cat_id'            => 'Категория',
     'article'           => 'Артикул',
     'article_provider'  => 'Артикул поставщика',
-    'old_price'         => 'Старая цена',
     'price'             => 'Цена',
+    
+    'old_price'         => 'Старая цена', 
     'amount'            => 'Количество',
     
     'availability_id'   => 'Варианты наличия',
